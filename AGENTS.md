@@ -5,6 +5,8 @@
 用户要求：每次新增或修改博客文章，完成本地验证后，都要将本次文章改动提交并推送到对应的 GitHub 仓库。推送属于文章任务的一部分，不需要重复询问是否同步。
 
 - 仓库以项目当前 `NEXT_PUBLIC_GITHUB_OWNER`、`NEXT_PUBLIC_GITHUB_REPO`、`NEXT_PUBLIC_GITHUB_BRANCH` 配置及 Git remote 为准。记录本约定时目标为 `JYEverUp/2026-blog-public` 的 `main` 分支；配置与 remote 不一致时，先查清目标。
+- 本机用于提交和推送的 Git 工作副本为 `E:/2025-blog-public-main/github-sync`；当前写作目录没有 `.git`。同步前先获取工作副本的远程最新版本，再把本次文章及索引变更合并进去，保留远程已有内容。
+- 提交作者使用 `JYEverUp <484764968@qq.com>`，该邮箱已由 GitHub 正确关联到 `JYEverUp`。提交后继续核对 GitHub 上的作者归属；不要把认证账号与 commit 作者混为一谈。
 - 同步文章正文、`config.json`、文章引用的新增本地资源，以及 `public/blogs/index.json`；若本次调整了分类，也同步相应分类文件。
 - 提交前确认文章能从列表打开、正文和代码块正常展示、索引与文章配置一致。
 - 只提交本次任务涉及的改动，先检查差异，不混入用户其他未提交工作。不上传 `.env.local`、私钥、访问令牌、依赖或构建产物。
