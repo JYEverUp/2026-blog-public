@@ -1,0 +1,14 @@
+{
+  "title": "Dify 内网插件安装教程：把 Python 依赖一起打进离线包",
+  "tags": [
+    "Dify",
+    "Docker",
+    "Python",
+    "离线部署",
+    "插件"
+  ],
+  "date": "2026-11-05",
+  "summary": "用 dify-plugin-offline-packager 制作包含 Python 依赖的离线插件包，走通 Docker 打包、包内容检查、内网安装与断网冷安装验收，并排查签名、上传限制和环境不匹配问题。",
+  "hidden": false,
+  "category": "代码实现"
+}
