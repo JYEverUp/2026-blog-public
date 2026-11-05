@@ -1,5 +1,20 @@
 [
   {
+    "slug": "dify-tts-autoplay",
+    "title": "Dify 语音自动播放排查与修复：SSE 事件顺序、30 秒等待与部署回滚",
+    "tags": [
+      "Dify",
+      "TTS",
+      "SSE",
+      "Docker",
+      "故障排查"
+    ],
+    "date": "2026-11-05",
+    "summary": "记录 Dify 1.13.3 定制部署中语音自动播放无声的两处后端修复：让音频结束先于工作流结束，并将连续无新音频的等待从 5 秒延长到 30 秒；附 Docker 更新、流式验收、浏览器权限与语速排查、回滚方法。",
+    "hidden": false,
+    "category": "代码实现"
+  },
+  {
     "slug": "dify-plugin-offline-packager",
     "title": "Dify 内网插件安装教程：把 Python 依赖一起打进离线包",
     "tags": [
