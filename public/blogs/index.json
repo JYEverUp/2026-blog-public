@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "slug": "ntfy-docker-springboot",
+    "title": "给自己的项目加个手机通知：Docker 自建 ntfy，接入 Spring Boot",
+    "tags": [
+      "ntfy",
+      "Docker",
+      "Spring Boot",
+      "消息推送",
+      "Android"
+    ],
+    "date": "2026-11-01",
+    "summary": "从想收到一条手机提醒开始，用 Docker 自建 ntfy，配置安卓订阅，再用 Spring Boot 实现启动提醒、磁盘告警和业务任务通知。",
+    "hidden": false,
+    "category": "代码实现"
+  }
+]
