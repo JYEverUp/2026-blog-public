@@ -1,5 +1,21 @@
 [
   {
+    "slug": "dify-intranet-file-download",
+    "title": "内网 Dify 文件下载全链路：路径查找、多 Web 入口、手机访问与历史重签名",
+    "tags": [
+      "Dify",
+      "文件下载",
+      "Nginx",
+      "Docker",
+      "内网部署",
+      "故障排查"
+    ],
+    "date": "2026-11-06",
+    "summary": "从定时生成日报、按日期定位已有 PDF 到电脑与手机下载，详细梳理 Dify 文件存储路径、文件引用、签名链接、多 Web 网关、相对路径渲染、历史重签名，以及内网离线部署、回退和文件保留规则；附代码节点和最小补丁。",
+    "hidden": false,
+    "category": "代码实现"
+  },
+  {
     "slug": "dify-tts-autoplay",
     "title": "Dify 语音自动播放排查与修复：SSE 事件顺序、30 秒等待与部署回滚",
     "tags": [

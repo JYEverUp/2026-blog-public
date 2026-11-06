@@ -1,0 +1,24 @@
+--- a/web/app/components/base/markdown-blocks/link.tsx
++++ b/web/app/components/base/markdown-blocks/link.tsx
+@@ -33,7 +33,8 @@
+       return <a href={href} onClick={handleClick} className={commonClassName}>{children || 'ScrollView'}</a>
+     }
+
+-    if (!href || !isValidUrl(href))
++    const isRelativeFileUrl = typeof href === 'string' && href.startsWith('/files/')
++    if (!href || (!isRelativeFileUrl && !isValidUrl(href)))
+       return <span>{children}</span>
+
+     return <a href={href} target="_blank" rel="noopener noreferrer" className={commonClassName}>{children || 'Download'}</a>
+--- a/api/models/model.py
++++ b/api/models/model.py
+@@ -1520,6 +1520,9 @@
+                 sign_url = file_helpers.get_signed_file_url(upload_file_id)
+             else:
+                 continue
++            if url.startswith("/files/"):
++                # Preserve same-origin links when refreshing history signatures.
++                sign_url = re.sub(r"^https?://[^/]+", "", sign_url)
+             # if as_attachment is in the url, add it to the sign_url.
+             if "as_attachment" in url:
+                 sign_url += "&as_attachment=true"
