@@ -1,0 +1,27 @@
+sequenceDiagram
+    autonumber
+    actor U as 用户
+    participant H as 应用后端
+    participant A as Agent
+    participant G as 工具入口
+    participant V as 凭据服务
+    participant C as CRM 适配器
+    participant E as CRM 系统
+    U->>H: 查询远山公司的<br/>客户信息
+    H->>H: 校验登录态<br/>与连接权限
+    H->>A: 本轮工具 +<br/>可信执行上下文
+    A->>G: search_customers<br/>(query, limit)
+    G->>G: 校验参数与实例<br/>本轮选择和授权
+    alt 授权无效或连接停用
+        G-->>A: 拒绝调用<br/>不访问外部系统
+    else 校验通过
+        G->>V: 按凭据引用<br/>取得有效 Token
+        V-->>G: Token<br/>仅在后端流转
+        G->>C: 连接实例与 Token<br/>业务参数
+        C->>E: 调用客户查询 API
+        E-->>C: 业务结果
+        C-->>G: 白名单字段<br/>截断后的结果
+        G-->>A: 客户 ID、名称、状态
+    end
+    A-->>H: 组织回答或提示<br/>需要重新授权
+    H-->>U: 返回本轮结果

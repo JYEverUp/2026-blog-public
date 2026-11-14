@@ -1,0 +1,9 @@
+{
+  "title": "给客户做 Agent 系统，为什么需要连接器？从接口调用到可复用接入层",
+  "tags": ["Agent", "连接器", "Python", "MCP", "架构设计"],
+  "date": "2026-11-14",
+  "summary": "从一个售后助手的接入需求出发，讲清直接写工具函数的适用范围、连接器的职责、账号与权限边界，以及本地工具和 MCP 两条接入路径；附 Mermaid 图和可离线运行的 Python 示例。",
+  "cover": "/blogs/agent-connectors-from-api-to-runtime/architecture.svg",
+  "hidden": false,
+  "category": "代码实现"
+}

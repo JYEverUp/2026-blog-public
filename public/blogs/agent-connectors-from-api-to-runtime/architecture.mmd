@@ -1,0 +1,17 @@
+flowchart TB
+    U[用户提出业务需求] --> A[Agent 运行时]
+    A --> T[本轮可用工具<br/>名称、描述、参数 Schema]
+    T --> G[调用入口<br/>校验参数、连接范围和权限]
+    G --> C[连接实例<br/>系统类型、地址、凭据引用]
+    C --> P[系统适配器<br/>请求转换、响应裁剪]
+    P --> E[外部业务系统<br/>CRM、知识库、工单]
+    S[后端登录态与本轮选择] -. 注入可信上下文 .-> G
+    V[凭据服务<br/>按调用取出有效凭据] -. 仅供后端使用 .-> P
+    E --> R[最小必要业务结果]
+    R --> A
+    classDef main fill:#eef4ff,stroke:#6080c0,color:#172b4d,stroke-width:1.5px;
+    classDef guard fill:#eefaf4,stroke:#4f9470,color:#173d2a,stroke-width:1.5px;
+    classDef external fill:#fff6e9,stroke:#b98a45,color:#50381b,stroke-width:1.5px;
+    class U,A,T,C,R main;
+    class G,S,V guard;
+    class P,E external;

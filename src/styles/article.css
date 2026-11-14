@@ -191,6 +191,11 @@
 	@apply max-sm:max-w-full;
 }
 
+/* Diagrams in the connector article */
+.prose img[src^='/blogs/agent-connectors-from-api-to-runtime/'] {
+	max-width: 100%;
+}
+
 /* Blockquote */
 .prose blockquote {
 	border-left: 3px solid var(--color-brand);

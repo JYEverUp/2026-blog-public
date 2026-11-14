@@ -1,0 +1,19 @@
+flowchart TB
+    subgraph local[路径一：已有 API 或 SDK]
+        L1[系统适配器函数] --> L2[本地工具包装<br/>名称、说明、参数校验]
+    end
+    subgraph remote[路径二：已有 MCP 服务]
+        M1[MCP 服务<br/>远程 HTTP 或本地 stdio] --> M2[MCP 客户端<br/>发现工具并建立调用包装]
+    end
+    L2 --> R[Agent 工具集合]
+    M2 --> R
+    R --> F[本轮工具选择<br/>只向模型开放需要的能力]
+    F --> A[模型提出工具调用]
+    A --> G[执行入口再次校验权限]
+    G --> X[执行本地函数或 MCP 调用]
+    classDef localStyle fill:#eef4ff,stroke:#6080c0,color:#172b4d;
+    classDef remoteStyle fill:#f4efff,stroke:#9271b8,color:#3a2856;
+    classDef shared fill:#eefaf4,stroke:#4f9470,color:#173d2a;
+    class L1,L2 localStyle;
+    class M1,M2 remoteStyle;
+    class R,F,A,G,X shared;
