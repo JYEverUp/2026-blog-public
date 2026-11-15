@@ -1,0 +1,10 @@
+flowchart LR
+    APP["app.py：装配入口"] --> TOOLS["tools.py：业务工具"]
+    APP --> CFG["decision/config.py：配置"]
+    APP --> CLIENT["decision/client.py：服务适配"]
+    APP --> MW["middleware/decision.py：请求拦截"]
+    MW --> CLIENT
+    MW --> SEL["decision/select.py：筛选规则"]
+    CLIENT --> EXT["外部或本地评分服务"]
+    TEST["tests/test_decision.py"] -.-> CLIENT
+    TEST -.-> SEL

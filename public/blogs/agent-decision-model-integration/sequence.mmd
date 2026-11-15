@@ -1,0 +1,28 @@
+sequenceDiagram
+    autonumber
+    actor U as 用户
+    participant A as Agent 运行时
+    participant W as 决策中间件
+    participant D as 决策服务
+    participant M as 主模型
+    participant T as 工具执行器
+    U->>A: 查询昨天发电量，并导出报表
+    A->>W: 对话上下文与当前工具集合
+    W->>D: 任务状态与候选描述
+    D-->>W: 各候选工具的适用性分数
+    W->>M: 对话与筛选后的工具集合
+    M-->>A: 调用 current_time
+    A->>T: 执行工具
+    T-->>A: 当前日期时间
+    loop 工具结果返回后，直到主模型完成任务
+        A->>W: 更新后的对话与工具集合
+        W->>D: 根据当前上下文评分
+        D-->>W: 评分结果
+        W->>M: 筛选后的模型请求
+        M-->>A: 后续工具调用或最终回答
+        opt 主模型提出工具调用
+            A->>T: 查询发电量或导出报表
+            T-->>A: 查询结果或文件路径
+        end
+    end
+    A-->>U: 发电量与报表结果

@@ -193,7 +193,8 @@
 
 /* Diagrams in the connector article */
 .prose img[src^='/blogs/agent-connectors-from-api-to-runtime/'],
-.prose img[src^='/blogs/deepagents-model-integration/'] {
+.prose img[src^='/blogs/deepagents-model-integration/'],
+.prose img[src^='/blogs/agent-decision-model-integration/'] {
 	max-width: 100%;
 }
 

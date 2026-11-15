@@ -1,0 +1,12 @@
+flowchart TD
+    START["当前工具集合"] --> CORE{"是否属于核心工具？"}
+    CORE -->|是| KEEP["保留"]
+    CORE -->|否| ASK{"是否提交评分？"}
+    ASK -->|否| KEEP
+    ASK -->|是| VALID{"是否拿到有效分数？"}
+    VALID -->|否| KEEP
+    VALID -->|是| HIGH{"达到阈值？"}
+    HIGH -->|否| DROP["本次不向主模型提供"]
+    HIGH -->|是| TOP{"是否在高分数量限制内？"}
+    TOP -->|是| KEEP
+    TOP -->|否| DROP

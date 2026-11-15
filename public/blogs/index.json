@@ -1,5 +1,21 @@
 [
   {
+    "slug": "agent-decision-model-integration",
+    "title": "给公司的 Agent 加一层决策模型：为什么需要，代码怎么接",
+    "tags": [
+      "Agent",
+      "决策模型",
+      "LangChain",
+      "Python",
+      "架构设计"
+    ],
+    "date": "2026-11-15",
+    "summary": "以公司业务助手查询发电量并导出报表为例，讲清工具目录膨胀后的问题、决策模型与主模型的分工，以及配置、评分客户端、筛选策略和中间件的代码位置；附六张 Mermaid 图及可离线验证的 Python 示例。",
+    "cover": "/blogs/agent-decision-model-integration/architecture.png",
+    "hidden": false,
+    "category": "代码实现"
+  },
+  {
     "slug": "deepagents-model-integration",
     "title": "DeepAgents 已经能接模型，为什么还要做统一接入层？",
     "tags": [
