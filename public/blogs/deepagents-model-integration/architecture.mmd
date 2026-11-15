@@ -1,0 +1,21 @@
+flowchart TB
+    subgraph CONTROL[平台侧：确定配置与使用范围]
+        direction LR
+        HTTP[HTTP 入口<br/>用户身份 + Agent 选择] --> RES[ModelResolver<br/>归属、范围、启用检查]
+        RES --> FAC[ModelFactory<br/>选择模型创建函数]
+        DB[(供应商与 Agent 配置)] -. 读取 .-> RES
+        SEC[凭据服务<br/>按引用取 Key] -. 后端读取 .-> FAC
+    end
+    subgraph RUNTIME[运行时：复用已有模型与 Agent 能力]
+        direction LR
+        SDK[厂商 SDK / 模型适配器] --> MODEL[统一模型对象]
+        MODEL --> AGENT[DeepAgents<br/>计划与工具调用]
+    end
+    CONTROL -->|注入已选择的模型| RUNTIME
+    RUNTIME --> API[模型服务 API<br/>返回任务所需的响应]
+    classDef entry fill:#eef2ff,stroke:#6366f1,color:#172554;
+    classDef control fill:#ecfdf5,stroke:#059669,color:#064e3b;
+    classDef adapter fill:#fff7ed,stroke:#ea580c,color:#7c2d12;
+    class HTTP,AGENT entry;
+    class RES,DB,FAC,SEC control;
+    class SDK,MODEL,API adapter;

@@ -1,0 +1,9 @@
+{
+  "title": "DeepAgents 已经能接模型，为什么还要做统一接入层？",
+  "tags": ["Agent", "DeepAgents", "Python", "设计模式", "模型接入"],
+  "date": "2026-11-14",
+  "summary": "从质疑多余封装开始，沿着固定模型脚本、重复初始化和多用户模型选择逐步拆解痛点；用完整可离线运行的 Python 示例、真实 SDK 装配代码和三张 Mermaid 图，解释简单工厂、适配器、策略与依赖注入的边界。",
+  "cover": "/blogs/deepagents-model-integration/architecture.svg",
+  "hidden": false,
+  "category": "代码实现"
+}

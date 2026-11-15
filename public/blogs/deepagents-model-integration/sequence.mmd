@@ -1,0 +1,26 @@
+sequenceDiagram
+    actor U as 用户
+    participant H as HTTP
+    participant R as 解析器
+    participant F as 模型工厂
+    participant S as 凭据
+    participant A as Agent
+    participant M as 模型 API
+    U->>H: agent_id + 问题
+    H->>R: user_id<br/>agent_id
+    R->>R: 检查归属<br/>与使用范围
+    alt 不允许使用
+        R-->>H: 拒绝
+        H-->>U: 权限错误
+    else 允许使用
+        R-->>H: 模型配置
+        H->>F: 创建模型
+        F->>S: secret_ref
+        S-->>F: Key<br/>仅后端
+        F-->>H: 模型对象
+        H->>A: 注入模型<br/>执行任务
+        A->>M: 模型请求<br/>可包含多轮调用
+        M-->>A: 模型响应
+        A-->>H: 任务结果
+        H-->>U: 返回结果
+    end

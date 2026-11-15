@@ -1,0 +1,23 @@
+flowchart TB
+    subgraph Before[起点：固定模型的单人脚本]
+        direction LR
+        A[开发者填写环境变量] --> B[创建模型对象] --> C[DeepAgents 执行任务]
+    end
+    subgraph After[需求变化：多用户和多个业务入口]
+        direction LR
+        D[聊天 / 日报 / 定时任务] --> E[解析当前用户与 Agent 配置]
+        E --> F[检查使用范围<br/>交给统一模型工厂]
+    end
+    Before -. 需求增加后再演进 .-> After
+    subgraph Execution[底层继续复用现有框架]
+        direction LR
+        H[DeepSeek 专用适配器] --> J[创建模型并交给 Agent]
+        I[OpenAI 兼容适配器] --> J
+    end
+    After --> Execution
+    classDef entry fill:#eef2ff,stroke:#6366f1,color:#172554;
+    classDef control fill:#ecfdf5,stroke:#059669,color:#064e3b;
+    classDef adapter fill:#fff7ed,stroke:#ea580c,color:#7c2d12;
+    class A,B,C,D,J entry;
+    class E,F control;
+    class H,I adapter;
