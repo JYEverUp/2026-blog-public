@@ -1,0 +1,10 @@
+flowchart TD
+    P["policy.py：工具名、模式与阈值"] --> B["bootstrap.py：装配 Agent 与中间件"]
+    R["rules.yaml：工具、参数、正则与等级"] --> G["guard.py：参数扫描"]
+    G --> B
+    T["tools.py：发电量、报表与工单工具"] --> B
+    B --> S["host.py：运行、事件投影与恢复"]
+    C["checkpointer：会话执行状态"] <--> S
+    S <--> UI["review UI：展示动作、收集决定"]
+    UI --> AUTH["宿主鉴权：用户与会话归属"]
+    AUTH --> S

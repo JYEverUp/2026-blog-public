@@ -1,5 +1,21 @@
 [
   {
+    "slug": "power-agent-tool-approval",
+    "title": "电力 Agent 为什么需要工具审核：从自动执行到人工确认，代码怎么落地",
+    "tags": [
+      "电力Agent",
+      "人工审核",
+      "LangGraph",
+      "Python",
+      "架构设计"
+    ],
+    "date": "2026-11-15",
+    "summary": "以发电量查询、日报生成与发布、检修工单为例，解释为什么需要执行前审核、工具名与命令参数两种触发方式，以及暂停恢复、会话隔离和幂等边界；附八张 Mermaid 图与九个可离线验证的 Python 场景。",
+    "cover": "/blogs/power-agent-tool-approval/architecture.png",
+    "hidden": false,
+    "category": "代码实现"
+  },
+  {
     "slug": "agent-decision-model-integration",
     "title": "给公司的 Agent 加一层决策模型：为什么需要，代码怎么接",
     "tags": [

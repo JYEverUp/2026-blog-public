@@ -1,0 +1,14 @@
+stateDiagram-v2
+    [*] --> Planned: 模型提出调用
+    Planned --> Checking: 检查策略与权限
+    Checking --> Rejected: 硬拒绝或直接阻止
+    Checking --> Paused: 需要人工决定
+    Checking --> Executing: 无需审核
+    Paused --> CheckingAgain: 用户批准并恢复
+    Paused --> Rejected: 用户拒绝
+    CheckingAgain --> Paused: 下一层再次需要审核
+    CheckingAgain --> Rejected: 后续检查失败
+    CheckingAgain --> Executing: 检查通过
+    Executing --> Finished: 返回工具结果
+    Rejected --> Finished: 返回拒绝结果
+    Finished --> [*]

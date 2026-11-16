@@ -1,0 +1,25 @@
+sequenceDiagram
+    actor U as 业务人员
+    participant UI as 审核界面
+    participant H as 宿主服务
+    participant G as Agent 运行图
+    participant C as Checkpointer
+    participant T as 报表接口
+    G->>G: 模型提出 publish_report 参数
+    G->>C: 保存暂停状态
+    G-->>H: interrupt 审核请求
+    H-->>UI: hitl_required 事件
+    UI-->>U: 展示厂站、日期、版本和操作
+    U->>UI: 批准或拒绝
+    UI->>H: 提交会话与审核决定
+    H->>H: 核对用户权限与待审操作
+    H->>G: Command(resume=...)
+    G->>C: 读取原会话状态
+    alt 批准且后续检查通过
+        G->>T: 执行已批准的调用
+        T-->>G: 发布结果
+    else 拒绝
+        G->>G: 跳过调用，生成拒绝反馈
+    end
+    G-->>H: 后续结果或下一次审核
+    H-->>UI: 持续消费事件流
