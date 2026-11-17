@@ -1,0 +1,29 @@
+flowchart LR
+    A["选择 backend<br/>文件放在哪里？"]
+    A --> L["本机磁盘"]
+    L --> F["filesystem<br/>本机文件读写<br/>不执行命令"]
+    L --> H["local_shell<br/>本机文件 + 命令执行<br/>隔离看配置与环境"]
+    A --> C["云端对象存储"]
+    C --> S["s3<br/>AWS S3 / MinIO<br/>通过 boto3 连接"]
+    C --> V["cos / oss / obs<br/>云厂商对象存储<br/>使用对应厂商 SDK"]
+    A --> D["数据库"]
+    D --> P["postgres<br/>文件路径 + 文件内容<br/>存为数据库记录"]
+    A --> B["沙箱"]
+    B --> X["docker / opensandbox<br/>沙箱文件 + 命令执行<br/>保留看生命周期与卷"]
+    A --> G["会话与 Store"]
+    G --> T["state<br/>当前会话中的文件<br/>恢复看状态持久化"]
+    G --> U["store<br/>跨会话共享文件<br/>落盘看 Store 实现"]
+    A --> R["组合入口"]
+    R --> Q["composite<br/>按路径选择子 backend<br/>命令能力看默认后端"]
+    classDef local fill:#edf4ff,stroke:#7197c3,color:#153452
+    classDef cloud fill:#edf8f1,stroke:#79a78b,color:#234c32
+    classDef database fill:#f3effb,stroke:#9a86bd,color:#44315f
+    classDef sandbox fill:#fff6e7,stroke:#c7a15f,color:#5c431d
+    classDef state fill:#eaf7f9,stroke:#6cabb2,color:#204b50
+    classDef composite fill:#fff0ec,stroke:#c78f7e,color:#603d33
+    class L,F,H local
+    class C,S,V cloud
+    class D,P database
+    class B,X sandbox
+    class G,T,U state
+    class R,Q composite

@@ -1,0 +1,5 @@
+flowchart TD
+    A["Agent 要读写一个文件"] --> B{"文件路径是什么？"}
+    B -->|"/report.md"| C["没有匹配路由，交给默认本地 backend"]
+    B -->|"/assets/photo.png"| D["匹配 /assets/，交给 COS"]
+    B -->|"/archive/report.md"| E["匹配 /archive/，交给 S3"]

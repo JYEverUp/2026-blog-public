@@ -1,0 +1,13 @@
+sequenceDiagram
+    participant A as Agent 文件工具
+    participant R as 组合后端
+    participant B as COS 后端
+    participant C as COS SDK
+    A->>R: write /assets/report.md
+    R->>B: write /report.md
+    B->>C: get_object 检查同名文件
+    C-->>B: 对象不存在
+    B->>C: put_object 保存 JSON 文件数据
+    C-->>B: 保存成功
+    B-->>R: WriteResult
+    R-->>A: WriteResult

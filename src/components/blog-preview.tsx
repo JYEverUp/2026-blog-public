@@ -5,6 +5,7 @@ import { INIT_DELAY } from '@/consts'
 import { useMarkdownRender } from '@/hooks/use-markdown-render'
 import { useSize } from '@/hooks/use-size'
 import { BlogSidebar } from '@/components/blog-sidebar'
+import { BlogToc } from '@/components/blog-toc'
 import { useConfigStore } from '@/app/(home)/stores/config-store'
 
 type BlogPreviewProps = {
@@ -28,12 +29,17 @@ export function BlogPreview({ markdown, title, tags, date, summary, cover, slug 
 	}
 
 	return (
-		<div className='mx-auto flex max-w-[1140px] justify-center gap-6 px-6 pt-28 pb-12 max-sm:px-0'>
+		<div className='mx-auto flex max-w-[1364px] justify-center gap-6 px-6 pt-28 pb-12 max-sm:px-0'>
+			{!isMobile && (
+				<aside aria-label='文章目录' className='sticky top-6 w-[200px] shrink-0 self-start'>
+					<BlogToc toc={toc} delay={INIT_DELAY} />
+				</aside>
+			)}
 			<motion.article
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ delay: INIT_DELAY }}
-				className='card bg-article static flex-1 overflow-auto rounded-xl p-8'>
+				className='card bg-article static min-w-0 flex-1 overflow-auto rounded-xl p-8'>
 				<div>
 					<div className='text-center text-2xl font-semibold'>{title}</div>
 
@@ -51,7 +57,11 @@ export function BlogPreview({ markdown, title, tags, date, summary, cover, slug 
 				</div>
 			</motion.article>
 
-			{!isMobile && <BlogSidebar cover={cover} summary={summary} toc={toc} slug={slug} />}
+			{!isMobile && (
+				<div className='hidden shrink-0 xl:block'>
+					<BlogSidebar cover={cover} summary={summary} slug={slug} />
+				</div>
+			)}
 		</div>
 	)
 }

@@ -1,5 +1,21 @@
 [
   {
+    "slug": "power-agent-storage-backend",
+    "title": "Backend 怎么接起来：从传统写法、deepagents 到 运行层 封装",
+    "tags": [
+      "电力Agent",
+      "DeepAgents",
+      "文件存储",
+      "Python",
+      "架构设计"
+    ],
+    "date": "2026-11-16",
+    "summary": "从传统业务存储写法出发，先直接接入 deepagents，再拆解 Agent 运行层的配置工厂、工作区门面、远程存储公共基类与组合路由，讲清默认行为、路径差异和设计模式。",
+    "cover": "/blogs/power-agent-storage-backend/architecture.png",
+    "hidden": false,
+    "category": "代码实现"
+  },
+  {
     "slug": "power-agent-tool-approval",
     "title": "电力 Agent 为什么需要工具审核：从自动执行到人工确认，代码怎么落地",
     "tags": [

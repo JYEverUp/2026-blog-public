@@ -1,0 +1,8 @@
+flowchart TD
+    N["直接使用 deepagents"] --> A["创建 backend 对象"]
+    A --> B["create_deep_agent 接收 backend"]
+    B --> C["FilesystemMiddleware 提供文件工具"]
+    C --> D["模型调用 write_file"]
+    D --> E["工具处理参数，再调用 backend.write"]
+    E --> F["具体 backend 操作磁盘或其他存储"]
+    F --> G["结果经文件工具返回模型"]
