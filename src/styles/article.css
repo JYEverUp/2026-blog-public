@@ -195,7 +195,8 @@
 .prose img[src^='/blogs/agent-connectors-from-api-to-runtime/'],
 .prose img[src^='/blogs/deepagents-model-integration/'],
 .prose img[src^='/blogs/agent-decision-model-integration/'],
-.prose img[src^='/blogs/power-agent-storage-backend/'] {
+.prose img[src^='/blogs/power-agent-storage-backend/'],
+.prose img[src^='/blogs/power-agent-acp/'] {
 	max-width: 100%;
 }
 

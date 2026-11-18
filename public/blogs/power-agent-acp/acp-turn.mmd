@@ -1,0 +1,18 @@
+sequenceDiagram
+    actor User as 用户
+    participant Main as 主 Agent
+    participant Host as ACP 客户端代码
+    participant Runner as 外部巡检程序
+    User->>Main: 核对 readings.csv
+    Main->>Host: 调用委派工具
+    Host->>Runner: 启动子进程
+    Host->>Runner: initialize 协议握手
+    Runner-->>Host: 协议版本和能力
+    Host->>Runner: session/new 指定工作目录
+    Runner-->>Host: 返回 sessionId
+    Host->>Runner: session/prompt 发巡检任务
+    Runner-->>Host: session/update 已核对 3 条
+    Runner-->>Host: session/update 2 条要复核
+    Runner-->>Host: 本轮结束 end_turn
+    Host-->>Main: 返回汇总好的工具结果
+    Main-->>User: 展示设备和触发规则

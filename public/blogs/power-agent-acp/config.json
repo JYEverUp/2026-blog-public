@@ -1,0 +1,13 @@
+{
+  "title": "ACP 怎么把任务交给另一个 Agent？从电力巡检到 Deep Agents 封装",
+  "tags": [
+    "电力Agent",
+    "ACP",
+    "DeepAgents",
+    "Python"
+  ],
+  "date": "2026-11-18",
+  "summary": "用电力巡检的模拟数据和 Python 示例，讲清 ACP 报文、原生 Deep Agents、会话与权限封装，以及编辑器接入。含三张时序图。",
+  "hidden": false,
+  "category": "代码实现"
+}

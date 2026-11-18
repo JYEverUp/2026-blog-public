@@ -1,0 +1,13 @@
+sequenceDiagram
+    participant Editor as 编辑器
+    participant Adapter as ACP 服务端适配器
+    participant Runtime as 应用运行时
+    Editor->>Adapter: session/new
+    Adapter-->>Editor: 返回 sessionId
+    Editor->>Adapter: session/prompt 加上 sessionId
+    Adapter->>Runtime: stream 使用 sessionId 作为 thread_id
+    Runtime-->>Adapter: 累计正文 读到 3 条
+    Adapter-->>Editor: session/update 读到 3 条
+    Runtime-->>Adapter: 累计正文 读到 3 条，2 条需要复核
+    Adapter-->>Editor: session/update 只补发后半句
+    Adapter-->>Editor: stopReason 为 end_turn

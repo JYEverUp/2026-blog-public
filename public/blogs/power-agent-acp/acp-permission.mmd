@@ -1,0 +1,12 @@
+sequenceDiagram
+    actor User as 用户
+    participant Main as 主 Agent
+    participant Host as ACP 会话服务
+    participant Runner as 外部 Agent
+    Runner->>Host: 请求权限，提供选项 ID
+    Host-->>Main: 返回 permission_required，外部任务继续等待
+    Main-->>User: 询问是否保存演示简报
+    User->>Main: 仅这次允许
+    Main->>Host: respond，message 为 allow-report
+    Host-->>Runner: 回复原权限请求，选中 allow-report
+    Runner-->>Host: 同一次任务继续并结束
