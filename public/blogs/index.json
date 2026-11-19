@@ -1,5 +1,15 @@
 [
   {
+    "slug": "websocket-reconnection",
+    "title": "对话到一半断了，怎么接着看？WebSocket 断线重连入门",
+    "tags": [
+      "WebSocket",
+      "断线重连"
+    ],
+    "date": "2026-11-19",
+    "summary": "AI 回答到一半断线，怎样接着看？本文用可运行的 Python 和浏览器 demo，演示 WebSocket 重连、按序补发事件，以及如何避免重复提交同一个问题。"
+  },
+  {
     "slug": "power-agent-acp",
     "title": "ACP 怎么把任务交给另一个 Agent？从电力巡检到 Deep Agents 封装",
     "tags": [
