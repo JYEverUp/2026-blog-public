@@ -1,0 +1,7 @@
+flowchart TD
+    Task["用户交给 Agent 的任务"] --> Agent["现有 Agent 规划和验收"]
+    Agent -->|读取数据或执行现成命令| Tools["API、CLI、文件工具"]
+    Agent -->|遇到需要操作界面的步骤| Driver["Cua Driver MCP"]
+    Driver -->|读取窗口和发送操作| App["目标桌面应用"]
+    App -->|窗口画面和控件状态| Driver
+    Driver -->|返回观察结果和动作状态| Agent

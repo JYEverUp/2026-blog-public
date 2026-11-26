@@ -1,0 +1,15 @@
+sequenceDiagram
+    participant A as Agent
+    participant D as Cua Driver
+    participant C as 系统计算器
+    A->>D: 打开应用并定位窗口
+    D->>C: 启动并定位计算器
+    A->>D: 获取窗口快照
+    D-->>A: 返回截图和无障碍树
+    A->>D: 按下 6、乘号、7 和等号
+    D->>C: 向目标窗口发送动作
+    A->>D: 重新获取窗口快照
+    D->>C: 读取目标窗口状态
+    C-->>D: 计算器显示 42
+    D-->>A: 返回包含显示结果的快照
+    Note over A: 读取显示值 42

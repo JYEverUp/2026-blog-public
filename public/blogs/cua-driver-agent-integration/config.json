@@ -1,0 +1,14 @@
+{
+  "title": "为什么要给现有 Agent 接入 Cua Driver",
+  "tags": [
+    "Agent",
+    "Cua Driver",
+    "MCP",
+    "桌面自动化",
+    "Windows"
+  ],
+  "date": "2026-11-26",
+  "summary": "以 Windows 上的消费报告为例，拆解 Cua Driver 的 MCP 接入、跨应用操作与结果回读，并说明后台执行的适用范围。附两张 Mermaid 图和四张截图。",
+  "hidden": false,
+  "category": "代码实现"
+}
