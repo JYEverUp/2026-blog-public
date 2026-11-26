@@ -22,6 +22,7 @@ import { saveBlogEdits } from './services/save-blog-edits'
 import { Check } from 'lucide-react'
 import { BlogCoverHoverPreview, useBlogCoverHover } from './components/blog-cover-hover'
 import { CategoryModal } from './components/category-modal'
+import { ArchiveChapters, isArchiveChapter } from './components/archive-chapters'
 
 type DisplayMode = 'day' | 'week' | 'month' | 'year' | 'category'
 
@@ -332,7 +333,7 @@ export default function BlogPage() {
 					<motion.div
 						initial={{ opacity: 0, scale: 0.6 }}
 						animate={{ opacity: 1, scale: 1 }}
-						className='card btn-rounded relative mx-auto flex items-center gap-1 p-1 max-sm:hidden'>
+						className='card btn-rounded relative mx-auto flex items-center gap-1 p-1'>
 						{[
 							{ value: 'day', label: '日' },
 							{ value: 'week', label: '周' },
@@ -344,6 +345,7 @@ export default function BlogPage() {
 								key={option.value}
 								whileHover={{ scale: 1.05 }}
 								whileTap={{ scale: 0.95 }}
+								aria-pressed={displayMode === option.value}
 								onClick={() => setDisplayMode(option.value as DisplayMode)}
 								className={cn(
 									'btn-rounded px-3 py-1.5 text-xs font-medium transition-all',
@@ -355,9 +357,11 @@ export default function BlogPage() {
 					</motion.div>
 				)}
 
-				{groupKeys.map((groupKey, index) => {
+				{groupKeys.map(groupKey => {
 					const group = groupedItems[groupKey]
 					if (!group) return null
+					const chapters = displayMode === 'year' && !editMode ? group.items.filter(isArchiveChapter) : []
+					const timelineItems = chapters.length ? group.items.filter(item => !isArchiveChapter(item)) : group.items
 
 					return (
 						<motion.div
@@ -392,8 +396,9 @@ export default function BlogPage() {
 										)
 									})()}
 							</div>
+							{chapters.length > 0 && <ArchiveChapters items={chapters} isRead={isRead} />}
 							<div>
-								{group.items.map(it => {
+								{timelineItems.map(it => {
 									const hasRead = isRead(it.slug)
 									const isSelected = selectedSlugs.has(it.slug)
 									return (
