@@ -1,0 +1,11 @@
+{
+  "title": "7、Spring Boot 整合 logback 日志",
+  "tags": [
+    "Spring Boot",
+    "知识积累",
+    "SpringBoot"
+  ],
+  "date": "2024-08-10",
+  "summary": "xml配置 springboot自带logback的依赖，不需要导入任何包。我们只需要在项目路径下创建文件logback.xml ```xml ${CONSOLELOGPATTERN} ${LOGPATH}/${LOGFILE}.log true ${CONSOLELOGPATTERN} ${LOGPA…",
+  "category": "Spring Boot"
+}

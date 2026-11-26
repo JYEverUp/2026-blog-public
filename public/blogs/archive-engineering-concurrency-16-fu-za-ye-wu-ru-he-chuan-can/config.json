@@ -1,0 +1,10 @@
+{
+  "title": "复杂业务，传参的痛点",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-07-03",
+  "summary": "从一段代码开始 ```java package com.itsoku.lesson016; public class XxxService { /** 这个方法是对外暴露的接口; * @param request; */ public void execute(M1Request request) {…",
+  "category": "工程实践"
+}

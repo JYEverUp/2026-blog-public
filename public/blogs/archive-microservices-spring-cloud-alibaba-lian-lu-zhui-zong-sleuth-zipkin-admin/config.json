@@ -1,0 +1,11 @@
+{
+  "title": "6、Sleuth&Zipkin链路追踪",
+  "tags": [
+    "微服务",
+    "Spring Cloud Alibaba",
+    "链路追踪"
+  ],
+  "date": "2024-02-22",
+  "summary": "学习当前课程，比必须要先掌握SpringCloud的基本应用（Nacos，Feign调用） 对Docker有一定的了解，知道docker-compose.yml如何启动一个容器 RabbitMQ，Elasticsearch有一定了解。 而且学习每一个技术前，一定要先知道有什么问题是现在无法解决的，通过学…",
+  "category": "微服务"
+}

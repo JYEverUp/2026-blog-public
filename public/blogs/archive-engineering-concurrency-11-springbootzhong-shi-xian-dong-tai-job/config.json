@@ -1,0 +1,10 @@
+{
+  "title": "使用SpringBoot实现动态Job实战",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-02-03",
+  "summary": "功能 会创建一个job表; 可以通过接口，对这些job表进行增删改查; 支持动态增加、删除、修改、启动、停止Job等; 系统均无需重启，会自动监控job表的变化，实现job的动态执行; 用到的技术 SpringBoot; MyBatis-Plus; MySql; cron表达式（job执行的一种表达式…",
+  "category": "工程实践"
+}

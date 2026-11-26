@@ -1,0 +1,10 @@
+{
+  "title": "2、负载均衡及Ribbon",
+  "tags": [
+    "微服务",
+    "Spring Cloud"
+  ],
+  "date": "2024-05-10",
+  "summary": "Ribbon：负载均衡及Ribbon 什么是Ribbon Spring Cloud Ribbon是基于Netflix Ribbon实现的一套==客户端负载均衡==的工具。 简单的说，Ribbon是Netflix发布的开源项目 ,主要功能是提供客户端的软件负载均衡算法，将NetFlix的中间层服务连接在一…",
+  "category": "微服务"
+}

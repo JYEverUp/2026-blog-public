@@ -1,0 +1,10 @@
+{
+  "title": "如何优雅的处理，线程池内异常？",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-05-18",
+  "summary": "```java package com.itsoku.lesson099; import org.junit.jupiter.api.Test; import org.slf4j.Logger; import org.slf4j.LoggerFactory; import java.util.concu…",
+  "category": "工程实践"
+}

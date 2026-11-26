@@ -1,0 +1,9 @@
+{
+  "title": "7、Docker环境部署",
+  "tags": [
+    "部署运维"
+  ],
+  "date": "2024-08-02",
+  "summary": "下载docker 根据提示输入y。 ```bash #yum install docker（这个下载的是老版本，不要用视频的这个，用下面的） yum-config-manager --add-rep https://mirrors.aliyun.com/docker-ce/linux/centos/do…",
+  "category": "部署运维"
+}

@@ -192,5 +192,2696 @@
     "summary": "先用 Dashboard 验证 OpenClaw 和模型，再用长连接接入飞书机器人。用一组模拟巡检数据验收消息往返，并按症状定位网关、权限和事件订阅问题。",
     "hidden": false,
     "category": "代码实现"
+  },
+  {
+    "slug": "archive-design-patterns-behavioral-14-ming-ling-mo-shi",
+    "title": "2、命令模式",
+    "tags": [
+      "设计模式",
+      "行为型模式"
+    ],
+    "date": "2024-12-31",
+    "summary": "1、智能生活项目需求 image-20211217202526745 1）我们买了一套智能家电，有照明灯、风扇、冰箱、洗衣机，只要在手机上安装 APP 就可以控制这些家电的工作; 2）这些智能家电来自不同的厂家，我们不想针对每一种家电都安装一个 APP 分别控制，我们希望只要一个 APP 就可以控制全部…",
+    "category": "设计模式"
+  },
+  {
+    "slug": "archive-observability-skywalkingquan-lian-lu-jian-kong",
+    "title": "skywalking全链路监控",
+    "tags": [
+      "可观测性"
+    ],
+    "date": "2024-12-30",
+    "summary": "一、章节目的 img 本章节通过 Docker 方式部署一套 skywalking 非入侵的全链路监控系统，并在对应的测试工程中通过 skywalking-agent 字节码增强组件，采集系统运行时的各项信息到 skywalking-ui 监控平台观察数据。 源码：https://github.com/…",
+    "category": "可观测性"
+  },
+  {
+    "slug": "archive-java-java1-8xin-te-xing",
+    "title": "7、Java8新特性",
+    "tags": [
+      "Java",
+      "知识积累",
+      "勇往直前"
+    ],
+    "date": "2024-12-29",
+    "summary": "JDK - 新特性 - Java8 特性列表 Lambda表达式; 函数式接口; 方法引用和构造函数调用; Stream流; 在JDK7中的新特性 fork/join 框架和Stream流搭配使用; 接口中的默认方法和静态方法; Optional 容器; 新时间日期API; HashMap底层数据结构的…",
+    "category": "Java"
+  },
+  {
+    "slug": "archive-engineering-concurrency-44-wei-fu-wu-lian-lu-ri-zhi-zhui-zong-shi-zhan",
+    "title": "微服务链路日志追踪实战",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-12-26",
+    "summary": "1、微服务中，接口报错，如何快速定位问题？ 需要日志的辅助，一般错误日志中有详细的堆栈信息，具体是哪行代码报错，都可以看到。 要想快速定位问题，前提是要能够快速定位日志。 但是微服务调用链路通常比较复杂，先来看下微服务常见的调用流程，如下图，一个请求可能会调用多个服务。 image-2024060515…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-projects-spring-boot-starter-whitelist",
+    "title": "2、白名单中间件设计",
+    "tags": [
+      "项目实践",
+      "Spring Boot Starter",
+      "SDK"
+    ],
+    "date": "2024-12-25",
+    "summary": "一、需求背景 在互联网这种多数面向C端用户场景下的产品功能研发完成交付后，通常并不会直接发布上线。尤其是在一个原有服务功能已经沉淀了大量用户时，不断的迭代开发新增需求下，更不会贸然发布上线。 虽然在测试环境、预发环境都有了相应功能的验证，但在真实的用户场景下可能还会存在其他隐患问题。那么为了更好的控制系…",
+    "category": "项目实践"
+  },
+  {
+    "slug": "archive-messaging-rocketmq-3-rocketmqying-yong",
+    "title": "3、RocketMQ应用",
+    "tags": [
+      "消息队列",
+      "RocketMQ"
+    ],
+    "date": "2024-12-21",
+    "summary": "RocketMQ应用 切记切记开启防火墙，9876和10911端口！不然会连接不上 一、普通消息 消息发送分类 Producer对于消息的发送也有许多的选择，不同的方法会产生不同的效果 同步发送消息 同步发送消息是指，Producer发出一条消息后， 会在收到MQ返回的ACK之后才发下一条消息 该方式的…",
+    "category": "消息队列"
+  },
+  {
+    "slug": "archive-engineering-concurrency-84-ze-ren-lian-mo-shi-you-hua-dai-ma-tai-hao-yong-liao",
+    "title": "第84节 责任链模式优化代码，太好用了",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-12-20",
+    "summary": "后端需要提供一个文章发布的接口，接口中需要先对文章内容进行如下校验，校验通过后才能发布 1. 文章长度不能超过1万个字符 2. 不能有敏感词 3. 文章中图片需要合规 代码入口： ```java com.itsoku.lesson084.controller.ArticleController#publ…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-69-fen-ku-fen-biao-fen-ku-fen-biao-ru-he-xuan-ze",
+    "title": "分库、分表、分库分表，如何选择？",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-12-18",
+    "summary": "分库、分表以及分库分表是数据库架构设计中常见的优化手段，它们各自适用于不同的场景。 本文将带大家了解这3种方案各自的适合的场景，帮助大家精准决策。 场景1：并发量太大 数据库连接数，受物理机器的影响，是有上限的，当并发量上来后，这块会成为系统瓶颈。 对于高并发写的场景：可以考虑分库，分摊db压力，比如：…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-storage-mysql-replication-zhu-cong-fu-zhi",
+    "title": "7、MySQL主从复制",
+    "tags": [
+      "存储中间件",
+      "MySQL",
+      "主从复制与读写分离"
+    ],
+    "date": "2024-12-16",
+    "summary": "主从复制是指将主数据库的 DDL 和 DML 操作通过二进制日志传到从库服务器中，然后在从库上对这些日志重新 执行（也叫重做），从而使得从库和主库的数据保持同步。 MySQL支持一台主库同时向多台从库进行复制， 从库同时也可以作为其他从服务器的主库，实现链状复制。 img MySQL主从复制的优点主要包…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-messaging-rabbitmq-1-rabbitmqji-chu-zhi-shi",
+    "title": "1、RabbitMQ 基础知识",
+    "tags": [
+      "消息队列",
+      "rabbitmq"
+    ],
+    "date": "2024-12-14",
+    "summary": "1.1. 分布式开发遇到的问题 随着微服务架构的流行，MQ成了解决微服务之间问题的常用工具。 以电商应用为例，应用中有订单系统、库存系统、物流系统、支付系统。用户创建订单后，如果耦合调用库存系统、物流系统、支付系统，任何一个子系统出了故障，都会造成下单操作异常。 当转变成基于消息队列的方式后，系统间调用…",
+    "category": "消息队列"
+  },
+  {
+    "slug": "archive-deployment-03-redis",
+    "title": "3、Redis部署",
+    "tags": [
+      "部署运维"
+    ],
+    "date": "2024-12-13",
+    "summary": "创建挂载目录 ```bash #创建挂载目录 mkdir -p /data/redis ``` 创建yml文件 ```bash vim /data/redis/docker-compose.yml ``` 填入配置 ```bash version: '3' services: redis: image:…",
+    "category": "部署运维"
+  },
+  {
+    "slug": "archive-storage-mysql-replication-ji-zhu-ji-sharding-jdbc-kuai-su-ru-men",
+    "title": "2、快速入门",
+    "tags": [
+      "存储中间件",
+      "MySQL",
+      "主从复制与读写分离",
+      "技术集",
+      "Sharding-JDBC"
+    ],
+    "date": "2024-12-11",
+    "summary": "本章节使用Sharding-JDBC完成对订单表的水平分表，通过快速入门程序的开发，快速体验Sharding-JDBC的使 用 方法。 人工创建两张表，torder1和torder2，这两张表是订单表拆分后的表，通过Sharding-Jdbc向订单表插入数 据， 按照一定的分片规则，主键为偶数的进入to…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-storage-mysql-2-mysqlsuo-yin-you-hua",
+    "title": "2、MYSQL索引优化",
+    "tags": [
+      "存储中间件",
+      "MySQL"
+    ],
+    "date": "2024-12-10",
+    "summary": "1.1 优化简介 MySQL性能调优是指通过对MySQL数据库系统进行优化，以提高其执行速度、响应时间和资源利用率的过程。MySQL是一种常用的关系型数据库管理系统，因此，针对MySQL的性能调优主要集中在以下几个方面： 1、查询优化：通过分析和优化查询语句，包括使用合适的索引、避免全表扫描、优化JOI…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-storage-redis-1-redisru-men-yu-ying-yong",
+    "title": "1、Redis入门与应用",
+    "tags": [
+      "存储中间件",
+      "Redis"
+    ],
+    "date": "2024-12-09",
+    "summary": "Redis的技术全景 Redis一个开源的基于键值对（Key-Value）NoSQL数据库。使用ANSI C语言编写、支持网络、基于内存但支持持久化。性能优秀，并提供多种语言的API。 我们要首先理解一点，我们把Redis称为KV数据库，键值对数据库，那就可以把Redis内部的存储视为存在着一个巨大的M…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-projects-openaicodereview-codereview",
+    "title": "2、OpenAI 代码⾃动评审组件",
+    "tags": [
+      "项目实践",
+      "openaicodereview",
+      "Review"
+    ],
+    "date": "2024-12-08",
+    "summary": "项目背景： 《OpenAI 代码⾃动评审组件》结合 GitHub Actions、Git/Github、OpenAI、微信公众号，多⽅⾯技术完成代码评审和⾃动推送通知。 项目价值： AI代码⾃动评审组件显著提升软件开发效率与质量，通过智能分析代码⻛格、潜在缺陷及性能瓶颈，减少⼈⼯复审负担，加速产品迭代周…",
+    "category": "项目实践"
+  },
+  {
+    "slug": "archive-projects-threadpool-threadpool",
+    "title": "3、动态线程池组件",
+    "tags": [
+      "项目实践",
+      "threadPool",
+      "Thread Pool"
+    ],
+    "date": "2024-12-07",
+    "summary": "简介 本项目是采用分布式架构的动态线程池组件，通过SpringBoot Starter的形式引入业务项目，自带web页面，可监控系统的线程池运行状态，动态修改线程池参数，解决并发业务中实际环境复杂，线程池参数不易设置恰当，而重新设置参数却需要重启系统的弊端。 技术选型 Umi; React; Ant D…",
+    "category": "项目实践"
+  },
+  {
+    "slug": "archive-engineering-troubleshooting-yi-xing-dai-ma-gao-ding-cao-zuo-ri-zhi",
+    "title": "一行代码搞定系统操作日志（实战）",
+    "tags": [
+      "工程实践",
+      "生产问题定位"
+    ],
+    "date": "2024-12-06",
+    "summary": "本文内容 通过aop统一记录系统操作日志，只需在接口方法上加个自定义的注解，不论接口成功还是失败，都可自动记录操作日志到db中。 操作日志包含的信息有 日志描述; 状态，0：异常，1：正常; 请求参数json格式; 响应结果json格式; 错误信息(状态=0时，记录异常堆栈信息); 接口耗时（毫秒）;…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-57-cpubiao-sheng-shi-yong-arthas-3miao-ding-wei-wen-ti",
+    "title": "cpu飙升，使用Arthas，3秒定位问题",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-12-05",
+    "summary": "arthas：阿里开源的一款Java问题诊断利器，详情见：https://arthas.aliyun.com/doc/quick-start.html 2.1、问题代码 ```java public class CpuLoadTest { public static void main(String[]…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-storage-mysql-replication-ji-zhu-ji-mycat-1-jian-jie",
+    "title": "1、MyCat 简介",
+    "tags": [
+      "存储中间件",
+      "MySQL",
+      "主从复制与读写分离",
+      "技术集",
+      "MyCat"
+    ],
+    "date": "2024-12-04",
+    "summary": "一、简介 Mycat是开源的、活跃的、基于Java语言编写的MySQL数据库中间件。 可以像使用mysql一样来使用mycat，对于开发人员来说根本感觉不到mycat的存在。 开发人员只需要连接MyCat即可，而具体底层用到几台数据库，每一台数据库服务器里面存储了什么数据，都无 需关心。 具体的分库分表…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-storage-mysql-replication-ji-zhu-ji-sharding-jdbc-zhi-xing-yuan-li",
+    "title": "3、Sharding-JDBC执行原理",
+    "tags": [
+      "存储中间件",
+      "MySQL",
+      "主从复制与读写分离",
+      "技术集",
+      "Sharding-JDBC"
+    ],
+    "date": "2024-12-02",
+    "summary": "在了解Sharding-JDBC的执行原理前，需要了解以下概念： 逻辑表 水平拆分的数据表的总称。例：订单数据表根据主键尾数拆分为10张表，分别是 torder0 、 torder1 到 torder9 ，他们的逻辑表名为 t_order 。 真实表 在分片的数据库中真实存在的物理表。即上个示例中的 t…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-storage-mycat-03-mycatying-yong-yu-shi-zhan-jiao-cheng",
+    "title": "Mycat应用与实战教程（3）",
+    "tags": [
+      "存储中间件",
+      "mycat"
+    ],
+    "date": "2024-11-28",
+    "summary": "读写分离原理：读写分离就是让主库处理事务性操作，从库处理select查询。数据库复制被用来把事务性查询导致的数据变更同步到从库，同时主库也可以select查询。 实现读写分离是基于MySQL的主从复制架构的，通过一主多从的配置方式，可以将查询请求均匀的分散到多个数据副本，能够进一步的提升系统的处理能力…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-storage-mycat-05-mycatying-yong-yu-shi-zhan-jiao-cheng",
+    "title": "Mycat应用与实战教程（5）",
+    "tags": [
+      "存储中间件",
+      "mycat"
+    ],
+    "date": "2024-11-25",
+    "summary": "6.1 分库分表概念回顾 6.1.1 分库操作 水平分库：把同一个表的数据按一定规则拆到不同的数据库中; 垂直分库：按照业务、功能模块将表进行分类，不同功能模块对应的表分到不同的库中; 分库原则：将紧密关联关系的表划分在一个库里，没有关联关系的表可以分到不同的库里; 6.1.2 分表操作 水平分表：在同…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-engineering-concurrency-30-mqzhuan-ti-springbootzhong-shou-ba-shou-jiao-ni-shi-9994918",
+    "title": "MQ专题-手把手教你，落地事务消息代码",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-11-24",
+    "summary": "本文主要内容 1. 事务消息代码落地，可直接拿去使用 2. 若消息投递到MQ失败，会由Job进行补偿，衰减式自动重试 回顾下事务消息 什么是事务消息？ 事务消息是投递消息的一种方式，可以确保业务执行成功，消息一定会投递成功。 需要在业务本地库创建一个消息表(t_msg) ```sql create ta…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-design-patterns-structural-9-zu-he-mo-shi",
+    "title": "4、组合模式",
+    "tags": [
+      "设计模式",
+      "结构型模式"
+    ],
+    "date": "2024-11-23",
+    "summary": "1、学校院系展示需求 编写程序展示一个学校院系结构： 需求是这样，要在一个页面中展示出学校的院系组成，一个学校有多个学院，一个学院有多个系。如图： image-20211023221436485 传统方式解决学校院系展示（类图） image-20211023221531826 问题分析 1）将学院看做是…",
+    "category": "设计模式"
+  },
+  {
+    "slug": "archive-engineering-troubleshooting-jie-kou-xiang-ying-man-shi-yong-arthas-3miao-ding-wei-7bd3879",
+    "title": "接口相应慢，如何解决？",
+    "tags": [
+      "工程实践",
+      "生产问题定位",
+      "Arthas",
+      "场景相关内容"
+    ],
+    "date": "2024-11-22",
+    "summary": "1、使用Arthas定位分析 案例代码： ``` public class Testcontroller { public String test() { this.m1(); this.m2(); this.m3(); } private void m3() { Thread.sleep(100);…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-mysql-man-jie-kou-ru-he-ding-wei-jie-jue",
+    "title": "慢接口定位",
+    "tags": [
+      "工程实践",
+      "MYSQL"
+    ],
+    "date": "2024-11-20",
+    "summary": "慢查询定位总结 1、介绍一下当时产生问题的场景(我们当时的一个接口测试的时候非常的慢，压测的结果大概5秒钟) 2、我们系统中当时采用了运维工具(Skywalking)，可以监测出哪个接口，最终因为是sq!的问题 3、在mysal中开启了慢日志查询，我们设置的值就是2秒，一旦sql执行超过2秒就会记录到日…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-dev-log-day12",
+    "title": "项目开发日志 · Day012",
+    "tags": [
+      "开发日志",
+      "开发笔记",
+      "学习记录"
+    ],
+    "date": "2024-11-19",
+    "summary": "任务 [x] 规则引擎量化人群参与活动; 总结 首先先去了解了一下组合模式和决策树，然后看了看数据库，其实就是把一个类似于二叉树的结构存到了数据库里，分别对应了三个东西，一个表用来保存决策树的树根信息，然后一个表用来保存树上的所有节点的信息，然后一个表用来存决策树的连接信息，我们可以通过树根的 ID 拿…",
+    "category": "开发日志"
+  },
+  {
+    "slug": "archive-engineering-concurrency-48-dian-shang-xi-tong-zi-jin-zhang-hu-biao-she-ji-yu-shi-zhan",
+    "title": "电商系统-资金账户表设计 及 应用实战",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-11-18",
+    "summary": "电商系统资金账户相关表设计及代码落地; 案例：电商平台余额提现到微信钱包; 比如咱们需要开发一个电商系统，电商系统中每个用户都有一个资金账户，相当于我们在电商系统中给用户开了一张银行卡一样，这个账户需要支持以下功能 1. 支持通过第三方支付进行充值 2. 支持将余额提现到微信钱包 3. 支持通过账户余额…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-storage-mysql-4-suo",
+    "title": "4、MYSQL锁机制",
+    "tags": [
+      "存储中间件",
+      "MySQL"
+    ],
+    "date": "2024-11-12",
+    "summary": "事务的 隔离性 由这章讲述的 锁 来实现。 1.1 锁概述 锁是计算机协调多个进程或者线程并发访问某一个资源的机制。在程序开发中会存在多线程同步的问题，当多个线程并发访问某一个数据的时候，尤其针对一些敏感的数据(比如订单、金额等)，我们就需要保证这个数据在任何时刻最多只有一个线程在访问，保证数据的完整性…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-frontend-vue2-1-vueji-chu",
+    "title": "1、vue基础",
+    "tags": [
+      "前端",
+      "Vue2"
+    ],
+    "date": "2024-11-11",
+    "summary": "一、 Vue基础 1. 上手vue简单示例 想让 Vue 工作，就必须创建一个 Vue 实例，且要传入一个配置对象; demo 容器里的代码依然符合 html 规范，只不过混入了一些特殊的 Vue 语法; demo 容器里的代码被称为【Vue模板】; Vue实例和容器是一一对应的，真实开发中只有一个Vu…",
+    "category": "前端"
+  },
+  {
+    "slug": "archive-engineering-concurrency-12-mi-deng-tong-yong-shi-xian-tai-hao-yong-liao",
+    "title": "幂等的4种解决方案",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-11-10",
+    "summary": "本文将介绍幂等问题的 4 种解决方案，理解后，可以应对工作中所有幂等性问题。 每种方案都会有代码落地，并对每种方案进行并发压测，验证其可靠性，可能有点长，大家耐心看完，吃透后，以后也不用在幂等性问题上耗费时间了。 什么是幂等 幂等指多次操作产生的影响只会跟一次执行的结果相同，通俗的说：某个行为重复的执行…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-dev-log-day11",
+    "title": "项目开发日志 · Day011",
+    "tags": [
+      "开发日志",
+      "开发笔记",
+      "学习记录"
+    ],
+    "date": "2024-11-09",
+    "summary": "任务 [x] 在应用层编排抽奖过程; 总结 今天的内容比较简单，最主要的问题就是表改了，然后花了很多时间去改对应的 PO 以及 SQL，然后今天第一次开发 application 层，感觉就是把 domain 层各个领域进行组装，然后形成一个又一个的流程，在这里面会使用 MQ 把流程进行切片，之后写门面…",
+    "category": "开发日志"
+  },
+  {
+    "slug": "archive-microservices-spring-cloud-3-shen-ru-li-jie-ribbonwen-dang",
+    "title": "3、深入理解Ribbon",
+    "tags": [
+      "微服务",
+      "Spring Cloud"
+    ],
+    "date": "2024-11-08",
+    "summary": "1、负载均衡的两种方式 服务器端负载均衡; 传统的方式前端发送请求会到我们的的nginx上去，nginx作为反向代理，然后路由给后端的服务器，由于负载均衡算法是nginx提供的，而nginx是部署到服务器端的，所以这种方式又被称为服务器端负载均衡。 image.png 客户端侧负载均衡; 现在有三个实例…",
+    "category": "微服务"
+  },
+  {
+    "slug": "archive-engineering-concurrency-35-mqxiao-xi-ji-ya-xiang-guan-wen-ti-ji-jie-jue-si-lu",
+    "title": "MQ消息积压，相关问题及解决思路",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-11-07",
+    "summary": "MQ最后一节 这节讲完，MQ算是告于段落了，8节，如果能够坚持下来，那么在MQ使用上，基本上是通关了。 8节中包含了下面这些内容： 1. MQ典型使用场景 2. 如何确保消息的可靠性 3. 事务消息通用方案 & 源码 4. 手写一个好用的延迟任务处理工具类 5. 延迟消息通用方案 & 源码 6. 幂等消…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-90-springshi-wu-shi-xiao-chang-jian-de-ji-chong-chang-40c8194",
+    "title": "第90节 Spring事务失效，常见的几种场景，带你精通Spring事务",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-11-06",
+    "summary": "1. Spring事务失效常见的4种场景 2. 事务失效问题如何排查？ 3. 如何精通Spring事务？ 案例代码 如下代码，外部调用m1方法，m1方法中调用m2方法，虽然m2方法上加了事务@Transactional注解，但是事务不会生效 ```java Service public class Us…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-microservices-spring-cloud-alibaba-gateway-gatewaywang-guan",
+    "title": "5、Spring Cloud Gateway网关",
+    "tags": [
+      "微服务",
+      "Spring Cloud Alibaba",
+      "gateway"
+    ],
+    "date": "2024-11-05",
+    "summary": "1、网关简介 网关作为流量的入口，常用的功能包括路由转发，权限校验，限流等。 2、Gateway简介 Spring Cloud Gateway 是Spring Cloud官方推出的第二代网关框架，定位于取代 Netflix Zuul。相比 Zuul 来说，Spring Cloud Gateway 提供更…",
+    "category": "微服务"
+  },
+  {
+    "slug": "archive-dev-log-day09-day10",
+    "title": "项目开发日志 · Day09 ~ Day10",
+    "tags": [
+      "开发日志",
+      "开发笔记",
+      "学习记录"
+    ],
+    "date": "2024-11-04",
+    "summary": "任务 [x] 在应用层编排抽奖过程; 总结 有了前面的模板模式的基础，这一章节相对来说比较容易，自己实现的时候也没有什么大问题，大体流程就是写接口，编排流程，然后写实现类，然后写 Mapper，至于为什么花了两三天，这就不得不说上一章的分库分表了，没写过 SpringBoot Starter，没写过 M…",
+    "category": "开发日志"
+  },
+  {
+    "slug": "archive-engineering-troubleshooting-cpubiao-sheng-shi-yong-arthas-3sding-wei-wen-ti",
+    "title": "CPU飙升，如何定位问题？",
+    "tags": [
+      "工程实践",
+      "生产问题定位",
+      "场景相关内容"
+    ],
+    "date": "2024-11-03",
+    "summary": "1、Arthas arthas:阿里开源的一款java问题诊断利器，详情见:https://arthas.aliyun,com/doc/quick-start.html 2、演示:使用Arthas，3秒定位cpu飙升的代码 2.1、问题代码 ``` public class CpuLoadTest {…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-55-ru-he-pai-cha-oom",
+    "title": "如何排查oom？",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-11-02",
+    "summary": "1. 导出内存快照 2. 使用Eclipse MAT工具分析内存快照，定位问题代码 有2种方案 方式1：jmap命令导出文件 ```shell jmap -dump:format=b,file=E:/dump/dump.hprof pid ``` 方式1适合程序没有没有退出的情况，若程序退出了，需采用方…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-storage-mycat-01-mycatying-yong-yu-shi-zhan-jiao-cheng",
+    "title": "Mycat2应用与实战教程",
+    "tags": [
+      "存储中间件",
+      "mycat"
+    ],
+    "date": "2024-11-01",
+    "summary": "1.1 什么是MyCat 官网： http://mycatone.top/ () Mycat 是基于 java 语言编写的数据库中间件，是一个实现了 MySQL 协议的服务器，前端用户可以把它看作是一个数据库代理，用 MySQL 客户端工具和命令行访问，而其后端可以用 MySQL 原生协议与多个 MyS…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-engineering-concurrency-13-bing-xing-cha-xun-xing-neng-you-hua-li-qi-ke-neng-you-keng",
+    "title": "并行查询，可能有坑",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-10-29",
+    "summary": "需求：后端提供一个接口获取商品信息 接口传入一个商品id，需要返回商品下面这些信息，这些信息都在不同的表中，通过商品id就可以查到 商品基本信息（如商品名称、价格等基本信息); 商品描述信息（可能是富文本，放在单独的表中）; 商品收藏量; 商品评论量; 常规版本实现（性能低） 按照id一步步查询，组装结…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-docker-dui-xiang-cun-chu-minioru-men-jie-shao",
+    "title": "对象存储MinIO入门介绍",
+    "tags": [
+      "Docker"
+    ],
+    "date": "2024-10-27",
+    "summary": "常见的对象存储方式对比 (https://note.moguit.cn/#/./Docker/对象存储MinIO入门简介/README?id=常见的对象存储方式对比) 直接将图片保存到服务的硬盘; 优点：开发便捷，成本低; 缺点：扩容困难; 使用分布式文件系统进行存储; 优点：容易实现扩容; 缺点：开发…",
+    "category": "Docker"
+  },
+  {
+    "slug": "archive-java-fan-xing",
+    "title": "3、泛型",
+    "tags": [
+      "Java",
+      "知识积累",
+      "勇往直前"
+    ],
+    "date": "2024-10-26",
+    "summary": "泛型 泛型的理解 1. 泛型的概念：所谓泛型，就是允许在定义类、接口时通过一个标识表示类中某个属性的类型或者是某个方法的返 回值及参数类型。这个类型参数将在使用时（例如，继承或实现这个接口，用这个类型声明变量、 创建对象时确定（即传入实际的类型参数，也称为类型实参）。 2. 泛型的引入背景 集合容器类在…",
+    "category": "Java"
+  },
+  {
+    "slug": "archive-deployment-06-nginxbu-shu",
+    "title": "6、nginx部署",
+    "tags": [
+      "部署运维"
+    ],
+    "date": "2024-10-24",
+    "summary": "nginx部署 去官网也下个windows版本 (https://nginx.org/en/download.html)的，本地调试成功，再放到服务器去执行，容易排查错误。 用docker的坑太多了，nginx决定用原生的o(╥﹏╥)o。 1、安装nginx前首先安装四个依赖包 --以下命令一键安装四个…",
+    "category": "部署运维"
+  },
+  {
+    "slug": "archive-storage-redis-2-redisgao-ji-te-xing-he-ying-yong-man-cha-xun-pipeline-d747fd1",
+    "title": "3、Redis高级特性和应用(慢查询、Pipeline、事务、Lua)",
+    "tags": [
+      "存储中间件",
+      "Redis"
+    ],
+    "date": "2024-10-23",
+    "summary": "Redis的慢查询 许多存储系统（例如 MySQL)提供慢查询日志帮助开发和运维人员定位系统存在的慢操作。所谓慢查询日志就是系统在命令执行前后计算每条命令的执行时间，当超过预设阀值,就将这条命令的相关信息（例如:发生时间，耗时，命令的详细信息）记录下来，Redis也提供了类似的功能。 Redis客户端执…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-storage-mycat-02-mycatying-yong-yu-shi-zhan-jiao-cheng",
+    "title": "Mycat应用与实战教程（2）",
+    "tags": [
+      "存储中间件",
+      "mycat"
+    ],
+    "date": "2024-10-22",
+    "summary": "3.1 制作安装包 Mycat2不提供安装包,只提供核心JAR包,JAR包可以独立运行,安装包是使用Java Service Wrapper做壳的,如果需要安装包，需要自己制作。 JAR可以作为Java库引入自己业务项目中使用,Mycat2中的各个组件的设计都是可以独立使用的 步骤如下： 1. 下载对应…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-engineering-concurrency-63-sao-ma-deng-lu",
+    "title": "扫码登录详解",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-10-21",
+    "summary": "网页端登录流程详解; APP端登录流程详解; 手机端扫码登录流程详解;",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-design-patterns-behavioral-22-ce-lue-mo-shi",
+    "title": "10、策略模式",
+    "tags": [
+      "设计模式",
+      "行为型模式"
+    ],
+    "date": "2024-10-20",
+    "summary": "1、鸭子问题 编写鸭子项目，具体要求如下： 1）有各鸭子（比如野鸭、北京鸭、水鸭等，鸭子有各种行为，比如叫、飞行等）; 2）显示鸭子的信息; 2、传统方案解决鸭子问题 UML 类图 image-20220117194817264 核心代码 ```java public abstract class Du…",
+    "category": "设计模式"
+  },
+  {
+    "slug": "archive-engineering-concurrency-68-springbootzhong-jie-kou-jia-jie-mi-tong-yong-fang-an-shi-zhan",
+    "title": "SpringBoot中，接口加解密，通用方案实战",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-10-19",
+    "summary": "有些接口中，数据敏感度高，为了防止数据在传输过程中被窃取，我们可以采用密文传输，这样数据传输过程中，被别人窃取后，拿到的也是密文，他不知道如何解密，没有任何意义。 调用方发送请求前，先对明文加密，然后发送密文，被调用方收到数据后，先进行解密，然后再进行处理。 返回的结果同样也可以加密，被调用方将需要返回…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-design-patterns-creational-01-dan-li-mo-shi",
+    "title": "1、单例模式",
+    "tags": [
+      "设计模式",
+      "创建型模式"
+    ],
+    "date": "2024-10-17",
+    "summary": "介绍 所谓类的单例设计模式，就是采取一定的方法保证在整个的软件系统中，对某个类只能存在一个对象实例，并且该类只提供一个取得其对象实例的方法（静态方法） 比如 Hibernate 的 SessionFactory，它充当数据存储源的代理，并负责创建 Session 对象。SessionFactory 并不…",
+    "category": "设计模式"
+  },
+  {
+    "slug": "archive-storage-redis-3-redisdi-ceng-yuan-li-chi-jiu-hua-fen-bu-shi-suo",
+    "title": "4、Redis底层原理（持久化+分布式锁）",
+    "tags": [
+      "存储中间件",
+      "Redis"
+    ],
+    "date": "2024-10-16",
+    "summary": "Redis底层原理 持久化 Redis虽然是个内存数据库，但是Redis支持RDB和AOF两种持久化机制，将数据写往磁盘，可以有效地避免因进程退出造成的数据丢失问题，当下次重启时利用之前持久化的文件即可实现数据恢复。 RDB RDB持久化是把当前进程数据生成快照保存到硬盘的过程。所谓内存快照，就是指内存…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-deployment-08-ideacha-jian-fu-zhu-gong-ju",
+    "title": "8、IDEA插件辅助工具",
+    "tags": [
+      "部署运维"
+    ],
+    "date": "2024-10-15",
+    "summary": "代码缩略图：CodeGlance Pro 当代码很长的时候，为了快速下翻是不是很羡慕Sublime和VS Code右侧的缩略图，通过点击大概位置就可以快速的定位代码。 在IDEA中只需要安装插件：CodeGlance Pro，马上也能拥有它 image-20240924202535101 调试Strea…",
+    "category": "部署运维"
+  },
+  {
+    "slug": "archive-microservices-spring-cloud-alibaba-seata-seatashi-yong-he-yuan-ma-fen-xi",
+    "title": "4、分布式事务",
+    "tags": [
+      "微服务",
+      "Spring Cloud Alibaba",
+      "seata"
+    ],
+    "date": "2024-10-14",
+    "summary": "一、数据库事务ACID特性 基础概念：事务ACID A（Atomic）：原子性，构成事务的所有操作，要么都执行完成，要么全部不执行，不可能出现部分成功部分失 败的情况。; C（Consistency）：一致性，在事务执行前后，数据库的一致性约束没有被破坏。比如：张三向李四转100元， 转账前和转账后的数…",
+    "category": "微服务"
+  },
+  {
+    "slug": "archive-storage-mysql-replication-ji-zhu-ji-mycat-du-xie-fen-chi",
+    "title": "5、MyCat读写分离",
+    "tags": [
+      "存储中间件",
+      "MySQL",
+      "主从复制与读写分离",
+      "技术集",
+      "MyCat"
+    ],
+    "date": "2024-10-13",
+    "summary": "读写分离,简单地说是把对数据库的读和写操作分开,以对应不同的数据库服务器。 主数据库提供写操作，从数据库提供读操作，这样能有效地减轻单台数据库的压力。 通过MyCat即可轻易实现上述功能，不仅可以支持MySQL，也可以支持Oracle和SQL Server。 img 1. 原理 MySQL的主从复制，是…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-dev-log-day07-day08",
+    "title": "项目开发日志 · Day07 ~ Day08",
+    "tags": [
+      "开发日志",
+      "开发笔记",
+      "学习记录"
+    ],
+    "date": "2024-10-12",
+    "summary": "任务 [x] 分库分表组件; 遇到的问题 问题就不说了，这一章节全是问题 T.T，基础不牢，地动山摇啊！！！ 总结 首先建立一个大局观，要实现一个分库分表组件，那么先要学会如何编写 SpringBoot Starter，然后这个 Starter 需要实现的功能是分库分表，那么一定是有多个数据源，这个数据…",
+    "category": "开发日志"
+  },
+  {
+    "slug": "archive-juc-xian-cheng-de-san-da-te-xing",
+    "title": "2、线程的三大特性",
+    "tags": [
+      "Java 并发"
+    ],
+    "date": "2024-10-11",
+    "summary": "一、原子性 1.1 什么是并发编程的原子性 JMM（Java Memory Model）。不同的硬件和不同的操作系统在内存上的操作有一定差异的。Java为了解决相同代码在不同操作系统上出现的各种问题，用JMM屏蔽掉各种硬件和操作系统带来的差异。 让Java的并发编程可以做到跨平台。 JMM规定所有变量都…",
+    "category": "Java 并发"
+  },
+  {
+    "slug": "archive-engineering-concurrency-20-da-pi-liang-ren-wu-chu-li-chang-jian-de-fang-an-mo-dd32263",
+    "title": "大批量任务处理常见的方案（模拟余额宝发放收益）",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-10-08",
+    "summary": "学完本文收获 以后遇到大批量任务处理的业务场景，基本都可以从容应对。 。 场景 假如余额宝每天发放收益的功能让咱们来实现，用户量有1个亿，每天早上9点之前需要将发放完毕，咱们会采用什么方案呢？ 下面我们会采用2种方法来实现，以后遇到同类问题的时候，大家可以作为参考。 先分析一下需求。 需求分析 1. 这…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-72-fen-ku-fen-biao-ru-he-ping-hua-qian-yi-shu-ju",
+    "title": "分库分表-如何平滑迁移数据？",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-10-05",
+    "summary": "非常实用的一节，内容有点多，先收藏点赞，慢慢看。 假如我们做了一个电商系统，刚开始只有一个订单表，后面由于业务量暴增，单表数据量太多遇到性能瓶颈，需要对订单表进行分表来缓解压力 比如1个表扩容成32张表，扩容中需要考虑一个非常关键的问题：数据迁移 主要有3种方案 1. 停机迁移数据 2. 不停机+操作日…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-15-jie-kou-tai-duo-ge-chong-dto-vobu-ji-qi-shu-ru-he-ming-ming",
+    "title": "解决DTO、VO泛滥，命名困难的问题",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-10-04",
+    "summary": "痛点 有些项目接口很多，而接口入参一般我们使用XxxDTO这种类型参数，返回值通常使用XxxVO这种类型，很多开发按照自己项目搞事情，时间久了，导致系统中充斥着大量的dto、vo命名的类，各种命名千奇百怪。 问题来了，然后我们再添加新的接口的时候，入参和返回值不知道如何命名了，大家有没有这种经历？ 如何…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-microservices-spring-cloud-alibaba-openfeign-openfeignshi-xian-fu-wu-diao-yong",
+    "title": "2、OpenFeign实现服务调用",
+    "tags": [
+      "微服务",
+      "Spring Cloud Alibaba",
+      "OpenFeign"
+    ],
+    "date": "2024-10-02",
+    "summary": "概述 Feign是一个声明式WebService客户端。使用Feign能让编写WebService客户端更加简单。 它的使用方法是定义一个服务接口然后在上面添加注解。Feign也支持可插拔式的编码和解码器。Spring Cloud对feign进行了封装，使其支持了Spring MVC标准注解和HttpM…",
+    "category": "微服务"
+  },
+  {
+    "slug": "archive-storage-mysql-replication-fen-ku-fen-biao",
+    "title": "5、分库分表",
+    "tags": [
+      "存储中间件",
+      "MySQL",
+      "主从复制与读写分离"
+    ],
+    "date": "2024-09-30",
+    "summary": "img 随着互联网及移动互联网的发展，应用系统的数据量也是成指数式增长，若采用单数据库进行数据存储，存在以下 性能瓶颈： 1. IO瓶颈：热点数据太多，数据库缓存不足，产生大量磁盘IO，效率较低。 请求数据太多，带宽不够，网络IO 瓶颈。 1. CPU瓶颈：排序、分组、连接查询、聚合统计等SQL会耗费大…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-engineering-concurrency-86-ideazhong-de-bi-bei-debugji-qiao-gao-shou-bi-bei",
+    "title": "第86节 idea中的必备debug技巧，高手必备",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-09-29",
+    "summary": "非常实用的一节，掌握后，debug定位问题的效率将大幅提升，先收藏点赞，慢慢看。 开发过程中，难免会遇到一些问题，通常我们会使用debug来帮我们排查问题，所以，如果debug玩的好，排查问题的效率将大幅提升。 本文将给大家分享几个特别实用的debug技巧，掌握后，排查问题效率大幅提升。 1. 条件断点…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-microservices-spring-cloud-4-hystrix",
+    "title": "4、Hystrix 微服务熔断降级监控",
+    "tags": [
+      "微服务",
+      "Spring Cloud"
+    ],
+    "date": "2024-09-28",
+    "summary": "Hystrix：服务熔断、服务降级与服务监控 分布式面临的问题 复杂分布式体系结构中的应用程序有数-十个依赖关系，每个依赖关系在某些时候将不可避免的失败! Hystrix是什么 在分布式环境中，许多服务依赖项中的一些必然会失败。Hystrix是一个库，通过添加延迟容忍和容错逻辑，帮助你控制这些分布式服务…",
+    "category": "微服务"
+  },
+  {
+    "slug": "archive-design-patterns-behavioral-18-guan-cha-zhe-mo-shi",
+    "title": "6、观察者模式",
+    "tags": [
+      "设计模式",
+      "行为型模式"
+    ],
+    "date": "2024-09-26",
+    "summary": "1、天气预报需求 具体要求如下： 1）气象站可以将每天测量到的温度，湿度，气压等等以公告的形式发布出去（比如发布到自己的网站或第三方）; 2）需要设计开放型 API，便于其他第三方也能接入气象站获取数据; 3）提供温度、气压和湿度的接口; 4）测量数据更新时，要能实时的通知给第三方; image-202…",
+    "category": "设计模式"
+  },
+  {
+    "slug": "archive-projects-spring-boot-starter-methodext",
+    "title": "4、自定义拦截方法中间件设计",
+    "tags": [
+      "项目实践",
+      "Spring Boot Starter",
+      "SDK"
+    ],
+    "date": "2024-09-25",
+    "summary": "一、需求背景 在服务治理层面，我们通常会想到熔断、降级、限流、切量等各类操作，因此也把这些功能集成到统一的中间件中供业务系统使用。 但有些时候每个业务系统因需求的多样性，可能还会有一些额外的场景需要被治理，如果这个时候中间件原有的功能就不能满足了，不得已每一个业务系统又单独开发相应的功能，最终导致的情况…",
+    "category": "项目实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-07-shi-yong-transactiontemplateyou-hua-jie-kou-xing-neng",
+    "title": "接口性能调优之大事务优化",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-09-24",
+    "summary": "本文内容非常硬核，请大伙打起精神，坚持看完。 接口性能不是谁都会优化的，如果面试的时候，能够说出优化接口的一些方案，会让面试官对你刮目相看。 ```java Transactional public void bigTransaction() throws InterruptedException {…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-23-springbootzhong-shu-ju-tuo-min-you-ya-she-ji-yu-shi-xian",
+    "title": "SpringBoot中数据脱敏优雅设计与实现",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-09-20",
+    "summary": "本文内容 本文主要介绍 SpringBoot 中数据脱敏优雅的设计与实现，坚持看完，相信你会有所收获。 先带大家看下效果 接口代码 ```java RestController public class TestController { @GetMapping(\"/getUser\") public Re…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-17-jie-kou-bao-cuo-ru-he-kuai-su-ding-wei-ri-zhi",
+    "title": "接口报错，如何快速定位日志？",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-09-17",
+    "summary": "要解决的问题？ 接口报错，如何快速定位问题？这个需要日志的辅助，一般错误日志中有详细的堆栈信息，具体是哪行代码报错，都可以看到。 要想快速定位问题，前提是要能够快速定位日志。 海量日志，如何定位呢？ 日志量一般都是很大的，如何能够从大量日志中找到自己需要的日志呢？ 解决方案 1、服务端入口处可以生成一个…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-storage-mysql-replication-ji-zhu-ji-sharding-jdbc-jian-jie",
+    "title": "1、Sharding-JDBC简介",
+    "tags": [
+      "存储中间件",
+      "MySQL",
+      "主从复制与读写分离",
+      "技术集",
+      "Sharding-JDBC"
+    ],
+    "date": "2024-09-16",
+    "summary": "Sharding-JDBC是当当网研发的开源分布式数据库中间件，从 3.0 开始Sharding-JDBC被包含在 Sharding- Sphere中，之后该项目进入进入Apache孵化器，4.0版本之后的版本为Apache版本。 ShardingSphere是一套开源的分布式数据库中间件解决方案组成的…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-design-patterns-structural-8-zhuang-shi-zhe-mo-shi",
+    "title": "3、装饰者模式",
+    "tags": [
+      "设计模式",
+      "结构型模式"
+    ],
+    "date": "2024-09-15",
+    "summary": "1、星巴克咖啡订单项目 星巴克咖啡订单项目（咖啡馆）： 1）咖啡种类/单品咖啡：Espresso（意大利浓咖）、ShortBlack、LongBlack（美式咖啡）、Decaf（无因咖啡）; 2）调料：Mik、Soy（豆浆）、Chocolate; 3）要求在扩展新的咖啡种类时，具有良好的扩展性、改动方便…",
+    "category": "设计模式"
+  },
+  {
+    "slug": "archive-deployment-01-jdkbu-shu",
+    "title": "1、jdk部署",
+    "tags": [
+      "部署运维"
+    ],
+    "date": "2024-09-14",
+    "summary": "JDK环境 用yum命令安装，这种办法简单粗暴，就像盖伦丢技能一样。废话不多说，直接开始操作。 1.首先执行以下命令查看可安装的jdk版本： ```bash yum -y list java* ``` 执行成功后可看到如下界面： image-20240924174837500 选择你要的版本 ```ba…",
+    "category": "部署运维"
+  },
+  {
+    "slug": "archive-storage-mycat-04-mycatying-yong-yu-shi-zhan-jiao-cheng",
+    "title": "Mycat应用与实战教程（4）",
+    "tags": [
+      "存储中间件",
+      "mycat"
+    ],
+    "date": "2024-09-13",
+    "summary": "5.3 Docker搭建MySQL主从复制集群 (双主双从) 5.3.1 双主双从架构介绍 虽然一主一从或一主多从集群解决了并发读的问题，但由于主节点只有一台，如果主节点宕机了，则数据库的写操作便无法完成，从而无法做到高可用。 因此，接下来我们来完成Mysql双主双从的集群搭建，双主双从的原理很简单，相…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-java-duo-xian-cheng",
+    "title": "1、程序、进程、线程",
+    "tags": [
+      "Java",
+      "知识积累",
+      "勇往直前"
+    ],
+    "date": "2024-09-12",
+    "summary": "多线程 程序、进程、线程的理解 1. 程序(programm) 概念：是为完成特定任务、用某种语言编写的一组指令的集合。即指一段静态的代码。 2. 进程(process) 1. 概念：程序的一次执行过程，或是正在运行的一个程序。 2. 说明：进程作为资源分配的单位，系统在运行时会为每个进程分配不同的内存…",
+    "category": "Java"
+  },
+  {
+    "slug": "archive-engineering-concurrency-62-fang-fa-zhi-xing-yi-chang-shi-yong-arthas-kuai-su-d8f0a69",
+    "title": "方法执行异常，使用arthas，快速定位问题",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-09-11",
+    "summary": "当生产上某个方法的执行结果和我们期望的结果不一致时，咱们怎么办？ 修改代码，添加一些日志，在日志中输出方法的入参和返参; 然后发布上线，拿到入参、返参; 在本地进行重现，定位问题; 可以使用阿里的arthas工具，在不调整代码的情况下，拿到任意一个方法的入参、返参值，帮助我们更快的定位问题。 artha…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-dev-log-day06",
+    "title": "项目开发日志 · Day06",
+    "tags": [
+      "开发日志",
+      "开发笔记",
+      "学习记录"
+    ],
+    "date": "2024-09-10",
+    "summary": "任务 [x] ID 生成策略开发; 学习过程 1. 先看视频了解用到了啥 2. 看小傅哥策略模式的文章 (https://mp.weixin.qq.com/s/zOFLtSFVrYEyTuihzwgKYw) 3. 看代码结构 1. 定义一个接口，用来生成 id 2. 实现接口，实现不同的 id 生成算法…",
+    "category": "开发日志"
+  },
+  {
+    "slug": "archive-engineering-concurrency-82-springbootxia-zai-wen-jian-de-ji-chong-fang-shi-yi-952fad0",
+    "title": "第82节 SpringBoot下载文件的几种方式，一次性搞懂",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-09-08",
+    "summary": "文件下载，常用的一个功能，比较简单 但是有可能会遇到一些问题 1. 文件太大，若写法上有问题，可能会导致内存溢出 2. 文件中文名称乱码问题 本文将给大家展示SpringBoot中下载文件常见的几种方式，顺便解决这些问题。 2.1、方式1：HttpServletResponse.write 代码如下，直…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-design-patterns-creational-05-jian-zao-zhe-mo-shi",
+    "title": "5、建造者模式",
+    "tags": [
+      "设计模式",
+      "创建型模式"
+    ],
+    "date": "2024-09-06",
+    "summary": "1、盖房项目需求 1）需要建房子：这一过程为打桩、砌墙、封顶; 2）房子有各种各样的，比如普通房，高楼，别墅，各种房子的过程虽然一样，但是要求不要相同的; 3）请编写程序，完成需求; 传统方式 image-20211016135817291 ```java public abstract class A…",
+    "category": "设计模式"
+  },
+  {
+    "slug": "archive-engineering-troubleshooting-cpubiao-sheng-ru-he-kuai-su-pai-cha",
+    "title": "CPU飙升，如何快速排查？",
+    "tags": [
+      "工程实践",
+      "生产问题定位",
+      "场景相关内容"
+    ],
+    "date": "2024-09-05",
+    "summary": "1、问题代码 ``` public class CpuLoadTest { public static void main(String[] args) { System.out.println(\"程序已启动\"); while (true) { } } } ``` 执行上面这段代码，会导致cpu飙升 `…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-java-javachang-yong-de-lei-ji-he",
+    "title": "2、Java常用类、集合",
+    "tags": [
+      "Java",
+      "知识积累",
+      "勇往直前"
+    ],
+    "date": "2024-09-04",
+    "summary": "一、Java常用类 String类 java.lang.String类的使用 1. 概述 String:字符串，使用一对\"\"引起来表示。 1. String声明为final的，不可被继承 2. String实现了Serializable接口：表示字符串是支持序列化的。 实现了Comparable接口：表…",
+    "category": "Java"
+  },
+  {
+    "slug": "archive-microservices-spring-cloud-alibaba-sentinel-sentinelshi-yong-he-yuan-ma-fen-xi",
+    "title": "3、Sentinel使用和源码分析",
+    "tags": [
+      "微服务",
+      "Spring Cloud Alibaba",
+      "sentinel"
+    ],
+    "date": "2024-09-01",
+    "summary": "1、服务雪崩效应 在分布式系统中,由于网络原因或自身的原因,服务一般无法保证 100% 可用。如果一个服务出现了问题，调用这个服务就会出现线程阻塞的情况，此时若有大量的请求涌入，就会出现多条线程阻塞等待，进而导致服务瘫痪。 由于服务与服务之间的依赖性，故障会传播，会对整个微服务系统造成灾难性的严重后果…",
+    "category": "微服务"
+  },
+  {
+    "slug": "archive-docker-ru-he-jiang-jing-xiang-tui-song-dao-a-li-yun-rong-qi-5a0888d",
+    "title": "如何将镜像推送到阿里云容器镜像服务",
+    "tags": [
+      "Docker"
+    ],
+    "date": "2024-08-31",
+    "summary": "前言 (https://note.moguit.cn/#/./Docker/如何将镜像推送到阿里云容器镜像服务/README?id=前言) 原来我都是将镜像推送到Dockerhub中的，因为Dockerhub是国外的软件，所以经常会各种超时的问题，这阵子研究了一下阿里云容器镜像服务，发现可以把一些常用的…",
+    "category": "Docker"
+  },
+  {
+    "slug": "archive-engineering-concurrency-31-shou-xie-yi-ge-hao-yong-de-yan-chi-ren-wu-chu-li-gong-ju-lei",
+    "title": "手写一个好用的延迟任务处理工具类",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-08-30",
+    "summary": "本文主要内容 带大家手写一个好用的延迟任务处理工具类，也是为下一节做铺垫，下一节MQ延迟消息会用到本章节的内容。 什么是延迟队列？ 延迟队列是一种特殊的队列，它允许将消息或任务延迟一段时间后再进行处理。延迟队列基于优先级队列实现，每个元素都有一个指定的延迟时间，在到达延迟时间之前，元素无法从延迟队列中获…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-spring-boot-01-iphuo-qu",
+    "title": "1、SpringBoot获取用户ip",
+    "tags": [
+      "Spring Boot",
+      "知识积累",
+      "SpringBoot"
+    ],
+    "date": "2024-08-29",
+    "summary": "http请求 对于controller的请求，我们只需要写个拦截器，将用户的ip设置进上下文即可，非常方便。 ```java @Override public boolean preHandle(HttpServletRequest request, HttpServletResponse respon…",
+    "category": "Spring Boot"
+  },
+  {
+    "slug": "archive-engineering-concurrency-26-threadlocalyu-dao-xian-cheng-chi-you-da-keng",
+    "title": "ThreadLocal 遇到线程池有大坑 & 通用解决方案",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-08-27",
+    "summary": "本文内容 演示 ThreadLocal 遇到线程池出现的故障; 演示 InheritableThreadLocal 遇到线程池出现的故障; 通过自定义线程池解决这些问题，也是通用的一个方案，大家一定要掌握; 涉及到的技术 ThreadLocal：当前线程数据共享的一个工具类，java中自带的; Inhe…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-37-fen-bu-shi-shi-wu-mqzui-zhong-yi-zhi-xing-dian-shang-8ef163f",
+    "title": "使用MQ最终一致性实现：电商平台账户余额提现到微信钱包",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-08-25",
+    "summary": "场景 假如咱们做个电商系统，商户可以在上面卖东西，卖东西会产生交易，交易产生的收入在平台账户的余额中，这就涉及到商户提现的操作 需支持：商户将平台上账户余额提现到微信钱包，这个功能如果交给我们，该如何实现？ 本文将大家搞定这个问题，这个场景算是分布式事务中比较有代表性的一个案例，大家大概率会遇到类似的场…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-19-tong-guo-aoptong-yi-da-yin-qing-qiu-lian-lu-ri-zhi-2c1ff9c",
+    "title": "通过AOP统一打印请求链路日志，排错效率飞升",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-08-23",
+    "summary": "看过本文并实施之后，解决问题的效率将大幅提升。 思考一个问题：当一个接口报错的时候，如何能够快速定位问题？ 如果能够满足下面这些条件，咱们就可以快速定位错误 1. 能够快速找到接口的详细调用日志 2. 日志中最好知道出错的是哪个接口的哪个方法，即哪个controller的哪个方法 3. 日志中最好有接口…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-dev-log-day05",
+    "title": "项目开发日志 · Day05",
+    "tags": [
+      "开发日志",
+      "开发笔记",
+      "学习记录"
+    ],
+    "date": "2024-08-22",
+    "summary": "任务 [x] 活动领域的配置与状态; 学习过程 1. 包结构变化，调整对应的包 2. 了解活动创建的整个流程，然后将流程进行编排(其实就是落库的步骤呗)，写对应的 repository 层代码 1. 首先明确要做哪些操作 1. 添加活动 2. 添加奖品 3. 添加活动配置 4. 添加策略 5. 添加策略…",
+    "category": "开发日志"
+  },
+  {
+    "slug": "archive-engineering-concurrency-89-mybatismo-hu-cha-xun-qian-mo-bu-yao-zai-yong-liao-56c4ca8",
+    "title": "第89节 MyBatis模糊查询，千万不要再用${}了，容易搞出大事故",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-08-21",
+    "summary": "我们这边有个博客表，如下，3个字段，目前有5条数据，用户1的数据有2条 id：主键; user_id：作者id; title：博客标题; image-20240910100248466 假如，我们要给前端提供一个接口，根据title模糊检索当前用户博客列表，这个需求怎么实现？ 算是一个非常简单的需求吧…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-27-springbootdu-xie-fen-chi-shi-zhan",
+    "title": "SpringBoot读写分离实战",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-08-19",
+    "summary": "本文内容 通过一个注解搞定读写分离; 支持查询强制路由到主库; 涉及到的技术 SpringBoot 2.7.13; MyBatis; 多数据源路由; AOP环绕通知; 背景 大多数系统都是读多写少，为了降低数据库的压力，可以对主库创建多个从库，从库自动从主库同步数据，程序中将写的操作发送到主库，将读的操…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-storage-mysql-replication-du-xie-fen-chi",
+    "title": "6、读写分离",
+    "tags": [
+      "存储中间件",
+      "MySQL",
+      "主从复制与读写分离"
+    ],
+    "date": "2024-08-18",
+    "summary": "面对日益增加的系统访问量，数据库的吞吐量面临着巨大瓶颈。 对于同一时刻有大量并发读操作和较少写操作类型的应用系统来说，将数据库拆分为主库和从库， 主库负责处理事务性的增删改操作，从库负责处理查询操作，能够有效的避免由数据更新导致的行锁， 使得整个系统的查询性能得到极大的改善。 img 通过读写分离,就可…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-messaging-rocketmq-1-rocketmqbi-ji",
+    "title": "1、RocketMQ学习笔记",
+    "tags": [
+      "消息队列",
+      "RocketMQ"
+    ],
+    "date": "2024-08-17",
+    "summary": "为什么要使用消息队列？ 解耦 传统模式的缺点： 系统间耦合性太强，如上图所示，系统A在代码中直接调用系统B和系统C的代码，如果将来D系统接入，系统A还需要修改代码，过于麻烦！ !img (imgs/9f21ae0bd21649cf89fa2307782b504d-17283972963666.png)…",
+    "category": "消息队列"
+  },
+  {
+    "slug": "archive-deployment-04-rocketmqbu-shu",
+    "title": "4、RocketMQ部署",
+    "tags": [
+      "部署运维"
+    ],
+    "date": "2024-08-16",
+    "summary": "参考：链接 (https://blog.csdn.net/oschina41731918/article/details/123115102),帐号密码 (https://www.cnblogs.com/binz/p/15252277.html)，官方文档 (https://github.com/apa…",
+    "category": "部署运维"
+  },
+  {
+    "slug": "archive-engineering-concurrency-28-mqzhuan-ti-mqdian-xing-de-shi-yong-chang-jing",
+    "title": "MQ常见的使用场景",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-08-15",
+    "summary": "前言 本文开始，正式进入MQ专题，大概六七节，会将我工作中真实的设计和代码分享给大家（代码包含：事务消息、延迟消息、顺序消息通用代码，幂等消费的通用代码，消费失败衰减式自动重试的代码） MQ相关的教程有很多，但是我希望你能够花点时间把我这个看完，会得到一些不一样的东西，可以用在面试中和工作中，会让面试官…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-67-springbootzhong-jie-kou-qian-ming-tong-yong-fang-an-fddc183",
+    "title": "SpringBoot中，接口签名，通用方案，一次性搞懂",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-08-14",
+    "summary": "1. 接口为什么要签名？ 2. 如何签名？ 3. 什么是请求重放？ 4. 如何避免请求重放？ 5. 接口签名使用场景 6. SpringBoot实现接口签名实战 假如咱们开发了一个转账接口，如下，用于从一个账户转账到另外一个账户 ```java RequestMapping(\"/account/tran…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-spring-boot-07-zheng-he-logbackri-zhi",
+    "title": "7、Spring Boot 整合 logback 日志",
+    "tags": [
+      "Spring Boot",
+      "知识积累",
+      "SpringBoot"
+    ],
+    "date": "2024-08-10",
+    "summary": "xml配置 springboot自带logback的依赖，不需要导入任何包。我们只需要在项目路径下创建文件logback.xml ```xml ${CONSOLELOGPATTERN} ${LOGPATH}/${LOGFILE}.log true ${CONSOLELOGPATTERN} ${LOGPA…",
+    "category": "Spring Boot"
+  },
+  {
+    "slug": "archive-engineering-concurrency-91-ideaduo-xian-cheng-diao-shi-zhe-ge-ji-qiao-ye-tai-0eddafa",
+    "title": "第91节 idea多线程调试，非常实用的一个技巧，太好用了",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-08-09",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-85-completablefuture-shi-xian-yi-bu-ren-wu-bian-pai-tai-94d3df0",
+    "title": "第85节 CompletableFuture 实现异步任务编排，太好用了",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-08-08",
+    "summary": "后端需要给前端提供一个接口：根据商品id查询商品详情的接口，里面需要包含： step1：商品基本信息; step2：商品折扣信息; step3：商品描述信息; 这3个信息都需要调用不同的接口获取 step2需要依赖step1; step3和step1、step2之间没有依赖关系; 关系图如下，我们可以使…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-24-yi-xing-dai-ma-gao-ding-cao-zuo-ri-zhi",
+    "title": "一行代码搞定系统操作日志",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-08-07",
+    "summary": "本文内容 通过aop统一记录系统操作日志，只需在接口方法上加个自定义的注解，不论接口成功还是失败，都可自动记录操作日志到db中。 操作日志包含的信息有 日志描述; 状态，0：异常，1：正常; 请求参数json格式; 响应结果json格式; 错误信息(状态=0时，记录异常堆栈信息); 接口耗时（毫秒）;…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-design-patterns-behavioral-17-zhong-jie-zhe-mo-shi",
+    "title": "5、中介者模式",
+    "tags": [
+      "设计模式",
+      "行为型模式"
+    ],
+    "date": "2024-08-05",
+    "summary": "1、智能家庭管理问题 智能家庭项目： 1）智能家庭包括各种设备，闹钟、咖啡机、电视机、窗帘等; 2）主人要看电视时，各个设备可以协同工作，自动完成看电视的准备工作，比如流程为：; 闹铃响起 => 咖啡机开始做咖啡 => 窗帘自动落下 => 电视机开始播放 image-20220110214230289…",
+    "category": "设计模式"
+  },
+  {
+    "slug": "archive-deployment-07-dockerhuan-jing-bu-shu",
+    "title": "7、Docker环境部署",
+    "tags": [
+      "部署运维"
+    ],
+    "date": "2024-08-02",
+    "summary": "下载docker 根据提示输入y。 ```bash #yum install docker（这个下载的是老版本，不要用视频的这个，用下面的） yum-config-manager --add-rep https://mirrors.aliyun.com/docker-ce/linux/centos/do…",
+    "category": "部署运维"
+  },
+  {
+    "slug": "archive-projects-wxpay-wxpay",
+    "title": "5、微信支付SDK对接",
+    "tags": [
+      "项目实践",
+      "wxPay",
+      "Pay"
+    ],
+    "date": "2024-07-30",
+    "summary": "一、对接微信支付 蓝兔支付官网API接口分析，包括；扫码支付、H5支付、公众号支付、小程序支付、订单退款、查询订单、支付通知等功能。; 通过 okhttp3、retrofit2 框架，对接官网 http api 接口。框架的能力可以让支付对接更加标准、清晰，易扩展。; 不同的支付方式会有自己的签名字段…",
+    "category": "项目实践"
+  },
+  {
+    "slug": "archive-storage-redis-4-redisgao-bing-fa-gao-ke-yong-zhu-cong-fu-zhi-shao-bing",
+    "title": "5、Redis主从复制、哨兵",
+    "tags": [
+      "存储中间件",
+      "Redis"
+    ],
+    "date": "2024-07-29",
+    "summary": "复制 在分布式系统中为了解决单点问题，通常会把数据复制多个副本部署到其他机器，满足故障恢复和负载均衡等需求。Redis也是如此，它为我们提供了复制功能，实现了相同数据的多个Redis 副本。复制功能是高可用Redis的基础，后面章节的哨兵和集群都是在复制的基础上实现高可用的。 默认情况下，Redis都是…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-design-patterns-structural-10-wai-guan-mo-shi",
+    "title": "5、外观模式",
+    "tags": [
+      "设计模式",
+      "结构型模式"
+    ],
+    "date": "2024-07-28",
+    "summary": "1、影院管理项目 组建一个家庭影院： DVD 播放器、投影仪、自动屏幕、环绕立体声、爆米花机，要求完成使用家庭影院的功能，其过程为： 直接用遥控器：统筹各设备开关; 开爆米花机; 放下屏幕; 开投影仪; 开音响; 开DVD，选dvd; 去拿爆米花; 调暗灯光; 播放; 观影结束后，关闭各种设备; 传统方…",
+    "category": "设计模式"
+  },
+  {
+    "slug": "archive-projects-alipay-alipay",
+    "title": "4、支付宝沙箱支付",
+    "tags": [
+      "项目实践",
+      "aliPay",
+      "支付"
+    ],
+    "date": "2024-07-26",
+    "summary": "一、场景说明 以最简单的方式完成对接支付验证。再以商品下单模型，最终完成对支付宝沙箱的对接使用。 img 包括；商城、出行、外卖等场景，凡是对接支付，都会先创建一条订单。在基于订单的唯一ID创建支付单。这是因为调用的支付都是外部的接口提供，没法和自己流程做一个统一的事务。那么这里就需要考虑最终一致性问题…",
+    "category": "项目实践"
+  },
+  {
+    "slug": "archive-storage-mysql-3-ri-zhi-pai-cha-fen-xi",
+    "title": "3、事务、日志排查分析",
+    "tags": [
+      "存储中间件",
+      "MySQL"
+    ],
+    "date": "2024-07-25",
+    "summary": "1.1 日志分类 在任何一种数据库中，都会有各种各样的日志，记录着数据库工作的方方面面，以帮助数据库管理员追踪数据库曾经发生过的各种事件。MySQL有多种类型的日志，用于记录数据库的操作和状态。以下是一些常见的MySQL日志： 1、错误日志（Error Log）：记录MySQL服务器在启动、运行过程中发…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-docker-dockertu-xing-hua-gong-ju-portainerjie-shao-yu-an-zhuang",
+    "title": "Docker图形化工具Portainer介绍与安装",
+    "tags": [
+      "Docker"
+    ],
+    "date": "2024-07-24",
+    "summary": "介绍 (https://note.moguit.cn/#/./Docker/Docker图形化工具Portainer介绍与安装/README?id=介绍) Portainer 是一款轻量级的图形化管理工具，通过它我们可以轻松管理不同的 Docker 环境。Portainer 部署和使用都非常简单，它提供…",
+    "category": "Docker"
+  },
+  {
+    "slug": "archive-engineering-concurrency-75-dian-shang-zhong-zhong-fu-zhi-fu-ru-he-jie-jue",
+    "title": "第75节 电商中，重复支付如何解决？",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-07-21",
+    "summary": "本篇是一个场景题，工作中也可能会遇到，先收藏点赞，慢慢看。 同一笔订单，用户付了两次款，且两次都成功了 美团外面APP，可以重现这个问题，流程如下： 1. 准备2部手机，手机1、手机2 2. 2部手机登录同一个美团账号 3. 手机1：随便找一个店铺，下一笔订单，将订单提交，先别支付，此时订单待支付 4.…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-xian-cheng-threadlocalxian-cheng-shi-yong",
+    "title": "本文主要内容",
+    "tags": [
+      "工程实践"
+    ],
+    "date": "2024-07-19",
+    "summary": "ThreadLocal、InheritableThreadLocal.TransmittableThreadLocal 3个非常常用的工具类 1.ThreadLocal:在当前线程中共享数据的，JUC 中提供的; 2.InheritableThreadLocal:也是JUC中的一个工具类，解决 Thre…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-deployment-05-miniobu-shu",
+    "title": "5、Minio部署",
+    "tags": [
+      "部署运维"
+    ],
+    "date": "2024-07-18",
+    "summary": "学习参考文档https://java.isture.com/arch/minio/minio-concept.html 比较完整https://blog.csdn.net/weixin_39060009/article/details/115520696 创建挂载目录 ```bash #创建挂载目录 m…",
+    "category": "部署运维"
+  },
+  {
+    "slug": "archive-storage-redis-4-redisgao-bing-fa-gao-ke-yong-ji-qun",
+    "title": "6、Redis集群",
+    "tags": [
+      "存储中间件",
+      "Redis"
+    ],
+    "date": "2024-07-17",
+    "summary": "Redis集群 Redis Cluster是Redis的分布式解决方案，在3.0版本正式推出，有效地解决了Redis分布式方面的需求。当遇到单机内存、并发、流量等瓶颈时，可以采用Cluster架构方案达到负载均衡的目的。之前,Redis分布式方案一般有两种: 1、客户端分区方案，优点是分区逻辑可控，缺点…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-spring-boot-03-zheng-he-mybatisplus",
+    "title": "3、Spring Boot 整合 MyBatisPlus",
+    "tags": [
+      "Spring Boot",
+      "知识积累",
+      "SpringBoot"
+    ],
+    "date": "2024-07-16",
+    "summary": "1、引入依赖 ```java com.baomidou mybatis-plus-boot-starter 3.1.1 ``` 2、引入配置 ```java mybatis-plus: # xml地址 mapper-locations: classpath:mapper/*/.xml configura…",
+    "category": "Spring Boot"
+  },
+  {
+    "slug": "archive-projects-openaisdk-openaisdk",
+    "title": "1、OpenAI SDK组件设计",
+    "tags": [
+      "项目实践",
+      "openaiSDK",
+      "SDK"
+    ],
+    "date": "2024-07-14",
+    "summary": "这个开源项目是 《OpenAI SDK》 统一大模型标准化对接的技术组件项目，此项目以解决实际市面上的场景为诉求，将 OpenAI、Claude、PalM、文心一言、通义千问、讯飞星火、智谱 ChatGLM、腾讯混元等这些大模型做一个统一的 SDK 对接组件。 img 一、项目介绍 这样的项目往往工程结…",
+    "category": "项目实践"
+  },
+  {
+    "slug": "archive-deployment-linuxchang-yong-ming-ling",
+    "title": "linux常用命令",
+    "tags": [
+      "部署运维"
+    ],
+    "date": "2024-07-13",
+    "summary": "1、查找运行端口的进程：sudo ss -tulnp | grep 8080 image-20241228095417714 2、杀死进程pid：kill 9 8267 image-20241228095442641",
+    "category": "部署运维"
+  },
+  {
+    "slug": "archive-engineering-concurrency-76-qian-mo-ji-shu-ju-quan-biao-updatede-zheng-que-zi-shi",
+    "title": "第76节 千万级数据，全表update的正确姿势",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-07-11",
+    "summary": "千万数据全表更新，可能会导致严重的生产事故，本文将带大家分析下，千万级数据更新存在的问题，以及如何解决。 先收藏点赞，慢慢看。 1）创建测试表 ```sql create table t_demo ( id bigint auto_increment PRIMARY key, c1 bigint );…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-design-patterns-behavioral-23-zhi-ze-lian-mo-shi",
+    "title": "11、职责链模式",
+    "tags": [
+      "设计模式",
+      "行为型模式"
+    ],
+    "date": "2024-07-10",
+    "summary": "1、OA系统的采购审批项目 学校 OA 系统的采购审批项目，需求是 1）采购员采购教学器材; 2）如果金额小于等于 5000，由教学主任审批（0 < x ≤ 5000）; 3）如果金额小于等于 10000，由院长审批（5000 < x ≤ 10000）; 4）如果金额小于等于 30000，由副校长审批（…",
+    "category": "设计模式"
+  },
+  {
+    "slug": "archive-deployment-09-an-zhuang-chang-yong-po-jie-ruan-jian",
+    "title": "9、安装常用破解软件",
+    "tags": [
+      "部署运维"
+    ],
+    "date": "2024-07-09",
+    "summary": "破解idea ``` https://pan.quark.cn/s/5218add2f71f 提取码：fPDj http://www.javatiku.cn/idea/4443.html ``` 一元机场 ``` https://jxfast.akkfast.com/user ``` navicat破解…",
+    "category": "部署运维"
+  },
+  {
+    "slug": "archive-engineering-concurrency-47-mybatisplus-qing-song-shi-xian-duo-zu-hu-shu-ju-ge-chi",
+    "title": "MyBatisPlus 轻松实现多租户数据隔离",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-07-07",
+    "summary": "使用MybatisPlus实现多租户数据隔离。 比如我们开发了一个 WEB 版的 CRM 系统，部署在网上，任何公司都可以使用，那么这个系统就相当于一个多租户系统，每个公司相当于一个租户，系统中每个租户的数据是需要隔离的。 1. 每个租户一个数据库 2. 所有租户共用同一个数据库，通过租户id隔离，也就…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-51-springbootzi-dong-chu-shi-hua-shu-ju-ku-gong-neng-eaed3b0",
+    "title": "SpringBoot中自动初始化数据库功能，太好用了",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-07-04",
+    "summary": "大部分系统都会用到数据库，这就涉及系统发布前数据库初始化的一些操作。 通常的做法是： 1. 提申请让dba去执行数据库脚本 2. 数据库脚本执行完成后，由运维发布应用 比如我们把数据库的初始化脚本写在程序中某个文件中，系统启动的时候去自动执行这个文件，是不是会方便很多？ SpringBoot已经帮我们提…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-16-fu-za-ye-wu-ru-he-chuan-can",
+    "title": "复杂业务，传参的痛点",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-07-03",
+    "summary": "从一段代码开始 ```java package com.itsoku.lesson016; public class XxxService { /** 这个方法是对外暴露的接口; * @param request; */ public void execute(M1Request request) {…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-93-jin-rong-xi-tong-qian-mo-bu-yao-yong-double-qing-99c452b",
+    "title": "第93节 涉及到钱的，千万不要用double，请用BigDecimal",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-07-01",
+    "summary": "```java Test public void m1() { double a = 4.015, b = 100.00; System.out.println(a * b); // 期望结果：401.5 double c = 123.30, d = 100.00; System.out.println…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-29-mqzhuan-ti-ru-he-bao-zheng-xiao-xi-de-ke-kao-xing",
+    "title": "MQ专题-如何确保消息的可靠性",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-06-30",
+    "summary": "视频可能有点长，请大家认证看完，本文对于工作或面试，都是非常有用的一节。 消息的使用过程 image-20240428175659655 整个过程中消息可靠性需要考虑3个问题 1. 如何确保生产者这边业务执行成功，消息一定会投递到MQ？ 2. 如何确保消息到达MQ后，MQ这边不会丢失？ 3. 如何确保消…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-storage-redis-2-redisgao-ji-te-xing-he-ying-yong-fa-bu-ding-yue-stream",
+    "title": "2、Redis高级特性和应用(发布 订阅、Stream)",
+    "tags": [
+      "存储中间件",
+      "Redis"
+    ],
+    "date": "2024-06-29",
+    "summary": "发布和订阅 Redis提供了基于“发布/订阅”模式的消息机制，此种模式下，消息发布者和订阅者不进行直接通信,发布者客户端向指定的频道( channel)发布消息，订阅该频道的每个客户端都可以收到该消息。 image.png 操作命令 Redis主要提供了发布消息、订阅频道、取消订阅以及按照模式订阅和取消…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-storage-redis-6-redisshe-ji-shi-xian",
+    "title": "8、Redis设计、实现",
+    "tags": [
+      "存储中间件",
+      "Redis"
+    ],
+    "date": "2024-06-28",
+    "summary": "数据结构和内部编码 type命令实际返回的就是当前键的数据结构类型，它们分别是：string(字符串)hash(哈希)、list(列表)、set(集合)、zset (有序集合)，但这些只是Redis对外的数据结构。 实际上每种数据结构都有自己底层的内部编码实现，而且是多种实现，这样Redis会在合适的场…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-spring-boot-05-xiang-mu-shi-xian-jsonzi-duan",
+    "title": "5、项目实现json字段",
+    "tags": [
+      "Spring Boot",
+      "知识积累",
+      "SpringBoot"
+    ],
+    "date": "2024-06-27",
+    "summary": "参考http://www.dedeyun.com/it/java/93532.html 有些很复杂的信息，我们一般会用扩展字段传一个json串，字段一般用text类型存在数据库。mysql5.7以后支持json类型的字段，还可以进行sql查询与修改json内的某个字段的能力。 1.表结构 ```java…",
+    "category": "Spring Boot"
+  },
+  {
+    "slug": "archive-projects-spring-boot-starter-hystrix",
+    "title": "3、Hystrix 实现超时熔断保护",
+    "tags": [
+      "项目实践",
+      "Spring Boot Starter",
+      "SDK"
+    ],
+    "date": "2024-06-26",
+    "summary": "一、需求背景 如果说你正在开发一个交易或支付系统中的核心服务，可能有这样一个场景，用户在电商平台下单后开始跳转到在线收银台进行支付。由于支付渠道和网络环境随时都有可能发生问题，那么你该怎么保证支付系统的可靠性呢？ 保证支付系统的可靠性需要考虑的点非常多，但这里有一个最直接和重点的内容就支付响应时长，如果…",
+    "category": "项目实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-25-shi-yong-aopjian-hua-mybatisfen-ye-gong-neng",
+    "title": "使用AOP简化MyBatis分页功能",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-06-24",
+    "summary": "本文内容 PageHelper实现MyBatis分页; 使用AOP简化MyBatis分页; 涉及到的技术 SpringBoot 2.7.13; MyBatis; PageHelper：一个很好用的 MyBatis 分页工具; AOP环绕通知; 案例1：PageHelper实现Mybatis分页 Page…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-66-springbootzhong-redisru-he-shi-xian-cha-zhao-fu-jin-7e8f769",
+    "title": "SpringBoot中，Redis如何实现查找附近的人功能？",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-06-23",
+    "summary": "UserLocationController.http ```java com.itsoku.lesson066.controller.UserLocationController ``` image-20240719184649529 附近的人是使用Redis中的Geo（Geospatial）数据结构…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-dev-log-day04",
+    "title": "项目开发日志 · Day04",
+    "tags": [
+      "开发日志",
+      "开发笔记",
+      "学习记录"
+    ],
+    "date": "2024-06-22",
+    "summary": "任务 [x] 简单工厂搭建发奖领域; 学习过程 1. 表结构变了，先导入 SQL，然后该对应的 PO 类，然后改一下 Mapper 文件 2. 先把包结构建好 1. 新建一个领域包，负责发奖 2. 领域包内建三个子包，model 实体封装包、repository 提供仓储服务、service 提供具体的…",
+    "category": "开发日志"
+  },
+  {
+    "slug": "archive-storage-mysql-replication-ji-zhu-ji-mycat-2-ru-men",
+    "title": "2、MyCat 入门",
+    "tags": [
+      "存储中间件",
+      "MySQL",
+      "主从复制与读写分离",
+      "技术集",
+      "MyCat"
+    ],
+    "date": "2024-06-18",
+    "summary": "由于 tborder 表中数据量很大，磁盘IO及容量都到达了瓶颈，现在需要对 tborder 表进行数据分片，分为三个 数据节点，每一个节点主机位于不同的服务器上, 具体的结构，参考下图 !img (imgs/1724653044133-bb2d432a-fbc6-4dcb-b579-56b4c7e22…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-engineering-concurrency-97-xian-shang-wen-ti-pai-cha-si-lu",
+    "title": "线上问题排查思路",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-06-17",
+    "summary": "精准描述：准确捕捉问题的具体表现，如：接口超时、接口响应慢、服务不可用等; 影响界定：清晰界定问题影响的范围，包括受影响的用户群体、具体功能模块或服务，以及问题的紧急程度; 时间线梳理：详细记录问题发生的时间点、持续时间；是否是周期性的问题，还是偶发性的问题; 环境快照：全面收集环境信息，如：服务器配置…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-74-shi-yong-redis-pipeline-jie-kou-xing-neng-ti-sheng-10bei",
+    "title": "第74节 使用Redis Pipeline，接口性能提升10倍",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-06-15",
+    "summary": "本文是接口性能优化一个非常好的一个方案，好好掌握，先收藏点赞，慢慢看。 假如我们有 N 个命令，需要让redis去执行 常见的做法，如下图，先发送第1个命令给redis，拿到响应后，再发送下一个命令，来来回回，需和redis交互N次 image-20240818223251982 如果有1000个命令…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-design-patterns-behavioral-16-jie-shi-qi-mo-shi",
+    "title": "4、解释器模式",
+    "tags": [
+      "设计模式",
+      "行为型模式"
+    ],
+    "date": "2024-06-14",
+    "summary": "1、四则运算问题 通过解释器模式来实现四则运算，如计算a + b - c的值，具体要求 1）先输入表达式的形式，比如a + b + c - d + e，要求表达式的字母不能重复; 2）在分别输入a, b, c, d, e的值; 3）最后求出结果：如图; image-20220115215331808 传…",
+    "category": "设计模式"
+  },
+  {
+    "slug": "archive-engineering-concurrency-53-fen-xiang-yi-ge-te-hao-yong-de-ji-he-gong-ju-lei",
+    "title": "分享一个特好用的集合工具类，开发效率轻松翻倍",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-06-12",
+    "summary": "集合是咱们日常开发中最常用到的一个功能，如果有一个特别好用的集合工具类，那么咱们的开发效率将大幅提升。 这里给大家分享一个我日常工作中经常会用到的一个集合工具类，基本涵盖了集合常见的各种操作 建议大家抽时间把这个工具类过一遍，用起来，开发效率将轻松翻倍。 ```java com.itsoku.lesso…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-spring-boot-02-zheng-he-redis-yi-ji-xiang-guan-gong-ju-lei",
+    "title": "2、Spring Boot整合Redis",
+    "tags": [
+      "Spring Boot",
+      "知识积累",
+      "SpringBoot"
+    ],
+    "date": "2024-06-09",
+    "summary": "整合redis springboot在现在的版本中操作Redis数据库用到了lettuce，而不是Jedis，他们各有各的特点。; Jedis以Redis命令作为方法名称，学习成本低，简单实用。但是Jedis实例是线程不安全的，多线程环境下需要基于连接池来使用。; Lettuce是基于Netty实现的…",
+    "category": "Spring Boot"
+  },
+  {
+    "slug": "archive-engineering-concurrency-58-jie-kou-xiang-ying-man-shi-yong-arthas-3miao-ding-13b00c2",
+    "title": "接口响应慢，使用Arthas，3秒定位问题代码",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-06-08",
+    "summary": "arthas：阿里开源的一款Java问题诊断利器，详情见：https://arthas.aliyun.com/doc/quick-start.html 2.1、案例代码 ```java package com.itsoku.lesson058; import lombok.extern.slf4j.Sl…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-troubleshooting-si-suo-ru-he-ding-wei-jie-jue",
+    "title": "死锁，如何定位解决？",
+    "tags": [
+      "工程实践",
+      "生产问题定位",
+      "场景相关内容"
+    ],
+    "date": "2024-06-06",
+    "summary": "1、什么是线程死锁? 两个或多个线程在执行过程中，因争夺共享资源而被阻塞，且无法继续执行下去的一种状态。 2、示例 比如下面这个案例，定义了两个线程:thread1和thread2 thread1对resource1上锁，然后尝试获取resource2的锁;; thread2对resource2上锁，然…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-storage-redis-5-redishuan-cun-shi-yong-wen-ti-ji-hu-lian-wang-yun-yong",
+    "title": "7、Redis缓存使用问题及互联网运用",
+    "tags": [
+      "存储中间件",
+      "Redis"
+    ],
+    "date": "2024-06-05",
+    "summary": "Redis缓存使用问题 数据一致性 只要使用到缓存，无论是本地内存做缓存还是使用 redis 做缓存，那么就会存在数据同步的问题。 我以 Tomcat 向 MySQL 中写入和删改数据为例，来给你解释一下，数据的增删改操作具体是如何进行的。 image.png 我们分析一下几种解决方案， 1、先更新缓存…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-dev-log-day03",
+    "title": "项目开发日志 · Day03",
+    "tags": [
+      "开发日志",
+      "开发笔记",
+      "学习记录"
+    ],
+    "date": "2024-06-04",
+    "summary": "day03 任务 [x] 模板模式处理抽奖流程; 学习过程 1. 因为之前没学过设计模式，先学一学模板模式，用到一种学一种，哈哈哈 2. 先看一下整个抽奖流程 ![抽奖过程][step] 3. 了解了抽奖流程之后就开始写代码 1. 先写对应的 dao 层 1. 要查策略吧？写个策略的 Mapper 2.…",
+    "category": "开发日志"
+  },
+  {
+    "slug": "archive-engineering-concurrency-52-springbootyou-ya-ting-ji",
+    "title": "SpringBoot 优雅停机",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-06-02",
+    "summary": "Spring优雅停机，通俗点说就是如何优雅的停止SpringBoot应用， 优雅停机，应满足下面3点： 1. SpringBoot应用不再接收新的请求 2. SpringBoot应用将已经进来的请求处理完成 3. 然后关闭SpringBoot应用 注意：这里说的停机，并不是停止我们的机器，而是停止我们的…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-56-cpubiao-sheng-ru-he-kuai-su-pai-cha",
+    "title": "cpu飙升，如何快速排查？",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-06-01",
+    "summary": "```java public class CpuLoadTest { public static void main(String[] args) { System.out.println(\"程序已启动\"); while (true){ ; } } } ``` 执行上面这段代码，会导致cpu飙升 ```…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-troubleshooting-fang-fa-zhi-xing-yi-chang-shi-yong-arthas-kuai-su-ding-246e346",
+    "title": "方法执行异常、如何定位入参数？",
+    "tags": [
+      "工程实践",
+      "生产问题定位",
+      "场景相关内容"
+    ],
+    "date": "2024-05-31",
+    "summary": "先来看一个问题 当生产上某个方法的执行结果和我们期望的结果不一致时，咱们怎么办? 常见的做法 修改代码，添加一些日志，在日志中输出方法的入参和返参; 然后发布上线，拿到入参、返参; 在本地进行重现，定位问题; arthas watch命令 watch命令可以用来观察某个方法的调用情况，具体点说，可以用来…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-docker-dockerfilebu-shu-dao-yun-fu-wu-qi",
+    "title": "Dockerfile部署到云服务器",
+    "tags": [
+      "工程实践",
+      "Docker"
+    ],
+    "date": "2024-05-30",
+    "summary": "一、本章诉求 完成一下应用服务的镜像打包和部署操作。因为这个时候代码的开发量还不多，也不需要在部署的时候考虑如：MySQL、Redis 以及各个配置文件的操作。但又可以支撑我们验证服务。所以先来完成下这块的内容。 二、流程设计 整个流程为；在工程中添加 Dockerfile 配置文件，对工程进行镜像打包…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-05-semaphoreshi-xian-jie-kou-xian-liu-shi-zhan",
+    "title": "05.Semaphore实现接口限流实战",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-05-28",
+    "summary": "这个限流案例，大家直接看对应的视频，所有内容都在视频中。",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-microservices-spring-cloud-alibaba-nacos-naocszhu-ce-zhong-xin",
+    "title": "1、Nacos注册中心",
+    "tags": [
+      "微服务",
+      "Spring Cloud Alibaba",
+      "nacos"
+    ],
+    "date": "2024-05-27",
+    "summary": "SpringCloud Alibaba简介 SpringCloud Alibaba诞生的主要原因是：因为Spring Cloud Netflix项目进入了维护模式 维护模式 将模块置为维护模式，意味着SpringCloud团队将不再向模块添加新功能，我们将恢复block级别的bug以及安全问题，我们也会…",
+    "category": "微服务"
+  },
+  {
+    "slug": "archive-storage-mysql-replication-ji-zhu-ji-mycat-pei-zhi",
+    "title": "4、配置",
+    "tags": [
+      "存储中间件",
+      "MySQL",
+      "主从复制与读写分离",
+      "技术集",
+      "MyCat"
+    ],
+    "date": "2024-05-26",
+    "summary": "schema.xml 作为MyCat中最重要的配置文件之一 , 涵盖了MyCat的逻辑库 、 逻辑表 、 分片规则、分片节点及 数据源的配置。 img 主要包含以下三组标签： schema标签; datanode标签; datahost标签; 1. schema标签 1.1. schema 定义逻辑库…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-engineering-concurrency-39-fen-bu-shi-suo-xiang-jie",
+    "title": "分布式锁详解",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-05-24",
+    "summary": "什么是分布式锁？; 使用场景; 分布式锁的一些特性; 分布式锁需要考虑的一些问题; 分布式锁常见的 3 种实现方案; 分布式锁100%可靠么？; java中的synchronized、ReentrantLock大家都有用过吧，可以确保在单个jvm中，多线程访问共享资源安全性，当多个线程访问共享资源的时候…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-design-patterns-behavioral-19-fang-wen-zhe-mo-shi",
+    "title": "7、访问者模式",
+    "tags": [
+      "设计模式",
+      "行为型模式"
+    ],
+    "date": "2024-05-23",
+    "summary": "1、测评系统 **完成测评系统需求 1）将人、观众分为男人和女人，对歌手进行测评，当看完某个歌手表演后，得到他们对该歌手不同的评价（评价有不同的种类，比如成功、失败等）; 2）传统方案; image-20211220200401952 传统方式的问题分析 1）如果系统比较小，还是 ok 的，但是考虑系统…",
+    "category": "设计模式"
+  },
+  {
+    "slug": "archive-engineering-concurrency-01-fen-pian-shang-chuan",
+    "title": "分片上传",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-05-19",
+    "summary": "什么是普通上传 调用接口一次性完成一个文件的上传。 普通上传2个缺点 1. 文件无法续传，比如上传了一个比较大的文件，中间突然断掉了，需要重来 2. 大文件上传太慢 解决方案 分片上传 什么是分片上传 将源文件切分成很多分片，进行上传，待所有分片上传完毕之后，将所有分片合并，便可得到源文件。 这里面的分…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-99-ru-he-you-ya-chu-li-xian-cheng-chi-nei-yi-chang",
+    "title": "如何优雅的处理，线程池内异常？",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-05-18",
+    "summary": "```java package com.itsoku.lesson099; import org.junit.jupiter.api.Test; import org.slf4j.Logger; import org.slf4j.LoggerFactory; import java.util.concu…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-46-mybatisjin-jie-feng-zhuang-mybatis-shi-xian-tong-71498c1",
+    "title": "封装MyBatis，实现通用无SQL版CRUD功能ORM框架",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-05-16",
+    "summary": "对Mybatis进行封装，实现一个通用的无 SQL 版的 CRUD 功能 ORM 框架。 MyBatis-plus 大家应该都比较熟悉吧，本文实现的功能，类似与Mybatis-plus功能，实现的原理非常的简单，这样方便大家扩展。 不需要写一行sql，便可实现对数据库的 增、删、改、查、分页、统计、乐观…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-32-mqzhuan-ti-mqyan-chi-xiao-xi-tong-yong-fang-an-shi-zhan",
+    "title": "MQ延迟消息通用方案实战",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-05-12",
+    "summary": "本文主要内容 本文将带大家手写一个MQ延迟消息的通用方案。 本文的方案不依赖于MQ中间件，依靠MySQL和DelayQueue解决，不管大家用的是什么MQ，具体是RocketMQ、RabbitMQ还是kafka，本文这个方案你都可以拿去直接使用，可以轻松实现任意时间的延迟消息投递。 本文涉及到的技术点…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-design-patterns-creational-03-gong-han-mo-shi-jin-jie",
+    "title": "3、抽象工厂模式",
+    "tags": [
+      "设计模式",
+      "创建型模式"
+    ],
+    "date": "2024-05-11",
+    "summary": "1、工厂方法模式和抽象工厂模式的区别 这里为什么只介绍工厂方法模式和抽象工厂模式的区别？为什么不把简单工厂模式、静态工厂模式也放在一起比较呢？ 首先，静态工厂模式也是简单工厂模式的一种，仅仅是方法被定义成静态方法与否以及使用时是否直接通过类调用方法的区别; 其次，简单工厂模式过于简单，相对比较容易理解…",
+    "category": "设计模式"
+  },
+  {
+    "slug": "archive-microservices-spring-cloud-2-fu-zai-jun-heng-ji-ribbon",
+    "title": "2、负载均衡及Ribbon",
+    "tags": [
+      "微服务",
+      "Spring Cloud"
+    ],
+    "date": "2024-05-10",
+    "summary": "Ribbon：负载均衡及Ribbon 什么是Ribbon Spring Cloud Ribbon是基于Netflix Ribbon实现的一套==客户端负载均衡==的工具。 简单的说，Ribbon是Netflix发布的开源项目 ,主要功能是提供客户端的软件负载均衡算法，将NetFlix的中间层服务连接在一…",
+    "category": "微服务"
+  },
+  {
+    "slug": "archive-engineering-concurrency-18-threadlocal-inheritablethreadlocal-transmittablethreadlocal",
+    "title": "ThreadLocal、InheritableThreadLocal、TransmittableThreadLocal",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-05-09",
+    "summary": "3个非常常用的工具类，很多地方和框架中都会用到，必须要掌握。 可能很多人并不知道他们怎么用，有什么区别，本文将通过5个案例代码，带大家搞定他们。 本文主要内容 1. ThreadLocal：在当前线程中共享数据的，JUC 中提供的 2. InheritableThreadLocal：也是JUC中的一个工…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-83-ding-dan-chao-shi-zi-dong-qu-xiao-zui-chang-jian-de-fang-an",
+    "title": "第83节 订单超时自动取消，最常见的方案",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-05-08",
+    "summary": "订单下单后，15分钟未支付，自动取消，如何解决？ 本文给大家介绍 2种 最常见的方案。 实现方式 伪代码 ```java while(true){ //查询出超时未支付的订单，可以一次性查出100条，然后对其进行取消 List orderList = select * from torder where…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-87-javadong-tai-sheng-cheng-word-tai-qiang-da-liao",
+    "title": "第87节 Java动态生成word，太强大了",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-05-07",
+    "summary": "image-20240908155244545 官网：https://deepoove.com/poi-tl poi-tl（poi template language）是Word模板引擎，使用模板和数据创建很棒的Word文档。 可以生成任何动态的word，官网上有详细的使用教程，我们一起来看下。",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-design-patterns-structural-12-dai-li-mo-shi",
+    "title": "7、代理模式",
+    "tags": [
+      "设计模式",
+      "结构型模式"
+    ],
+    "date": "2024-05-06",
+    "summary": "1、代理模式的基本介绍 1）代理模式：为一个对象提供一个替身，以控制对这个对象的访问。即通过代理对象访问目标对象; 2）这样做的好处是：可以在目标对象实现的基础上，增强额外的功能操作，即扩展目标对象的功能; 3）被代理的对象可以是远程对象、创建开销大的对象或需要安全控制的对象; 4）代理模式有不同的形式…",
+    "category": "设计模式"
+  },
+  {
+    "slug": "archive-engineering-concurrency-79-wei-fu-wu-kua-ku-cha-xun-ru-he-jie-jue",
+    "title": "第79节 微服务跨库查询，如何解决？一次性搞懂",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-05-05",
+    "summary": "非常实用的一节，有点长，先收藏点赞，慢慢看。 大家都比较熟悉微服务，通常每个服务都有自己单独的数据库。 1.1、电商系统 假如我们有个电商系统，里面有2个核心的服务 用户服务和订单服务; 用户服务对应用户库; 订单服务对应订单库; 2个服务之间通过接口进行交互，比如要获取对方db中数据，也只能通过接口进…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-design-patterns-creational-04-yuan-xing-mo-shi",
+    "title": "4、原型模式",
+    "tags": [
+      "设计模式",
+      "创建型模式"
+    ],
+    "date": "2024-05-03",
+    "summary": "1、克隆羊问题 现在有一只羊，姓名为 Tom，年龄为 1，颜色为白色，请编写程序创建和 Tom 羊属性完全相同的 10 只羊 传统方法 image-20211015215334929 ```java public class Sheep { private String name; private In…",
+    "category": "设计模式"
+  },
+  {
+    "slug": "archive-design-patterns-structural-6-gua-pei-qi-mo-shi",
+    "title": "1、适配器模式",
+    "tags": [
+      "设计模式",
+      "结构型模式"
+    ],
+    "date": "2024-05-02",
+    "summary": "泰国旅游使用插座问题 现实生活中的适配器例子 泰国插座用的是两孔的（欧标），可以买个多功能转换插头（适配器），这样就可以使用了 image-20211018194134795 基本介绍 1）适配器模式（Adapter Pattern）将某个类的接口转换成客户端期望的另一个接口表示，主的目的是兼容性，让原…",
+    "category": "设计模式"
+  },
+  {
+    "slug": "archive-engineering-concurrency-34-mqzhuan-ti-shun-xu-xiao-xi-tong-yong-fang-an-shi-b11ead6",
+    "title": "MQ顺序消息通用方案 & 代码落地",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-04-30",
+    "summary": "什么是顺序消息 投递消息的顺序和消费消息的顺序一致。 比如生产者按顺序投递了1/2/3/4/5 这 5 条消息，那么消费的时候也必须按照1到5的顺序消费这些消息。 顺序消息如何实现？（2种方案） 1. 方案1：生产者串行发送+同一个队列+消费者单线程消费 2. 方案2：生产方消息带上连续递增编号+同一个…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-dev-log-day02",
+    "title": "项目开发日志 · Day02",
+    "tags": [
+      "开发日志",
+      "开发笔记",
+      "学习记录"
+    ],
+    "date": "2024-04-29",
+    "summary": "任务 [x] 表设计; [x] 抽奖领域模块开发; 学习过程 1. 查询分库分表相关知识点，了解到垂直和水平分库分表，主要是为了解决数据量过大导致 MySQL 查询慢、单体容量过大问题 2. 开始写代码 1. 编写基础的持久化对象 (PO) 2. 编写 Mapper 接口 3. 编写对应的 Mapper…",
+    "category": "开发日志"
+  },
+  {
+    "slug": "archive-projects-spring-boot-starter-ratelimiter",
+    "title": "1、限流开发组件",
+    "tags": [
+      "项目实践",
+      "Spring Boot Starter",
+      "SDK"
+    ],
+    "date": "2024-04-28",
+    "summary": "一、需求背景 通常我们可以知道一个系统服务在正常的业务增速下的流量大小，基本也是基于这个流量大小的几倍来扩容服务和系统压测验证的。如果后续有相应的业务推广或者活动，一般都会提前报备，再由研发侧做相应的扩容。 但如果我们的系统服务已经基本稳定在一个可承载的安全体量范围，对于突发或者恶意攻击的访问都需要拦截…",
+    "category": "项目实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-61-mysqlshi-xian-yi-ge-fen-bu-shi-idsheng-cheng-qi",
+    "title": "使用MySQL，实现一个高性能，分布式id生成器",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-04-27",
+    "summary": "```java com.itsoku.lesson061.Lesson061ApplicationTest ``` 基于数据库号段模式，可以理解为从数据库批量的获取自增id，每次从数据库取出一个号段范围，例如 [1,100] 代表100个Id，然后将这100个id加载到内存，以供调用方慢慢使用，等这批i…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-java-ioliu",
+    "title": "4、Java IO流",
+    "tags": [
+      "Java",
+      "知识积累",
+      "勇往直前"
+    ],
+    "date": "2024-04-26",
+    "summary": "IO流 File类的使用 1. File类的理解 1. File类的一个对象，代表一个文件或一个文件目录(俗称：文件夹) 2. File类声明在java.io包下 3. File类中涉及到关于文件或文件目录的创建、删除、重命名、修改时间、文件大小等方法，并未涉及到写入或读取文件内容的操作。如果需要读取或…",
+    "category": "Java"
+  },
+  {
+    "slug": "archive-engineering-docker-jenkinsbu-shu",
+    "title": "Jenkins部署",
+    "tags": [
+      "工程实践",
+      "Docker"
+    ],
+    "date": "2024-04-23",
+    "summary": "一、操作说明 Jenkins 环境的安装，以及以最简单的方式配置使用 Jenkins 完成对案例项目的部署。部署后可以访问 jenkins (opens new window) (https://gitee.com/guo-said/jenkins.git)项目提供的接口进行功能验证。整个部署操作流程如…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-observability-elk",
+    "title": "ELK",
+    "tags": [
+      "可观测性"
+    ],
+    "date": "2024-04-22",
+    "summary": "一、简要说明 Elastic Stack 技术栈，别是 Elasticsearch、`Logstash、Kibana` 组成，简称 ELK 是一套针对日志数据做解决方案的框架。它使您能够聚合来自所有系统和应用程序的日志，分析这些日志，并创建可视化来进行应用程序和基础设施监控、更快的故障排除、安全分析等…",
+    "category": "可观测性"
+  },
+  {
+    "slug": "archive-engineering-concurrency-73-bing-fa-bian-cheng-you-duo-nan-zhi-de-fan-fu-yan-jiu-6c97546",
+    "title": "案例代码",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-04-21",
+    "summary": "#并发编程有多难？值得反复研究的一个案例 本节一定要认真看，相信各位会受到很多启发，先收藏点赞，慢慢看。 image-20240814112446055 2个线程，按照下面的顺序下单，都下单20个，会出现超卖 thread1 thread2 | -----------------------------…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-49-umlhua-tu-shen-qi-plantuml-hua-tu-xiao-lu-fei-sheng",
+    "title": "UML画图神器：PlantUML，画图效率飞升",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-04-20",
+    "summary": "https://plantuml.com/ 个人微信：itsoku #",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-02-duo-xian-cheng-ren-wu-pi-chu-li-tong-yong-gong-ju-lei",
+    "title": "多线程任务批处理通用工具类",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-04-19",
+    "summary": "需求 使用线程池批量发送短信，当短信发送完毕之后，方法继续向下走。 技术点 线程池：ExecutorService; CountDownLatch：可以让一个或者多个线程等待一批任务执行完毕之后，继续向下走; 新手版代码实现 ```java com.itsoku.SimpleBatchTask ```…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-frontend-vue2-3-wang-luo-qing-qiu",
+    "title": "3、网络请求",
+    "tags": [
+      "前端",
+      "Vue2"
+    ],
+    "date": "2024-04-17",
+    "summary": "一、网络请求 目前可以发送网络请求的方式： 1. xhr（基于XMLHttpRequest） 存在的问题：配置调用混乱；编码方式复杂；实际开发中经常被JQuery-Ajax代替 2. JQuery-Ajax 存在的问题：Vue开发中不需要调用jQuery这个重量级框架（1w＋行） 3. vue-reso…",
+    "category": "前端"
+  },
+  {
+    "slug": "archive-microservices-spring-cloud-1-eurekafu-wu-zhu-ce-yu-fa-xian",
+    "title": "1、Eureka服务注册与发现",
+    "tags": [
+      "微服务",
+      "Spring Cloud"
+    ],
+    "date": "2024-04-16",
+    "summary": "前言 微服务架构的几个核心问题 1. 服务很多，客户端该怎么访问？ 2. 这么多服务之间怎么进行通信 3. 这么多服务怎么治理 4. 如果其中一个服务挂了怎么办 解决方案： springcloud并不是一个技术框架，而是一个生态 技术选型 1. springcloud Netflix 一站式解决方案，现…",
+    "category": "微服务"
+  },
+  {
+    "slug": "archive-storage-es-es",
+    "title": "1. 了解搜索技术",
+    "tags": [
+      "存储中间件",
+      "es"
+    ],
+    "date": "2024-04-14",
+    "summary": "1.1. 什么是搜索 什么是搜索， 计算机根据用户输入的关键词进行匹配，从已有的数据库中摘录出相关的记录反馈给用户。 1563166927432 线性匹配： select * from item where title like ’%小米%‘ 1.2. 新业务需求 比如，用户在百度文本框中输入，“吃饭睡…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-storage-minio-miniobi-ji",
+    "title": "MinIo课件",
+    "tags": [
+      "存储中间件",
+      "MinIO"
+    ],
+    "date": "2024-04-12",
+    "summary": "MinIO是全球领先的对象存储先锋，目前在全世界有数百万的用户。 高性能 ，在标准硬件上，读/写速度上高达183GB/秒和171GB/秒，拥有更高的吞吐量和更低的延迟; 可扩展性 ，为对象存储带来了简单的缩放模型，通过添加更多集群可以扩展空间; 简单 ，极简主义是MinIO的指导性设计原则，即可在几分钟…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-engineering-concurrency-14-jie-kou-tong-yong-fan-hui-zhi-she-ji-yu-shi-xian",
+    "title": "接口通用返回值设计与实现",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-04-09",
+    "summary": "前言 目前大部分系统都是前后端分离，后端提供接口，返回json数据，前端拿到数据进行处理。 后端接口返回值，可以采用固定的格式，这样前后端配合起来会更顺畅一些，也会节约很多时间。 这节课代码在 lesson013 模块中。 后端接口返回值通用格式 代码如下，通常会有4个字段 ```java public…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-messaging-rocketmq-2-rocketmqda-jian",
+    "title": "2、RocketMQ搭建",
+    "tags": [
+      "消息队列",
+      "RocketMQ"
+    ],
+    "date": "2024-04-08",
+    "summary": "单机的安装与启动 准备工作 硬件 准备一台linux，我用的vm虚拟机centos，输入ifconfig获得ens33的ip为inet 192.168.146.128 在C:\\Windows\\System32\\drivers\\etc\\修改host文件，将ip指向我自定义命名的centos域名 环境 1.…",
+    "category": "消息队列"
+  },
+  {
+    "slug": "archive-design-patterns-creational-02-gong-han-mo-shi",
+    "title": "2、工厂模式",
+    "tags": [
+      "设计模式",
+      "创建型模式"
+    ],
+    "date": "2024-04-07",
+    "summary": "看一个具体的需求 看一个披萨的项目：要便于披萨种类的扩展，要便于维护 1）披萨的种类很多（比如 GreekPizz、CheesePizz 等）; 2）披萨的制作有 prepare、bake、cut、box; 3）完成披萨店订购功能; 传统方式 UML 类图 image-20211013212910916…",
+    "category": "设计模式"
+  },
+  {
+    "slug": "archive-juc-zu-sai-dui-lie",
+    "title": "4、阻塞队列",
+    "tags": [
+      "Java 并发"
+    ],
+    "date": "2024-04-05",
+    "summary": "一、基础概念 1.1 生产者消费者概念 生产者消费者是设计模式的一种。让生产者和消费者基于一个容器来解决强耦合问题。 生产者 消费者彼此之间不会直接通讯的，而是通过一个容器（队列）进行通讯。 所以生产者生产完数据后扔到容器中，不通用等待消费者来处理。 消费者不需要去找生产者要数据，直接从容器中获取即可…",
+    "category": "Java 并发"
+  },
+  {
+    "slug": "archive-engineering-concurrency-70-fen-ku-fen-biao-fen-biao-zi-duan-ru-he-xuan-ze",
+    "title": "分库分表：分表字段如何选择？",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-04-02",
+    "summary": "非常实用的一节，内容有点多，先收藏点赞，慢慢看。 分库分表中有一个非常关键的问题，分表字段如何选择？ 本文以电商中的订单表为例，来分析下分表字段如何选择 看完之后，面对分库分表的场景，基本上可以轻松应对 1. 买家如何查询自己的订单列表？ 2. 买家如何查询某个订单明细？ 3. 卖家如何查询订单列表？…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-design-patterns-behavioral-13-mo-ban-fang-fa-mo-shi",
+    "title": "1、模版方法模式",
+    "tags": [
+      "设计模式",
+      "行为型模式"
+    ],
+    "date": "2024-04-01",
+    "summary": "1、豆浆制作问题 编写制作豆浆的程序，说明如下： 1）制作豆浆的流程选材 ----> 添加配料 ----> 浸泡 ----> 放到豆浆机打碎; 2）通过添加不同的配料，可以制作出不同口味的豆浆; 3）选材、浸泡和放到豆浆机打碎这几个步骤对于制作每种口味的豆浆都是一样的; 4）请使用模板方法模式完成; 说…",
+    "category": "设计模式"
+  },
+  {
+    "slug": "archive-engineering-concurrency-78-jie-kou-diao-yong-li-qi-resttemplate-chi-tou-ta",
+    "title": "第78节 接口调用利器：RestTemplate，吃透它",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-03-30",
+    "summary": "发送http请求，估计很多人用过 httpclient 和 okhttp，确实挺好用的 而 Spring 中的 RestTemplate 和这俩的功能类似，也是用来发送http请求的，不过用法上面比前面的2位要容易很多 本文给大家上 17 个案例，基本上涵盖了RestTemplate所有的用法。 ima…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-42-wei-fu-wu-zhong-ru-he-chuan-di-gong-gong-can-shu",
+    "title": "微服务中如何传递公共参数？",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-03-29",
+    "summary": "1、本文内容 本文是微服务中大概率会用到的一个知识点，非常实用，请大家用心看完。 2、背景 先来看下微服务调用的流程图：https://www.processon.com/view/link/665457cd50771c4b1ea0905b?cid=6654521d659699314de163c5 3…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-95-mysqlshu-ju-ru-he-tong-bu-dao-es",
+    "title": "第95节 MySQL数据如何同步到ES？靠谱方案",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-03-28",
+    "summary": "本文以博客系统为例，来介绍下，如何将mysql中的博客数据同步到ElasticSearch。 大概流程如下，主要有2个步骤。 image-20240912170026783 step1：投递mq消息 博客发生增删改（insert、update、delete）操作的时候，投递一条MQ消息，消息体如下，只需…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-08-shi-xian-yi-ge-tong-yong-de-exceldao-chu-gong-neng-shi-zhan",
+    "title": "SpringBoot中实现一个通用Excel导出功能",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-03-27",
+    "summary": "这个导出功能的特色 非常通用，能够满足大部分项目中99%的导出功能，代码复用性很强; 导出的列可以由前端自定义（比如哪些列需要导出、列的顺序、名称等都是可以由前端自定义）; 看效果 先带大家看一下效果。 启动com.itsoku.lesson007.Lesson008Application，启动好之后…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-71-fen-ku-fen-biao-fen-biao-shu-liang-wei-shi-yao-jian-8f48383",
+    "title": "分表数量为什么建议是2的n次方？",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-03-26",
+    "summary": "相信很多朋友听说过，分表的时候，建议将表的数量设置为2的n次方 比如：2、4、8、16、32、64、128，扩容时也是按照2的n次方进行扩容 大家有想过为什么要这么做么？ 1. 定位表的速度更快 2. 扩容时，数据迁移成本更低 通常我们会采用取模算法，来进行分表，当表的数量是2的n次方的时候，取模运算…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-80-luo-ji-shan-chu-yu-wei-yi-yue-shu-chong-tu-ru-he-jie-jue",
+    "title": "第80节 逻辑删除与唯一约束冲突，如何解决？",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-03-25",
+    "summary": "假如系统中有个用户表(t_user)，产品要求用户信息，需要满足下面几个条件 1. 用户名必须唯一 2. 用户数据不要物理删除，需要留痕，删除的时候可以对这条记录打个删除标记，标记这条记录被删除了 这个表应该如何设计呢？ 先来看此表的第一个版本 2.1、表结构 字段 说明 | --------- ---…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-juc-xian-cheng-chi",
+    "title": "5、线程池分析",
+    "tags": [
+      "Java 并发"
+    ],
+    "date": "2024-03-23",
+    "summary": "一、什么是线程池 为什么要使用线程池 在开发中，为了提升效率的操作，我们需要将一些业务采用多线程的方式去执行。 比如有一个比较大的任务，可以将任务分成几块，分别交给几个线程去执行，最终做一个汇总就可以了。 比如做业务操作时，需要发送短信或者是发送邮件，这种操作也可以基于异步的方式完成，这种异步的方式，其…",
+    "category": "Java 并发"
+  },
+  {
+    "slug": "archive-design-patterns-behavioral-15-die-dai-qi-mo-shi",
+    "title": "3、迭代器模式",
+    "tags": [
+      "设计模式",
+      "行为型模式"
+    ],
+    "date": "2024-03-22",
+    "summary": "1、学校院系结构展示需求 编写程序展示一个学校院系结构，要在一个页面中展示出学校的院系组成，一个学校有多个学院，一个学院有多个系。如图： image-20211221210654924 传统方案分析 1）将学院看做是学校的子类，系是学院的子类，这样实际上是站在组织大小来进行分层次的; 2）实际上我们的要…",
+    "category": "设计模式"
+  },
+  {
+    "slug": "archive-engineering-concurrency-38-fen-bu-shi-shi-wu-tong-yong-de-tccfen-bu-shi-shi-wu-782746a",
+    "title": "手写一个通用的TCC分布式事务框架",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-03-20",
+    "summary": "本文内容 1. TCC 相关概念 2. 自研 TCC 框架设计思路 3. 自研 TCC 框架，代码已落地，大家可以直接拿去用 4. 演示效果（演示跨库转账3个场景） 5. 源码解析 6. 小结 1. 什么是TCC？ 先了解分布式事务中的2个角色 TM：事务管理器，可以理解为分布式事务的发起者; 分支事务…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-98-jing-dian-bing-fa-an-li-fen-xi-que-shi-you-dian-nan-a6938c1",
+    "title": "经典并发案例分析，确实有点难，一起来挑战下",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-03-18",
+    "summary": "本文如果你能看懂，说明你解决并发问题的能力已经相当高了，先收藏点赞，慢慢看。 如下图，我们有个视频网站，视频下方允许用户发表评论，用户还可以对别人的评论进行回复。 image-20240914200710601 评论表如下(t_comment)，比较简单 字段 描述 | ----------------…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-40-fen-xiang-yi-ge-te-bie-hao-yong-redisfen-bu-shi-suo-4988501",
+    "title": "分享一个特别好用的Redis分布式锁工具类",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-03-17",
+    "summary": "本文主要内容 分享一个特别好用redis分布式锁工具类，使用Redisson实现的，对其进行了封装，用起来特别优雅，方便。 核心代码 ```java com.itsoku.lesson040.lock.DistributeLock com.itsoku.lesson040.lock.RedisDistr…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-77-you-ya-shi-xian-shu-xing-cai-dan-gua-yong-yu-suo-you-bad94bb",
+    "title": "第77节 优雅实现树形菜单，适用于所有树，太好用了",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-03-14",
+    "summary": "树形菜单，经常会用到，通常后端需要给前端提供接口，返回树形json数据，前端将其渲染成树结构。 hutool中给我们提供了一个通用的树工具类：TreeUtil，里面提供了很多好的用法，比如用来构建树的方法，非常好用。 2、先带大家看下效果 启动SpringBoot应用com.itsoku.lesson0…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-04-jie-jue-chao-mai-de-4chong-fang-an-tai-meng-liao",
+    "title": "解决超卖的4种方案",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-03-13",
+    "summary": "本文内容 了解超卖本质解决方案，也是并发修改数据的本质解决方案; 掌握4种方案解决超卖问题（原理、源码、测试用例）; 每个方案都有测试用例，会模拟并发秒杀，带大家看效果; 学完后，完全可以解决工作中所有并发修改数据出错的问题，太硬核了吧。。。; 避免超卖，避免并发修改数据出错，有银弹吗？ 本质上是需要加…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-juc-jin-cheng-yu-xian-cheng-xiang-guan-fen-xi",
+    "title": "1、进程与线程相关分析",
+    "tags": [
+      "Java 并发"
+    ],
+    "date": "2024-03-12",
+    "summary": "一、基础概念 1.1 进程与线程A 什么是进程？ 进程是指运行中的程序。 比如我们使用钉钉，浏览器，需要启动这个程序，操作系统会给这个程序分配一定的资源（占用内存资源）。 什么线程？ 线程是CPU调度的基本单位，每个线程执行的都是某一个进程的代码的某个片段。 举个栗子：房子与人 比如现在有一个100平的…",
+    "category": "Java 并发"
+  },
+  {
+    "slug": "archive-spring-boot-04-zheng-he-swagger-yi-ji-knife4jyou-hua-jie-mian",
+    "title": "4、整合swagger，以及Knife4j优化界面",
+    "tags": [
+      "Spring Boot",
+      "知识积累",
+      "SpringBoot"
+    ],
+    "date": "2024-03-11",
+    "summary": "因为是前后端项目，需要前端的参与，所以一个好看的接口文档非常的重要 1、引入依赖 美化插件其中自带swagger的依赖了 ```jsx com.github.xiaoymin knife4j-spring-boot-starter 2.0.9 ``` 2、添加配置类 ```jsx package com…",
+    "category": "Spring Boot"
+  },
+  {
+    "slug": "archive-engineering-concurrency-22-mysqlhe-redisshu-ju-yi-zhi-xing",
+    "title": "MySql和Redis数据一致性",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-03-09",
+    "summary": "背景 假如我们有个电商系统，为了提升商品详情页访问速度，我们使用redis来缓存商品信息，提升效率。 获取商品信息，先从redis中获取，如果没有，则从db中获取后丢到redis，然后返回。 而后台又可以修改商品的信息，这时如何确保redis和缓存数据一致呢？ 即：如何确保通过商品详情接口返回的数据和d…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-design-patterns-structural-7-qiao-jie-mo-shi",
+    "title": "2、桥接模式",
+    "tags": [
+      "设计模式",
+      "结构型模式"
+    ],
+    "date": "2024-03-08",
+    "summary": "1、传统方式解决手机操作问题 现在对不同手机类型的不同品牌实现操作编程（比如：开机、关机、上网，打电话等），如图： image-20211020192526079 UML 类图 image-20211020192702004 问题分析 1. 扩展性问题（类爆炸）：如果我们再增加手机的样式（旋转式），就需…",
+    "category": "设计模式"
+  },
+  {
+    "slug": "archive-engineering-sprigboot-fen-bu-shi-suo-gong-ju-lei",
+    "title": "分布式锁工具类",
+    "tags": [
+      "工程实践",
+      "SprigBoot"
+    ],
+    "date": "2024-03-05",
+    "summary": "Redis分布式锁工具类 核心代码 image-20241020094820911 测试类 1.测试用例1:无阻寒式获取锁 ``` @GetMapping(\"/tryLockRun\") public String tryLockRun() { Long startTime = System.curren…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-troubleshooting-ru-he-pai-cha-oom",
+    "title": "如何排查OOM？",
+    "tags": [
+      "工程实践",
+      "生产问题定位",
+      "场景相关内容"
+    ],
+    "date": "2024-03-03",
+    "summary": "介绍如何排查OOM",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-59-ce-lue-mo-shi-xiao-chu-if-else-tai-you-ya-liao",
+    "title": "策略模式，轻松消除if else",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-03-02",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-observability-grafana-ke-shi-hua-jian-kong-mian-ban",
+    "title": "Grafana 可视化监控面板",
+    "tags": [
+      "可观测性"
+    ],
+    "date": "2024-02-28",
+    "summary": "一、内容分析 Tomcat 可分配的连接数就像厕所的坑位，一堆用户来上大号。本来4个坑位也够用了，因为用户来了也可以快速释放请求，不会长时间占用。但突然有这么一天，用户都拉肚子，一个进去就1个小时候，其余人都排队。最后给压垮了！ img 那是不是，增加了连接数(WC 更多的坑位就好了呢)，其实也好不哪去…",
+    "category": "可观测性"
+  },
+  {
+    "slug": "archive-engineering-concurrency-41-yi-ge-zhu-jie-qing-song-shi-xian-bu-shi-suo",
+    "title": "一个注解轻松搞定分布式锁",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-02-27",
+    "summary": "本文主要内容 通过一个@Lock注解，轻松搞定接口加分布式锁。 直接看代码 ```java com.itsoku.lesson041.OrderController#orderPay ```",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-60-sheng-chan-shang-dai-ma-wei-sheng-xiao-ru-he-pai-cha",
+    "title": "生产上，代码未生效，如何排查？",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-02-25",
+    "summary": "我们的代码，由运维发布上线了，但是运行的结果和我们预期的不一样，怎么办？ 可能怀疑：运维没有发布成功，生产上运行的是老的代码 大家有没有遇到过这种情况？ 让运维帮忙将生产上的代码拉下来，我们进行反编译，看下编译后的源码是不是最新的。 如果发现代码是最新，但是生产上跑的依旧是旧的代码，怎么办？ 能否进入正…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-juc-yuan-ma-jie-xi",
+    "title": "6、源码解析",
+    "tags": [
+      "Java 并发"
+    ],
+    "date": "2024-02-24",
+    "summary": "一、CountDownLatch应用&源码分析 1.1 CountDownLatch介绍 CountDownLatch就是JUC包下的一个工具，整个工具最核心的功能就是计数器。 如果有三个业务需要并行处理，并且需要知道三个业务全部都处理完毕了。 需要一个并发安全的计数器来操作。 CountDownLat…",
+    "category": "Java 并发"
+  },
+  {
+    "slug": "archive-storage-mysql-replication-ji-zhu-ji-mycat-guan-li-jian-kong",
+    "title": "6、管理、监控",
+    "tags": [
+      "存储中间件",
+      "MySQL",
+      "主从复制与读写分离",
+      "技术集",
+      "MyCat"
+    ],
+    "date": "2024-02-23",
+    "summary": "在MyCat中，当执行一条SQL语句时，MyCat需要进行SQL解析、分片分析、路由分析、读写分离分析 等操作， 最终经过一系列的分析决定将当前的SQL语句到底路由到那几个(或哪一个)节点数据库，数据 库将数据执行完毕 后，如果有返回的结果，则将结果返回给MyCat，最终还需要在MyCat中进行结果合…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-microservices-spring-cloud-alibaba-lian-lu-zhui-zong-sleuth-zipkin-admin",
+    "title": "6、Sleuth&Zipkin链路追踪",
+    "tags": [
+      "微服务",
+      "Spring Cloud Alibaba",
+      "链路追踪"
+    ],
+    "date": "2024-02-22",
+    "summary": "学习当前课程，比必须要先掌握SpringCloud的基本应用（Nacos，Feign调用） 对Docker有一定的了解，知道docker-compose.yml如何启动一个容器 RabbitMQ，Elasticsearch有一定了解。 而且学习每一个技术前，一定要先知道有什么问题是现在无法解决的，通过学…",
+    "category": "微服务"
+  },
+  {
+    "slug": "archive-deployment-02-mysqlbu-shu",
+    "title": "2、mysql部署",
+    "tags": [
+      "部署运维"
+    ],
+    "date": "2024-02-21",
+    "summary": "mysql修改密码：http://www.yuyanba.com/default.aspx/did93214 创建挂载目录 ```bash #创建挂载目录 mkdir -p /data/mysql/data; mkdir -p /data/mysql/conf; ``` 创建yml文件 ```bash…",
+    "category": "部署运维"
+  },
+  {
+    "slug": "archive-engineering-concurrency-64-springbootzhong-redisru-he-shi-xian-pai-xing-bang-gong-neng",
+    "title": "SpringBoot中，Redis如何实现排行榜？",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-02-20",
+    "summary": "1. Redis 如何实现排行榜？ 2. Redis中zset实现排行榜，分数相同时，按照时间降序，如何处理？ Redis 实现排行榜主要依赖于其有序集合zset（Sorted Set）数据结构。 zset中可以存储不重复的元素集合，并为每个元素关联一个浮点数分数（score），Redis 会根据这个分…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-dev-log-day01",
+    "title": "项目开发日志 · Day01",
+    "tags": [
+      "开发日志",
+      "开发笔记",
+      "学习记录"
+    ],
+    "date": "2024-02-17",
+    "summary": "任务 [x] 环境配置; [x] 搭建项目结构; [x] 跑通广播模式 RPC 过程调用; 学习过程 1. 项目整体了解 通过对第一节文档的阅读，了解整个项目的生命周期、所需要的技术以及代码提交规范 2. 搭建项目结构，理解每个模块应该干什么 模块 作用 | ----------------------…",
+    "category": "开发日志"
+  },
+  {
+    "slug": "archive-messaging-rabbitmq-3-rabbitmqshi-ji-yong-fa",
+    "title": "3、RabbitMQ实际用法",
+    "tags": [
+      "消息队列",
+      "rabbitmq"
+    ],
+    "date": "2024-02-16",
+    "summary": "一、SpringBoot操作RabbitMQ 1.1 SpringBoot声明信息 创建项目; 导入依赖; ``` org.springframework.boot spring-boot-starter-amqp ``` 配置RabbitMQ信息; ``` spring: rabbitmq: host…",
+    "category": "消息队列"
+  },
+  {
+    "slug": "archive-design-patterns-behavioral-20-bei-wang-lu-mo-shi",
+    "title": "8、备忘录模式",
+    "tags": [
+      "设计模式",
+      "行为型模式"
+    ],
+    "date": "2024-02-15",
+    "summary": "1、游戏角色状态恢复问题 游戏鱼色有攻击力和防御力，在大战 Boss 前保存自身的状态（攻击力和防御力），当大战 Boss 后攻击力和防御万下降，从备忘录对象恢复到大战前的状态 传统方案 image-20220112212748962 传统方案问题分析 1）一个对象，就对应一个保存对象状态的对象。这样当…",
+    "category": "设计模式"
+  },
+  {
+    "slug": "archive-engineering-concurrency-43-jie-kou-mi-deng-tong-yong-fang-an-dai-ma-luo-di",
+    "title": "接口幂等，通用方案 & 代码落地",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-02-14",
+    "summary": "1、本文内容 接口幂等，通用方案 & 代码落地，干货满满。 2、什么是幂等 幂等指多次操作产生的影响只会跟一次执行的结果相同，通俗的说：某个行为重复的执行，最终获取的结果是相同的。 3、接口幂等是什么？ 同一个接口，对于同一个请求，不管调用多少次，产生的最终结果都应该是一样的。 举个例子，比如账户A给账…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-33-mqzhuan-ti-xiao-xi-mi-deng-xiao-fei-xiao-fei-shi-bai-e11a808",
+    "title": "MQ消息幂等消费 & 消费失败自动重试通用方案 & 代码落地",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-02-12",
+    "summary": "通过本文将获得 1. 消息投递的通用代码 非事务消息的投递; 事务消息的投递; 任意延迟消息的投递，不依赖于任何MQ; 上面这些投递都支持批量的方式; 投递失败自动重试的代码; 2. 幂等消费的通用代码 3. 消费失败，衰减式自动重试的通用代码 本文涉及到的主要技术点 1. SpringBoot2.7…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-88-hai-liang-ju-liang-tong-ji-ru-he-ti-sheng-xing-neng",
+    "title": "第88节 海量据量统计，如何提升性能？",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-02-10",
+    "summary": "下面是b站给up主提供的数据统计页面，up主可以看到自己b站的核心数据，大家思考一下，这个功能如何实现？ image-20240908170555596 当用户访问页面的时候，实时去计算。 比如播放量，可以在db中创建一个播放记录表，用户每次播放视频，会插入一条播放记录。 那么这个播放量就可以通过这个表…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-81-ping-lun-xi-tong-ru-he-she-ji-yi-ci-xing-gei-ni-0c5dbc8",
+    "title": "第81节 评论系统如何设计，一次性给你讲清楚",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-02-09",
+    "summary": "评论功能，属于非常常见的功能。 本文从评论功能的需求出发，来看下评论表如何设计，以及通过此表，如何实现评论中各种功能。 非常硬核，大家慢慢看。 假如我们开发了一个短视频的网站，用户可以对视频进行评论，要实现二级评论的功能。 先来看下什么是一级评论和二级评论。 2.1、一级评论 对视频直接发表的评论，属于…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-storage-mysql-replication-ji-zhu-ji-mycat-fen-pian",
+    "title": "3、MyCat 分片",
+    "tags": [
+      "存储中间件",
+      "MySQL",
+      "主从复制与读写分离",
+      "技术集",
+      "MyCat"
+    ],
+    "date": "2024-02-08",
+    "summary": "1. 场景 在业务系统中, 涉及以下表结构 ,但是由于用户与订单每天都会产生大量的数据, 单台服务器的数据存储及处理能力是有限的, 可以对数据库表进行拆分, 原有的数据库表如下。 img 现在考虑将其进行垂直分库操作，将商品相关的表拆分到一个数据库服务器，订单表拆分的一个数据库服 务器，用户及省市区表拆…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-engineering-concurrency-64-hutoolssheng-cheng-jie-xi-er-wei-ma",
+    "title": "使用hutool生成&解析二维码，特好用",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-02-07",
+    "summary": "二维码，在日常开发中用的挺多的，最常见的2个功能：生成二维码、解析二维码 hutool工具中已经包含了二维码的各种工具类，非常好用。 本文将给大家演示，springboot中，如何使用hutool中的工具类实现这2个功能。 image-20240719122027028 1）引入二维码相关maven工具…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-microservices-spring-cloud-5-lu-you-wang-guan",
+    "title": "5、路由网关",
+    "tags": [
+      "微服务",
+      "Spring Cloud"
+    ],
+    "date": "2024-02-06",
+    "summary": "Zuul路由网关 什么是zuul Zuul包含了对请求的路由和过滤两个最主要的功能: 其中路由功能负责将外部请求转发到具体的微服务实例上，是==实现外部访问统一入口的基础==， 而过滤器功能则负责对请求的处理过程进行干预，是实现请求校验，服务聚合等功能的基础。ZuuI和Eureka进行整合, 将Zuul…",
+    "category": "微服务"
+  },
+  {
+    "slug": "archive-frontend-vue2-4-vuex",
+    "title": "4、vuex",
+    "tags": [
+      "前端",
+      "Vue2"
+    ],
+    "date": "2024-02-05",
+    "summary": "一、VueX 1. 概念 ​ 在Vue中实现集中式状态（数据）管理的一个Vue插件，对vue应用中多个组件的共享状态进行集中式的管理（读/写），也是一种组件间通信的方式，且适用于任意组件间通信。 2. 何时使用？ ​ 多个组件需要共享数据时 3. 原理 Vuex原理图 1. 搭建vuex 环境 1. 创…",
+    "category": "前端"
+  },
+  {
+    "slug": "archive-engineering-concurrency-11-springbootzhong-shi-xian-dong-tai-job",
+    "title": "使用SpringBoot实现动态Job实战",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-02-03",
+    "summary": "功能 会创建一个job表; 可以通过接口，对这些job表进行增删改查; 支持动态增加、删除、修改、启动、停止Job等; 系统均无需重启，会自动监控job表的变化，实现job的动态执行; 用到的技术 SpringBoot; MyBatis-Plus; MySql; cron表达式（job执行的一种表达式…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-design-patterns-structural-11-xiang-yuan-mo-shi",
+    "title": "6、享元模式",
+    "tags": [
+      "设计模式",
+      "结构型模式"
+    ],
+    "date": "2024-01-31",
+    "summary": "1、展示网站项目需求 小型的外包项目，给客户 A 做一个产品展示网站，客户 A 的朋友感觉效果不错，也希望做这样的产品展示网站，但是要求都有些不同： 1）有客户要求以新闻的形式发布; 2）有客户人要求以博客的形式发布; 3）有客户希望以微信公众号的形式发布; 传统方案解决网站展现项目 1）直接复制粘贴一…",
+    "category": "设计模式"
+  },
+  {
+    "slug": "archive-engineering-concurrency-09-shou-xie-xian-cheng-chi-guan-li-qi-guan-li-jian-kong-838a629",
+    "title": "实现一个线程池管理器",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-01-30",
+    "summary": "要解决什么问题？ 平时我们在开发中，创建了不少线程池，这些线程池都处于游离状态，不方便管理和监控，我们是无法知道目前系统中有哪些线程池、以及每个线程池当前的一个状态，负载情况等，所以我们可以开发一个线程池管理器来解决这个问题。 线程池管理器 统管系统中所有线程池，负责所有线程池的创建、监控等操作。 代码…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-96-ding-dan-zhuang-tai-liu-zhuan-dai-ma-you-hua-que-shi-you-ya",
+    "title": "第96节 订单状态流转，代码优化，太优雅了",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-01-29",
+    "summary": "电商系统中，订单属于比较核心的功能； 本文会带大家看下订单状态流转这块的功能是如何实现的 顺便会对其进行优化，学完后应该可以收获不少。 image-20240913152302091 ```java public class OrderService { /** 订单支付; * @param order…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-spring-boot-06-guava-cacheben-di-huan-cun-zai-spring-bootying-yong-e0255f7",
+    "title": "6、Spring Boot 本地缓存实践 - Guava Cache",
+    "tags": [
+      "Spring Boot",
+      "知识积累",
+      "SpringBoot"
+    ],
+    "date": "2024-01-28",
+    "summary": "概 述 在如今高并发的互联网应用中，缓存的地位举足轻重，对提升程序性能帮助不小。而 3.x开始的 Spring也引入了对 Cache的支持，那对于如今发展得如火如荼的 Spring Boot来说自然也是支持缓存特性的。当然 Spring Boot默认使用的是 SimpleCacheConfigurati…",
+    "category": "Spring Boot"
+  },
+  {
+    "slug": "archive-engineering-concurrency-94-mybatisdong-tai-sqlbu-yao-luan-yong",
+    "title": "第94节 MyBatis动态SQL不要乱用，容易搞出大事故",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-01-24",
+    "summary": "代码如下 MyBatis写的一个更新用户信息的接口，字段可以动态更新：即用户传入的字段不为空的时候，才会被更新 ```xml ``` 对这段代码解释下： 传入的参数是用户对象UserModel; set部分采用的是动态sql，字段不为空的时候，才会去更新，这块没问题，设计的很好; 条件部分，用的是动态s…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-21-ru-he-pan-duan-dai-ma-zai-bing-fa-qing-kuang-xia-shi-f6bedc0",
+    "title": "如何判断代码在并发情况下会否安全？",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-01-22",
+    "summary": "背景 1、比如我们写了个扣库存的方法，怎么知道此方法在并发情况下，是否会超卖？ 2、或者其他一些类似的业务操作，怎么知道他们在并发的情况下，有没有问题？ 这种问题统称为：在并发情况下，如何确定咱们的代码是否和预期的一致 常用的方法，并发压测，但是有些情况可能不一定好测试，那么我们没有更简单的方法可以验证…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-juc-suo",
+    "title": "3、锁的分类",
+    "tags": [
+      "Java 并发"
+    ],
+    "date": "2024-01-21",
+    "summary": "一、锁的分类 1.1 可重入锁、不可重入锁 Java中提供的synchronized，ReentrantLock，ReentrantReadWriteLock都是可重入锁。 重入：当前线程获取到A锁，在获取之后尝试再次获取A锁是可以直接拿到的。 不可重入：当前线程获取到A锁，在获取之后尝试再次获取A锁…",
+    "category": "Java 并发"
+  },
+  {
+    "slug": "archive-engineering-concurrency-92-mysqlpai-xu-fen-ye-ke-neng-you-keng-xu-yao-zhu-yi",
+    "title": "第92节 MySQL排序分页，可能有坑，需要注意",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-01-19",
+    "summary": "1）创建一个表test1 ```sql drop table if exists test1; CREATE TABLE test1 ( a INT auto_increment PRIMARY KEY, b INT ); ``` 2）插入 8 条数据 ```sql insert into test1…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-java-wang-luo-bian-cheng",
+    "title": "5、网络编程",
+    "tags": [
+      "Java",
+      "知识积累",
+      "勇往直前"
+    ],
+    "date": "2024-01-18",
+    "summary": "网络编程 InetAddress类的使用 1. 实现网络通信需要解决的两个问题 1. 如何准确地定位网络上一台或多台主机；定位主机上的特定的应用 2. 找到主机后如何可靠高效地进行数据传输 2. 网络通信的两个要素： 1. 对应问题一：IP和端口号 2. 对应问题二：提供网络通信协议：TCP/IP参考模…",
+    "category": "Java"
+  },
+  {
+    "slug": "archive-engineering-concurrency-45-jie-kou-ce-shi-li-qi-http-client",
+    "title": "接口测试利器HTTP Client，不用Postman也可以",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-01-17",
+    "summary": "接口测试，用的比较多的可能是postman。 今天给大家推荐另一款接口测试工具，idea中自带的接口测试插件HTTP Client，非常好用，这样大家可以不用装postman，直接在idea一个工具中边开发边测试，非常方便。 1、安装插件HTTP Client File->Settings->Plugi…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-06-bing-xing-cha-xun-bi-bei-de-jie-kou-xing-neng-you-hua-fang-an",
+    "title": "并行查询，接口响应速度提升5倍",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-01-16",
+    "summary": "需求：后端提供一个接口获取商品信息 接口传入一个商品id，需要返回商品下面这些信息，这些信息都在不同的表中，通过商品id就可以查到 商品基本信息（如商品名称、价格等基本信息); 商品描述信息（可能是富文本，放在单独的表中）; 商品收藏量; 商品评论量; 常规版本实现（性能低） 按照id一步步查询，组装结…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-50-duo-xian-cheng-shi-wu-3miao-cha-ru-bai-mo-shu-ju",
+    "title": "多线程事务，3秒插入百万数据",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-01-15",
+    "summary": "1. 多线程事务效果演示 2. 多线程事务原理详解 3. 手写了一个非常好用的多线程事务工具类，大家拿去用 ```java com.itsoku.lesson050.Lesson050ApplicationTest#singleThreadInsert ``sql select count(*) fro…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-36-fen-bu-shi-shi-wu-mqzui-zhong-yi-zhi-xing-shi-xian-8ef0e44",
+    "title": "使用MQ最终一致性实现跨库转账",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-01-13",
+    "summary": "本文将通过跨库转账这个案例，带大家掌握MQ最终一致性解决分布式事务问题。 案例中，通用的代码我都给大家写好了，大家拿这个方案去解决分布式事务，只需要写你们的业务代码就可以了，这样大家遇到分布式事务问题，可以快速搞定。 前言 接下来三四节，属于分布式事务专题，会带来：分布式事务相关的一些解决方案+案例+代…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-messaging-rabbitmq-2-rabbitmqxiao-xi-mo-xing",
+    "title": "2、RabbitMQ消息模型",
+    "tags": [
+      "消息队列",
+      "rabbitmq"
+    ],
+    "date": "2024-01-12",
+    "summary": "RabbitMQ提供了6种消息模型，但是第6种其实是RPC，并不是MQ，因此不予学习。那么也就剩下5种。 但是其实3、4、5这三种都属于订阅模型，只不过进行路由的方式不同。 1527068544487 我们通过一个demo工程来了解下RabbitMQ的工作方式，导入工程： 1570342715181 依…",
+    "category": "消息队列"
+  },
+  {
+    "slug": "archive-storage-mysql-1-mysqlsuo-suo-yin-yin-qing",
+    "title": "1、MYSQL引擎、索引介绍",
+    "tags": [
+      "存储中间件",
+      "MySQL"
+    ],
+    "date": "2024-01-11",
+    "summary": "1.1 Docker安装MySQL 使用Docker安装MySQL，具体操作命令如下所示： ```shell docker run -d \\ -p 3309:3306 \\ -v mysql8_conf:/etc/mysql/conf.d \\ -v mysql8_data:/var/lib/mysql \\…",
+    "category": "存储中间件"
+  },
+  {
+    "slug": "archive-design-patterns-behavioral-21-zhuang-tai-mo-shi",
+    "title": "9、状态模式",
+    "tags": [
+      "设计模式",
+      "行为型模式"
+    ],
+    "date": "2024-01-10",
+    "summary": "1、APP 抽奖活动问题 请编写程序完成 APP 抽奖活动具体要求如下： 1）假如每参加一次这个活动要扣除用户 50 积分，中奖概率是 10%; 2）奖品数量固定，抽完就不能抽奖; 3）活动有四个状态：可以抽奖、不能抽奖、发放奖品和奖品领完; 4）活动的四个状态转换关系图; image-20220116…",
+    "category": "设计模式"
+  },
+  {
+    "slug": "archive-engineering-concurrency-10-dong-tai-xian-cheng-chi",
+    "title": "动态线程池",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-01-09",
+    "summary": "什么是动态线程池？ 无需重启的情况下，可以对线程池进行扩缩容，比如改变线程池的核心线程数量、最大线程数量、队列容量等。 还是先看效果 我们会创建一个线程池，然后让其去处理任务，然后对其进行扩缩容，并查看扩缩容前后线程池的各个指标的变化（核心线程数、最大线程数、活动线程数、队列容量、队列中当前元素数量）…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-54-xing-neng-diao-you-xian-cheng-si-suo-xiang-guan-wen-ti",
+    "title": "性能调优：线程死锁相关问题",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-01-08",
+    "summary": "两个或多个线程在执行过程中，因争夺共享资源而被阻塞，且无法继续执行下去的一种状态。 比如下面这个案例，定义了两个线程：thread1和thread2 thread1对resource1上锁，然后尝试获取resource2的锁；; thread2对resource2上锁，然后尝试获取resource1的锁…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-engineering-concurrency-03-shi-xian-jie-kou-xing-neng-ya-ce-gong-ju-lei",
+    "title": "手撸一个接口性能压测工具类",
+    "tags": [
+      "工程实践",
+      "并发每日记录"
+    ],
+    "date": "2024-01-03",
+    "summary": "常用的好用的压测工具 1. Apache服务器安装目录的 ab.exe 2. Jmeter 3. LoadRunner 为什么要自己实现一个压测工具？ 高并发有很多知识点，工具类（如：线程池、JUC四个常用工具类【CountDownLatch、CyclicBarrier、Semaphore、ExChan…",
+    "category": "工程实践"
+  },
+  {
+    "slug": "archive-java-javafan-she-ji-zhi",
+    "title": "6、Java反射机制",
+    "tags": [
+      "Java",
+      "知识积累",
+      "勇往直前"
+    ],
+    "date": "2024-01-01",
+    "summary": "Java反射机制 反射的概述 1. 本章的主要内容 image-20211129123911661 2. 关于反射的理解:Reflection（反射)是被视为动态语言的关键，反射机制允许程序在执行期借助于Reflection API取得任何 类的内部信息，并能直接操作任意对象的内部属性及方法。 框架 =…",
+    "category": "Java"
   }
 ]

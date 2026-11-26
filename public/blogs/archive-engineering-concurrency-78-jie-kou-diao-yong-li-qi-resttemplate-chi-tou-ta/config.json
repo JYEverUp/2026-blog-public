@@ -1,0 +1,10 @@
+{
+  "title": "第78节 接口调用利器：RestTemplate，吃透它",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-03-30",
+  "summary": "发送http请求，估计很多人用过 httpclient 和 okhttp，确实挺好用的 而 Spring 中的 RestTemplate 和这俩的功能类似，也是用来发送http请求的，不过用法上面比前面的2位要容易很多 本文给大家上 17 个案例，基本上涵盖了RestTemplate所有的用法。 ima…",
+  "category": "工程实践"
+}

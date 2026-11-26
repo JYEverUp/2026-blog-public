@@ -1,0 +1,11 @@
+{
+  "title": "1、Nacos注册中心",
+  "tags": [
+    "微服务",
+    "Spring Cloud Alibaba",
+    "nacos"
+  ],
+  "date": "2024-05-27",
+  "summary": "SpringCloud Alibaba简介 SpringCloud Alibaba诞生的主要原因是：因为Spring Cloud Netflix项目进入了维护模式 维护模式 将模块置为维护模式，意味着SpringCloud团队将不再向模块添加新功能，我们将恢复block级别的bug以及安全问题，我们也会…",
+  "category": "微服务"
+}

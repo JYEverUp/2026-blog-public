@@ -1,0 +1,10 @@
+{
+  "title": "分享一个特别好用的Redis分布式锁工具类",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-03-17",
+  "summary": "本文主要内容 分享一个特别好用redis分布式锁工具类，使用Redisson实现的，对其进行了封装，用起来特别优雅，方便。 核心代码 ```java com.itsoku.lesson040.lock.DistributeLock com.itsoku.lesson040.lock.RedisDistr…",
+  "category": "工程实践"
+}

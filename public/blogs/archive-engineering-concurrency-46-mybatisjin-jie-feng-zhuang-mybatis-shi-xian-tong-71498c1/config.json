@@ -1,0 +1,10 @@
+{
+  "title": "封装MyBatis，实现通用无SQL版CRUD功能ORM框架",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-05-16",
+  "summary": "对Mybatis进行封装，实现一个通用的无 SQL 版的 CRUD 功能 ORM 框架。 MyBatis-plus 大家应该都比较熟悉吧，本文实现的功能，类似与Mybatis-plus功能，实现的原理非常的简单，这样方便大家扩展。 不需要写一行sql，便可实现对数据库的 增、删、改、查、分页、统计、乐观…",
+  "category": "工程实践"
+}

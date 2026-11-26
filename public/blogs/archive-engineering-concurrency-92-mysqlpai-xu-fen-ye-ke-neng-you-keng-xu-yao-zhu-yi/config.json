@@ -1,0 +1,10 @@
+{
+  "title": "第92节 MySQL排序分页，可能有坑，需要注意",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-01-19",
+  "summary": "1）创建一个表test1 ```sql drop table if exists test1; CREATE TABLE test1 ( a INT auto_increment PRIMARY KEY, b INT ); ``` 2）插入 8 条数据 ```sql insert into test1…",
+  "category": "工程实践"
+}

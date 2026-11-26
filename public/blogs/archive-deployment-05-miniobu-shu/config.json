@@ -1,0 +1,9 @@
+{
+  "title": "5、Minio部署",
+  "tags": [
+    "部署运维"
+  ],
+  "date": "2024-07-18",
+  "summary": "学习参考文档https://java.isture.com/arch/minio/minio-concept.html 比较完整https://blog.csdn.net/weixin_39060009/article/details/115520696 创建挂载目录 ```bash #创建挂载目录 m…",
+  "category": "部署运维"
+}

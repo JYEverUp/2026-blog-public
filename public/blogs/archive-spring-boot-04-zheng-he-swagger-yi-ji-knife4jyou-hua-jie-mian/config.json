@@ -1,0 +1,11 @@
+{
+  "title": "4、整合swagger，以及Knife4j优化界面",
+  "tags": [
+    "Spring Boot",
+    "知识积累",
+    "SpringBoot"
+  ],
+  "date": "2024-03-11",
+  "summary": "因为是前后端项目，需要前端的参与，所以一个好看的接口文档非常的重要 1、引入依赖 美化插件其中自带swagger的依赖了 ```jsx com.github.xiaoymin knife4j-spring-boot-starter 2.0.9 ``` 2、添加配置类 ```jsx package com…",
+  "category": "Spring Boot"
+}

@@ -1,0 +1,13 @@
+{
+  "title": "3、Sharding-JDBC执行原理",
+  "tags": [
+    "存储中间件",
+    "MySQL",
+    "主从复制与读写分离",
+    "技术集",
+    "Sharding-JDBC"
+  ],
+  "date": "2024-12-02",
+  "summary": "在了解Sharding-JDBC的执行原理前，需要了解以下概念： 逻辑表 水平拆分的数据表的总称。例：订单数据表根据主键尾数拆分为10张表，分别是 torder0 、 torder1 到 torder9 ，他们的逻辑表名为 t_order 。 真实表 在分片的数据库中真实存在的物理表。即上个示例中的 t…",
+  "category": "存储中间件"
+}

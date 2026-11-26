@@ -1,0 +1,13 @@
+{
+  "title": "2、快速入门",
+  "tags": [
+    "存储中间件",
+    "MySQL",
+    "主从复制与读写分离",
+    "技术集",
+    "Sharding-JDBC"
+  ],
+  "date": "2024-12-11",
+  "summary": "本章节使用Sharding-JDBC完成对订单表的水平分表，通过快速入门程序的开发，快速体验Sharding-JDBC的使 用 方法。 人工创建两张表，torder1和torder2，这两张表是订单表拆分后的表，通过Sharding-Jdbc向订单表插入数 据， 按照一定的分片规则，主键为偶数的进入to…",
+  "category": "存储中间件"
+}

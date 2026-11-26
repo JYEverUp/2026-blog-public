@@ -1,0 +1,11 @@
+{
+  "title": "6、Spring Boot 本地缓存实践 - Guava Cache",
+  "tags": [
+    "Spring Boot",
+    "知识积累",
+    "SpringBoot"
+  ],
+  "date": "2024-01-28",
+  "summary": "概 述 在如今高并发的互联网应用中，缓存的地位举足轻重，对提升程序性能帮助不小。而 3.x开始的 Spring也引入了对 Cache的支持，那对于如今发展得如火如荼的 Spring Boot来说自然也是支持缓存特性的。当然 Spring Boot默认使用的是 SimpleCacheConfigurati…",
+  "category": "Spring Boot"
+}

@@ -1,0 +1,9 @@
+{
+  "title": "本文主要内容",
+  "tags": [
+    "工程实践"
+  ],
+  "date": "2024-07-19",
+  "summary": "ThreadLocal、InheritableThreadLocal.TransmittableThreadLocal 3个非常常用的工具类 1.ThreadLocal:在当前线程中共享数据的，JUC 中提供的; 2.InheritableThreadLocal:也是JUC中的一个工具类，解决 Thre…",
+  "category": "工程实践"
+}

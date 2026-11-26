@@ -1,0 +1,13 @@
+{
+  "title": "4、配置",
+  "tags": [
+    "存储中间件",
+    "MySQL",
+    "主从复制与读写分离",
+    "技术集",
+    "MyCat"
+  ],
+  "date": "2024-05-26",
+  "summary": "schema.xml 作为MyCat中最重要的配置文件之一 , 涵盖了MyCat的逻辑库 、 逻辑表 、 分片规则、分片节点及 数据源的配置。 img 主要包含以下三组标签： schema标签; datanode标签; datahost标签; 1. schema标签 1.1. schema 定义逻辑库…",
+  "category": "存储中间件"
+}

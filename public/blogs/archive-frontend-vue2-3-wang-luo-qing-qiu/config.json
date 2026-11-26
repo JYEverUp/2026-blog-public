@@ -1,0 +1,10 @@
+{
+  "title": "3、网络请求",
+  "tags": [
+    "前端",
+    "Vue2"
+  ],
+  "date": "2024-04-17",
+  "summary": "一、网络请求 目前可以发送网络请求的方式： 1. xhr（基于XMLHttpRequest） 存在的问题：配置调用混乱；编码方式复杂；实际开发中经常被JQuery-Ajax代替 2. JQuery-Ajax 存在的问题：Vue开发中不需要调用jQuery这个重量级框架（1w＋行） 3. vue-reso…",
+  "category": "前端"
+}

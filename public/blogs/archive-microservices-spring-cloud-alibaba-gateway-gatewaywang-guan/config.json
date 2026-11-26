@@ -1,0 +1,11 @@
+{
+  "title": "5、Spring Cloud Gateway网关",
+  "tags": [
+    "微服务",
+    "Spring Cloud Alibaba",
+    "gateway"
+  ],
+  "date": "2024-11-05",
+  "summary": "1、网关简介 网关作为流量的入口，常用的功能包括路由转发，权限校验，限流等。 2、Gateway简介 Spring Cloud Gateway 是Spring Cloud官方推出的第二代网关框架，定位于取代 Netflix Zuul。相比 Zuul 来说，Spring Cloud Gateway 提供更…",
+  "category": "微服务"
+}

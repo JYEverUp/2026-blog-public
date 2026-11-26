@@ -1,0 +1,11 @@
+{
+  "title": "1、SpringBoot获取用户ip",
+  "tags": [
+    "Spring Boot",
+    "知识积累",
+    "SpringBoot"
+  ],
+  "date": "2024-08-29",
+  "summary": "http请求 对于controller的请求，我们只需要写个拦截器，将用户的ip设置进上下文即可，非常方便。 ```java @Override public boolean preHandle(HttpServletRequest request, HttpServletResponse respon…",
+  "category": "Spring Boot"
+}

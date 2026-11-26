@@ -1,0 +1,10 @@
+{
+  "title": "第93节 涉及到钱的，千万不要用double，请用BigDecimal",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-07-01",
+  "summary": "```java Test public void m1() { double a = 4.015, b = 100.00; System.out.println(a * b); // 期望结果：401.5 double c = 123.30, d = 100.00; System.out.println…",
+  "category": "工程实践"
+}

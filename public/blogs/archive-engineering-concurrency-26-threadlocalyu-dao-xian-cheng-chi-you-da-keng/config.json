@@ -1,0 +1,10 @@
+{
+  "title": "ThreadLocal 遇到线程池有大坑 & 通用解决方案",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-08-27",
+  "summary": "本文内容 演示 ThreadLocal 遇到线程池出现的故障; 演示 InheritableThreadLocal 遇到线程池出现的故障; 通过自定义线程池解决这些问题，也是通用的一个方案，大家一定要掌握; 涉及到的技术 ThreadLocal：当前线程数据共享的一个工具类，java中自带的; Inhe…",
+  "category": "工程实践"
+}

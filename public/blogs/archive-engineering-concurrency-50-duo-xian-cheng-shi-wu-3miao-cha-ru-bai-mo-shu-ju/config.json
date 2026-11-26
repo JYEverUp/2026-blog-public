@@ -1,0 +1,10 @@
+{
+  "title": "多线程事务，3秒插入百万数据",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-01-15",
+  "summary": "1. 多线程事务效果演示 2. 多线程事务原理详解 3. 手写了一个非常好用的多线程事务工具类，大家拿去用 ```java com.itsoku.lesson050.Lesson050ApplicationTest#singleThreadInsert ``sql select count(*) fro…",
+  "category": "工程实践"
+}

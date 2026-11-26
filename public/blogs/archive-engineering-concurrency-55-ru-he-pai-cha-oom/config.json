@@ -1,0 +1,10 @@
+{
+  "title": "如何排查oom？",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-11-02",
+  "summary": "1. 导出内存快照 2. 使用Eclipse MAT工具分析内存快照，定位问题代码 有2种方案 方式1：jmap命令导出文件 ```shell jmap -dump:format=b,file=E:/dump/dump.hprof pid ``` 方式1适合程序没有没有退出的情况，若程序退出了，需采用方…",
+  "category": "工程实践"
+}

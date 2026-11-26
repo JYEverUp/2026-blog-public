@@ -1,0 +1,10 @@
+{
+  "title": "3、RabbitMQ实际用法",
+  "tags": [
+    "消息队列",
+    "rabbitmq"
+  ],
+  "date": "2024-02-16",
+  "summary": "一、SpringBoot操作RabbitMQ 1.1 SpringBoot声明信息 创建项目; 导入依赖; ``` org.springframework.boot spring-boot-starter-amqp ``` 配置RabbitMQ信息; ``` spring: rabbitmq: host…",
+  "category": "消息队列"
+}

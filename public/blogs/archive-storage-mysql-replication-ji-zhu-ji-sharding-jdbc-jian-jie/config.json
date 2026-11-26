@@ -1,0 +1,13 @@
+{
+  "title": "1、Sharding-JDBC简介",
+  "tags": [
+    "存储中间件",
+    "MySQL",
+    "主从复制与读写分离",
+    "技术集",
+    "Sharding-JDBC"
+  ],
+  "date": "2024-09-16",
+  "summary": "Sharding-JDBC是当当网研发的开源分布式数据库中间件，从 3.0 开始Sharding-JDBC被包含在 Sharding- Sphere中，之后该项目进入进入Apache孵化器，4.0版本之后的版本为Apache版本。 ShardingSphere是一套开源的分布式数据库中间件解决方案组成的…",
+  "category": "存储中间件"
+}

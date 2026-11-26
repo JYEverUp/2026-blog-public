@@ -1,4 +1,4 @@
-import { marked } from 'marked'
+import { Marked, Renderer } from 'marked'
 import type { Tokens } from 'marked'
 
 export type TocItem = { id: string; text: string; level: number }
@@ -59,11 +59,12 @@ async function loadKatex() {
 export async function renderMarkdown(markdown: string): Promise<MarkdownRenderResult> {
 	// Load optional renderers first so they apply on the FIRST lex/parse pass.
 	// (If we lex before registering extensions, math tokens won't ever be produced on a cold refresh.)
-	const codeBlockMap = new Map<string, { html: string; original: string }>()
+	const marked = new Marked()
+	const highlightedCode = new Map<Tokens.Code, string>()
 	const [shiki, katex] = await Promise.all([loadShiki(), loadKatex()])
 
 	// Render HTML with heading ids
-	const renderer = new marked.Renderer()
+	const renderer = new Renderer()
 
 	renderer.heading = (token: Tokens.Heading) => {
 		const id = slugify(token.text || '')
@@ -71,21 +72,9 @@ export async function renderMarkdown(markdown: string): Promise<MarkdownRenderRe
 	}
 
 	renderer.code = (token: Tokens.Code) => {
-		// Check if this code block was pre-processed
-		const codeData = codeBlockMap.get(token.text)
-		if (codeData) {
-			// Add data-code attribute with original code for copy functionality
-			// Escape HTML entities for attribute value
-			const escapedCode = codeData.original.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-			if (codeData.html) {
-				// Shiki highlighted code
-				return `<pre data-code="${escapedCode}">${codeData.html}</pre>`
-			}
-			// Fallback for failed highlighting
-			return `<pre data-code="${escapedCode}"><code>${codeData.original}</code></pre>`
-		}
-		// Fallback to default (inline code, not code block)
-		return `<code>${token.text}</code>`
+		const escapedCode = token.text.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+		const html = highlightedCode.get(token) ?? `<pre><code>${escapedCode}</code></pre>`
+		return `<pre data-code="${escapedCode}">${html}</pre>`
 	}
 
 	renderer.listitem = (token: Tokens.ListItem) => {
@@ -200,30 +189,20 @@ export async function renderMarkdown(markdown: string): Promise<MarkdownRenderRe
 	}
 	extractHeadings(tokens)
 
-	// Pre-process code blocks with Shiki
-	for (const token of tokens) {
-		if (token.type === 'code') {
-			const codeToken = token as Tokens.Code
-			const originalCode = codeToken.text
-			const key = `__SHIKI_CODE_${codeBlockMap.size}__`
-
-			if (shiki) {
-				try {
-					const html = await shiki.codeToHtml(originalCode, {
-						lang: codeToken.lang || 'text',
-						theme: 'one-light'
-					})
-					codeBlockMap.set(key, { html, original: originalCode })
-					codeToken.text = key
-				} catch {
-					// Keep original if highlighting fails
-					codeBlockMap.set(key, { html: '', original: originalCode })
-					codeToken.text = key
-				}
-			} else {
-				// Fallback when shiki is not available
-				codeBlockMap.set(key, { html: '', original: originalCode })
-				codeToken.text = key
+	if (shiki) {
+		const codeBlocks: Tokens.Code[] = []
+		marked.walkTokens(tokens, token => {
+			if (token.type === 'code') codeBlocks.push(token as Tokens.Code)
+		})
+		for (const token of codeBlocks) {
+			try {
+				const html = await shiki.codeToHtml(token.text, {
+					lang: token.lang?.toLowerCase() || 'text',
+					theme: 'one-light'
+				})
+				highlightedCode.set(token, html)
+			} catch {
+				// Render the escaped code when its language is unavailable.
 			}
 		}
 	}

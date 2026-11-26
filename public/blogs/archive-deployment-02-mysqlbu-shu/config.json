@@ -1,0 +1,9 @@
+{
+  "title": "2、mysql部署",
+  "tags": [
+    "部署运维"
+  ],
+  "date": "2024-02-21",
+  "summary": "mysql修改密码：http://www.yuyanba.com/default.aspx/did93214 创建挂载目录 ```bash #创建挂载目录 mkdir -p /data/mysql/data; mkdir -p /data/mysql/conf; ``` 创建yml文件 ```bash…",
+  "category": "部署运维"
+}

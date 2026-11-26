@@ -1,0 +1,10 @@
+{
+  "title": "接口性能调优之大事务优化",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-09-24",
+  "summary": "本文内容非常硬核，请大伙打起精神，坚持看完。 接口性能不是谁都会优化的，如果面试的时候，能够说出优化接口的一些方案，会让面试官对你刮目相看。 ```java Transactional public void bigTransaction() throws InterruptedException {…",
+  "category": "工程实践"
+}

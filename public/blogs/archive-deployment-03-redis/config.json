@@ -1,0 +1,9 @@
+{
+  "title": "3、Redis部署",
+  "tags": [
+    "部署运维"
+  ],
+  "date": "2024-12-13",
+  "summary": "创建挂载目录 ```bash #创建挂载目录 mkdir -p /data/redis ``` 创建yml文件 ```bash vim /data/redis/docker-compose.yml ``` 填入配置 ```bash version: '3' services: redis: image:…",
+  "category": "部署运维"
+}

@@ -1,0 +1,10 @@
+{
+  "title": "多线程任务批处理通用工具类",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-04-19",
+  "summary": "需求 使用线程池批量发送短信，当短信发送完毕之后，方法继续向下走。 技术点 线程池：ExecutorService; CountDownLatch：可以让一个或者多个线程等待一批任务执行完毕之后，继续向下走; 新手版代码实现 ```java com.itsoku.SimpleBatchTask ```…",
+  "category": "工程实践"
+}

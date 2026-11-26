@@ -1,0 +1,10 @@
+{
+  "title": "第90节 Spring事务失效，常见的几种场景，带你精通Spring事务",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-11-06",
+  "summary": "1. Spring事务失效常见的4种场景 2. 事务失效问题如何排查？ 3. 如何精通Spring事务？ 案例代码 如下代码，外部调用m1方法，m1方法中调用m2方法，虽然m2方法上加了事务@Transactional注解，但是事务不会生效 ```java Service public class Us…",
+  "category": "工程实践"
+}

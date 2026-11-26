@@ -1,0 +1,10 @@
+{
+  "title": "接口响应慢，使用Arthas，3秒定位问题代码",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-06-08",
+  "summary": "arthas：阿里开源的一款Java问题诊断利器，详情见：https://arthas.aliyun.com/doc/quick-start.html 2.1、案例代码 ```java package com.itsoku.lesson058; import lombok.extern.slf4j.Sl…",
+  "category": "工程实践"
+}

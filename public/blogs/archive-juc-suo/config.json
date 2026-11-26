@@ -1,0 +1,9 @@
+{
+  "title": "3、锁的分类",
+  "tags": [
+    "Java 并发"
+  ],
+  "date": "2024-01-21",
+  "summary": "一、锁的分类 1.1 可重入锁、不可重入锁 Java中提供的synchronized，ReentrantLock，ReentrantReadWriteLock都是可重入锁。 重入：当前线程获取到A锁，在获取之后尝试再次获取A锁是可以直接拿到的。 不可重入：当前线程获取到A锁，在获取之后尝试再次获取A锁…",
+  "category": "Java 并发"
+}

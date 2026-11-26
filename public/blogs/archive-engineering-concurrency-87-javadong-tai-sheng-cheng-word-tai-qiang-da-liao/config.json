@@ -1,0 +1,10 @@
+{
+  "title": "第87节 Java动态生成word，太强大了",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-05-07",
+  "summary": "image-20240908155244545 官网：https://deepoove.com/poi-tl poi-tl（poi template language）是Word模板引擎，使用模板和数据创建很棒的Word文档。 可以生成任何动态的word，官网上有详细的使用教程，我们一起来看下。",
+  "category": "工程实践"
+}

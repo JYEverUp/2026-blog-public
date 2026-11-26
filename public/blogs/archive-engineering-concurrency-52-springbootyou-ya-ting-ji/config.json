@@ -1,0 +1,10 @@
+{
+  "title": "SpringBoot 优雅停机",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-06-02",
+  "summary": "Spring优雅停机，通俗点说就是如何优雅的停止SpringBoot应用， 优雅停机，应满足下面3点： 1. SpringBoot应用不再接收新的请求 2. SpringBoot应用将已经进来的请求处理完成 3. 然后关闭SpringBoot应用 注意：这里说的停机，并不是停止我们的机器，而是停止我们的…",
+  "category": "工程实践"
+}

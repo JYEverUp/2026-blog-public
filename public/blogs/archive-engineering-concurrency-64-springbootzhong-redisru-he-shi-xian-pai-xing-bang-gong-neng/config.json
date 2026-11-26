@@ -1,0 +1,10 @@
+{
+  "title": "SpringBoot中，Redis如何实现排行榜？",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-02-20",
+  "summary": "1. Redis 如何实现排行榜？ 2. Redis中zset实现排行榜，分数相同时，按照时间降序，如何处理？ Redis 实现排行榜主要依赖于其有序集合zset（Sorted Set）数据结构。 zset中可以存储不重复的元素集合，并为每个元素关联一个浮点数分数（score），Redis 会根据这个分…",
+  "category": "工程实践"
+}

@@ -1,0 +1,11 @@
+{
+  "title": "2、OpenAI 代码⾃动评审组件",
+  "tags": [
+    "项目实践",
+    "openaicodereview",
+    "Review"
+  ],
+  "date": "2024-12-08",
+  "summary": "项目背景： 《OpenAI 代码⾃动评审组件》结合 GitHub Actions、Git/Github、OpenAI、微信公众号，多⽅⾯技术完成代码评审和⾃动推送通知。 项目价值： AI代码⾃动评审组件显著提升软件开发效率与质量，通过智能分析代码⻛格、潜在缺陷及性能瓶颈，减少⼈⼯复审负担，加速产品迭代周…",
+  "category": "项目实践"
+}

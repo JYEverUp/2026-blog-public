@@ -1,0 +1,11 @@
+{
+  "title": "2、OpenFeign实现服务调用",
+  "tags": [
+    "微服务",
+    "Spring Cloud Alibaba",
+    "OpenFeign"
+  ],
+  "date": "2024-10-02",
+  "summary": "概述 Feign是一个声明式WebService客户端。使用Feign能让编写WebService客户端更加简单。 它的使用方法是定义一个服务接口然后在上面添加注解。Feign也支持可插拔式的编码和解码器。Spring Cloud对feign进行了封装，使其支持了Spring MVC标准注解和HttpM…",
+  "category": "微服务"
+}

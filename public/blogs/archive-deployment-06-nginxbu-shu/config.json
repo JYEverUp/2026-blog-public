@@ -1,0 +1,9 @@
+{
+  "title": "6、nginx部署",
+  "tags": [
+    "部署运维"
+  ],
+  "date": "2024-10-24",
+  "summary": "nginx部署 去官网也下个windows版本 (https://nginx.org/en/download.html)的，本地调试成功，再放到服务器去执行，容易排查错误。 用docker的坑太多了，nginx决定用原生的o(╥﹏╥)o。 1、安装nginx前首先安装四个依赖包 --以下命令一键安装四个…",
+  "category": "部署运维"
+}

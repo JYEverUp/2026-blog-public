@@ -1,0 +1,10 @@
+{
+  "title": "接口测试利器HTTP Client，不用Postman也可以",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-01-17",
+  "summary": "接口测试，用的比较多的可能是postman。 今天给大家推荐另一款接口测试工具，idea中自带的接口测试插件HTTP Client，非常好用，这样大家可以不用装postman，直接在idea一个工具中边开发边测试，非常方便。 1、安装插件HTTP Client File->Settings->Plugi…",
+  "category": "工程实践"
+}

@@ -1,0 +1,10 @@
+{
+  "title": "第76节 千万级数据，全表update的正确姿势",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-07-11",
+  "summary": "千万数据全表更新，可能会导致严重的生产事故，本文将带大家分析下，千万级数据更新存在的问题，以及如何解决。 先收藏点赞，慢慢看。 1）创建测试表 ```sql create table t_demo ( id bigint auto_increment PRIMARY key, c1 bigint );…",
+  "category": "工程实践"
+}

@@ -1,0 +1,11 @@
+{
+  "title": "7、Java8新特性",
+  "tags": [
+    "Java",
+    "知识积累",
+    "勇往直前"
+  ],
+  "date": "2024-12-29",
+  "summary": "JDK - 新特性 - Java8 特性列表 Lambda表达式; 函数式接口; 方法引用和构造函数调用; Stream流; 在JDK7中的新特性 fork/join 框架和Stream流搭配使用; 接口中的默认方法和静态方法; Optional 容器; 新时间日期API; HashMap底层数据结构的…",
+  "category": "Java"
+}

@@ -1,0 +1,9 @@
+{
+  "title": "对象存储MinIO入门介绍",
+  "tags": [
+    "Docker"
+  ],
+  "date": "2024-10-27",
+  "summary": "常见的对象存储方式对比 (https://note.moguit.cn/#/./Docker/对象存储MinIO入门简介/README?id=常见的对象存储方式对比) 直接将图片保存到服务的硬盘; 优点：开发便捷，成本低; 缺点：扩容困难; 使用分布式文件系统进行存储; 优点：容易实现扩容; 缺点：开发…",
+  "category": "Docker"
+}

@@ -1,0 +1,9 @@
+{
+  "title": "linux常用命令",
+  "tags": [
+    "部署运维"
+  ],
+  "date": "2024-07-13",
+  "summary": "1、查找运行端口的进程：sudo ss -tulnp | grep 8080 image-20241228095417714 2、杀死进程pid：kill 9 8267 image-20241228095442641",
+  "category": "部署运维"
+}

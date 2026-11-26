@@ -1,0 +1,11 @@
+{
+  "title": "2、Spring Boot整合Redis",
+  "tags": [
+    "Spring Boot",
+    "知识积累",
+    "SpringBoot"
+  ],
+  "date": "2024-06-09",
+  "summary": "整合redis springboot在现在的版本中操作Redis数据库用到了lettuce，而不是Jedis，他们各有各的特点。; Jedis以Redis命令作为方法名称，学习成本低，简单实用。但是Jedis实例是线程不安全的，多线程环境下需要基于连接池来使用。; Lettuce是基于Netty实现的…",
+  "category": "Spring Boot"
+}

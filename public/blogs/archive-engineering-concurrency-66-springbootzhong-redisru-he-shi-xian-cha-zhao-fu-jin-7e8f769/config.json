@@ -1,0 +1,10 @@
+{
+  "title": "SpringBoot中，Redis如何实现查找附近的人功能？",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-06-23",
+  "summary": "UserLocationController.http ```java com.itsoku.lesson066.controller.UserLocationController ``` image-20240719184649529 附近的人是使用Redis中的Geo（Geospatial）数据结构…",
+  "category": "工程实践"
+}

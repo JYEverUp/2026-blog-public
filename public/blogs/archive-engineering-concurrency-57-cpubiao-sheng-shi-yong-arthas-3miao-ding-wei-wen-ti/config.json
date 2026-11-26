@@ -1,0 +1,10 @@
+{
+  "title": "cpu飙升，使用Arthas，3秒定位问题",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-12-05",
+  "summary": "arthas：阿里开源的一款Java问题诊断利器，详情见：https://arthas.aliyun.com/doc/quick-start.html 2.1、问题代码 ```java public class CpuLoadTest { public static void main(String[]…",
+  "category": "工程实践"
+}

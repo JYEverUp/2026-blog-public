@@ -1,0 +1,10 @@
+{
+  "title": "Mycat2应用与实战教程",
+  "tags": [
+    "存储中间件",
+    "mycat"
+  ],
+  "date": "2024-11-01",
+  "summary": "1.1 什么是MyCat 官网： http://mycatone.top/ () Mycat 是基于 java 语言编写的数据库中间件，是一个实现了 MySQL 协议的服务器，前端用户可以把它看作是一个数据库代理，用 MySQL 客户端工具和命令行访问，而其后端可以用 MySQL 原生协议与多个 MyS…",
+  "category": "存储中间件"
+}

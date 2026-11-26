@@ -1,0 +1,10 @@
+{
+  "title": "2、RocketMQ搭建",
+  "tags": [
+    "消息队列",
+    "RocketMQ"
+  ],
+  "date": "2024-04-08",
+  "summary": "单机的安装与启动 准备工作 硬件 准备一台linux，我用的vm虚拟机centos，输入ifconfig获得ens33的ip为inet 192.168.146.128 在C:\\Windows\\System32\\drivers\\etc\\修改host文件，将ip指向我自定义命名的centos域名 环境 1.…",
+  "category": "消息队列"
+}

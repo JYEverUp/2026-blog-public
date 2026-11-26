@@ -1,0 +1,10 @@
+{
+  "title": "Jenkins部署",
+  "tags": [
+    "工程实践",
+    "Docker"
+  ],
+  "date": "2024-04-23",
+  "summary": "一、操作说明 Jenkins 环境的安装，以及以最简单的方式配置使用 Jenkins 完成对案例项目的部署。部署后可以访问 jenkins (opens new window) (https://gitee.com/guo-said/jenkins.git)项目提供的接口进行功能验证。整个部署操作流程如…",
+  "category": "工程实践"
+}

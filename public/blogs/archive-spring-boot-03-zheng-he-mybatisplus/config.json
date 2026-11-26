@@ -1,0 +1,11 @@
+{
+  "title": "3、Spring Boot 整合 MyBatisPlus",
+  "tags": [
+    "Spring Boot",
+    "知识积累",
+    "SpringBoot"
+  ],
+  "date": "2024-07-16",
+  "summary": "1、引入依赖 ```java com.baomidou mybatis-plus-boot-starter 3.1.1 ``` 2、引入配置 ```java mybatis-plus: # xml地址 mapper-locations: classpath:mapper/*/.xml configura…",
+  "category": "Spring Boot"
+}

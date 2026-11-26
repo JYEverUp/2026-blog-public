@@ -1,0 +1,10 @@
+{
+  "title": "性能调优：线程死锁相关问题",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-01-08",
+  "summary": "两个或多个线程在执行过程中，因争夺共享资源而被阻塞，且无法继续执行下去的一种状态。 比如下面这个案例，定义了两个线程：thread1和thread2 thread1对resource1上锁，然后尝试获取resource2的锁；; thread2对resource2上锁，然后尝试获取resource1的锁…",
+  "category": "工程实践"
+}

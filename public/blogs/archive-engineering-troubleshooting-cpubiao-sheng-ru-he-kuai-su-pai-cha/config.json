@@ -1,0 +1,11 @@
+{
+  "title": "CPU飙升，如何快速排查？",
+  "tags": [
+    "工程实践",
+    "生产问题定位",
+    "场景相关内容"
+  ],
+  "date": "2024-09-05",
+  "summary": "1、问题代码 ``` public class CpuLoadTest { public static void main(String[] args) { System.out.println(\"程序已启动\"); while (true) { } } } ``` 执行上面这段代码，会导致cpu飙升 `…",
+  "category": "工程实践"
+}

@@ -1,0 +1,11 @@
+{
+  "title": "5、项目实现json字段",
+  "tags": [
+    "Spring Boot",
+    "知识积累",
+    "SpringBoot"
+  ],
+  "date": "2024-06-27",
+  "summary": "参考http://www.dedeyun.com/it/java/93532.html 有些很复杂的信息，我们一般会用扩展字段传一个json串，字段一般用text类型存在数据库。mysql5.7以后支持json类型的字段，还可以进行sql查询与修改json内的某个字段的能力。 1.表结构 ```java…",
+  "category": "Spring Boot"
+}

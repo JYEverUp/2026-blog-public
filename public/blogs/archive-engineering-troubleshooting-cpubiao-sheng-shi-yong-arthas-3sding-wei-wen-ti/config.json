@@ -1,0 +1,11 @@
+{
+  "title": "CPU飙升，如何定位问题？",
+  "tags": [
+    "工程实践",
+    "生产问题定位",
+    "场景相关内容"
+  ],
+  "date": "2024-11-03",
+  "summary": "1、Arthas arthas:阿里开源的一款java问题诊断利器，详情见:https://arthas.aliyun,com/doc/quick-start.html 2、演示:使用Arthas，3秒定位cpu飙升的代码 2.1、问题代码 ``` public class CpuLoadTest {…",
+  "category": "工程实践"
+}

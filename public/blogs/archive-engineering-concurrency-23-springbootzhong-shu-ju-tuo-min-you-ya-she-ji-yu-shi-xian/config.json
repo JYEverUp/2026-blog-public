@@ -1,0 +1,10 @@
+{
+  "title": "SpringBoot中数据脱敏优雅设计与实现",
+  "tags": [
+    "工程实践",
+    "并发每日记录"
+  ],
+  "date": "2024-09-20",
+  "summary": "本文内容 本文主要介绍 SpringBoot 中数据脱敏优雅的设计与实现，坚持看完，相信你会有所收获。 先带大家看下效果 接口代码 ```java RestController public class TestController { @GetMapping(\"/getUser\") public Re…",
+  "category": "工程实践"
+}
