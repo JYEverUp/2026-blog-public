@@ -202,6 +202,14 @@
 	max-width: 100%;
 }
 
+/* Keep the OpenClaw article figures within the reading column. */
+.prose img[src^='/blogs/openclaw-feishu-quickstart/source-images/'] {
+	width: auto;
+	height: auto;
+	max-width: min(100%, 720px);
+	max-height: min(65vh, 520px);
+}
+
 /* Blockquote */
 .prose blockquote {
 	border-left: 3px solid var(--color-brand);

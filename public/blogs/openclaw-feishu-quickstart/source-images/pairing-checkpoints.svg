@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1542" height="650" viewBox="0 0 1542 650" role="img" aria-labelledby="title">
+<title id="title">我怎么确认配对成功</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#116458"/></marker></defs>
+<rect x="0" y="0" width="1542" height="650" rx="0" fill="#f2f7fb" stroke="none"/>
+<text x="64" y="88" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="46" font-weight="700" fill="#132437">我怎么确认飞书配对成功</text>
+<rect x="64" y="135" width="1414" height="110" rx="20" fill="#ffffff" stroke="#c9d8e5"/><text x="90" y="178" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#132437">收到配对提示</text><text x="90" y="220" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#3d556b">我用自己的测试账号发起私聊，核对等待批准的请求。</text>
+<rect x="64" y="271" width="1414" height="194" rx="20" fill="#172b3d" stroke="none"/>
+<text x="90" y="329" font-family="Consolas, monospace" font-size="27" font-weight="400" fill="#f0f6fc">openclaw pairing list feishu</text>
+<text x="90" y="392" font-family="Consolas, monospace" font-size="27" font-weight="400" fill="#a8ebd5">openclaw pairing approve feishu YOUR_PAIRING_CODE</text>
+<rect x="64" y="492" width="1414" height="110" rx="20" fill="#ffffff" stroke="#c9d8e5"/><text x="90" y="535" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#132437">重发测试消息</text><text x="90" y="577" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#3d556b">看到机器人回复后，我再用一条巡检输入检查结果。</text>
+</svg>

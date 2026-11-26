@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1628" height="408" viewBox="0 0 1628 408" role="img" aria-labelledby="title">
+<title id="title">我怎么把飞书消息交给 OpenClaw</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#116458"/></marker></defs>
+<rect x="0" y="0" width="1628" height="408" rx="0" fill="#f2f7fb" stroke="none"/>
+<text x="70" y="83" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="48" font-weight="700" fill="#132437">我怎么把飞书消息交给 OpenClaw</text>
+<rect x="70" y="145" width="310" height="120" rx="20" fill="#ffffff" stroke="#c9d8e5"/><text x="96" y="188" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#132437">我的飞书私聊</text><text x="96" y="230" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#3d556b">发出一条巡检消息</text>
+<rect x="455" y="145" width="310" height="120" rx="20" fill="#ffffff" stroke="#c9d8e5"/><text x="481" y="188" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#132437">飞书通道</text><text x="481" y="230" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#3d556b">接收事件并回传回复</text>
+<rect x="840" y="145" width="310" height="120" rx="20" fill="#ffffff" stroke="#c9d8e5"/><text x="866" y="188" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#132437">OpenClaw Gateway</text><text x="866" y="230" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#3d556b">把消息交给对应会话</text>
+<rect x="1225" y="145" width="332" height="120" rx="20" fill="#ffffff" stroke="#c9d8e5"/><text x="1251" y="188" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#132437">Agent 与模型</text><text x="1251" y="230" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#3d556b">组织结果，按需调用工具</text>
+<path d="M394 205L438 205" stroke="#116458" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M779 205L823 205" stroke="#116458" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M1164 205L1208 205" stroke="#116458" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<text x="70" y="337" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#3d556b">消息走长连接进来，回复沿同一条通道回到我的私聊。</text>
+</svg>

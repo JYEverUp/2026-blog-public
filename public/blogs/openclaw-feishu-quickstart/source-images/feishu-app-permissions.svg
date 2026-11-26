@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="550" viewBox="0 0 1320 550" role="img" aria-labelledby="title">
+  <title id="title">我先开通哪些飞书权限</title>
+  <rect width="1320" height="550" fill="#f2f7fb"/>
+  <g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif">
+  <text x="60" y="71" font-size="42" font-weight="700" fill="#132437">我先开通哪些飞书权限</text>
+  <text x="60" y="119" font-size="24" fill="#3d556b">我先跑通机器人私聊的消息收发，再按实际任务添加权限。</text>
+  <rect x="60" y="156" width="1200" height="92" rx="16" fill="#fff" stroke="#c9d8e5"/>
+  <text x="87" y="192" font-size="27" font-weight="700" fill="#132437">接收私聊事件</text>
+  <text x="87" y="227" font-size="22" fill="#3d556b">选择长连接，在事件订阅中添加 im.message.receive_v1。</text>
+  <rect x="60" y="276" width="1200" height="92" rx="16" fill="#fff" stroke="#c9d8e5"/>
+  <text x="87" y="312" font-size="27" font-weight="700" fill="#132437">以应用身份回复</text>
+  <text x="87" y="347" font-size="22" fill="#3d556b">按平台提示开通机器人私聊的收发权限。</text>
+  <rect x="60" y="396" width="1200" height="92" rx="16" fill="#fff" stroke="#c9d8e5"/>
+  <text x="87" y="432" font-size="27" font-weight="700" fill="#132437">创建版本并发布</text>
+  <text x="87" y="467" font-size="22" fill="#3d556b">确认测试账号在可见范围内，等版本生效后发一条私聊消息。</text>
+  </g>
+</svg>

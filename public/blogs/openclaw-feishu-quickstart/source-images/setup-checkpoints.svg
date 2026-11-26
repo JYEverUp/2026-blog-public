@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="850" viewBox="0 0 1320 850" role="img" aria-labelledby="title">
+<title id="title">我怎么验收 OpenClaw 部署</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#116458"/></marker></defs>
+<rect x="0" y="0" width="1320" height="850" rx="0" fill="#f2f7fb" stroke="none"/>
+<text x="66" y="86" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="49" font-weight="700" fill="#132437">我怎么验收 OpenClaw 部署</text>
+<rect x="66" y="142" width="1188" height="110" rx="20" fill="#ffffff" stroke="#c9d8e5"/><text x="92" y="185" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#132437">安装 OpenClaw</text><text x="92" y="227" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#3d556b">运行官方安装脚本，进入向导。</text>
+<rect x="66" y="285" width="1188" height="110" rx="20" fill="#ffffff" stroke="#c9d8e5"/><text x="92" y="328" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#132437">配置模型并启动 Gateway</text><text x="92" y="370" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#3d556b">先完成模型配置，让 Gateway 后台运行。</text>
+<rect x="66" y="428" width="1188" height="110" rx="20" fill="#ffffff" stroke="#c9d8e5"/><text x="92" y="471" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#132437">用 Dashboard 验收</text><text x="92" y="513" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#3d556b">检查服务状态，在 Dashboard 收到一条模型回复。</text>
+<rect x="66" y="571" width="1188" height="110" rx="20" fill="#ffffff" stroke="#c9d8e5"/><text x="92" y="614" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#132437">接入并验收飞书私聊</text><text x="92" y="656" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#3d556b">配置企业自建应用和长连接，用同一条消息再测一次。</text>
+<path d="M660 260L660 277" stroke="#116458" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M660 403L660 420" stroke="#116458" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M660 546L660 563" stroke="#116458" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<text x="66" y="767" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#3d556b">本地对话和飞书私聊分别验收，报错时可以定位到具体环节。</text>
+</svg>

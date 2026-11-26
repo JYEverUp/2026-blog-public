@@ -1,28 +1,37 @@
-假设每天早上都要看一遍服务巡检结果，再把异常项发到飞书。可以先做一个小版本：把几行模拟巡检数据发给机器人，让它在原会话里回复异常摘要。跑通这一步之后，再考虑接入真实数据源。
+我想给自己搭一个飞书巡检助手。第一版只做一件事：我把几行巡检数据发给机器人，它在私聊里回一份异常摘要。这个范围够小，部署、消息收发和结果都能逐步核对。
 
-搭 OpenClaw 时，我会在两个地方分别验收。先在本地 Dashboard 发一条消息，确认 Gateway 和模型能正常对话。再到飞书私聊里发同一条消息，确认飞书的收发链路也通了。这样做的好处是，飞书机器人沉默时，手里已经有一个能对照的入口。
+我的顺序是先在 Dashboard 验证模型，再接飞书。两边用同一条测试消息。如果 Dashboard 能回、飞书没动静，我就先查飞书通道和权限。
 
-## 一条飞书消息要经过哪些环节
+## 我怎么理解这条消息链路
 
 ```text
-飞书私聊 → 飞书通道插件 → OpenClaw Gateway → Agent 调用模型
-飞书私聊 ← 飞书通道插件 ← OpenClaw Gateway ← Agent 返回结果
+我的飞书私聊 → 飞书通道插件 → OpenClaw Gateway → Agent 调用模型
+我的飞书私聊 ← 飞书通道插件 ← OpenClaw Gateway ← Agent 返回结果
 ```
 
-Gateway 是运行在电脑或服务器上的常驻进程，负责承接会话和通道连接。飞书插件负责接收消息事件和发送回复。模型负责理解输入、生成输出。如果以后要读取监控数据，还需要给 Agent 配置相应工具，并明确它能访问哪些数据。
+我把 Gateway 当作一直跑在电脑或服务器上的入口。飞书插件负责收发消息，Agent 接手后调用模型生成回复。以后要从监控系统读数据，我会再给 Agent 一个权限受限的查询工具。
 
-飞书使用 WebSocket 长连接时，由 OpenClaw 主动连到飞书，Gateway 可以继续绑定在本机回环地址。需要保持运行的是 Gateway，浏览器里的 Dashboard 可以关掉。[OpenClaw 飞书通道文档](https://docs.openclaw.ai/channels/feishu)
+我选飞书的 WebSocket 长连接。连接由 OpenClaw 主动发起，Gateway 可以继续监听本机回环地址。关掉 Dashboard 不影响已在后台运行的 Gateway。
 
-## 第一步：在 Dashboard 收到模型回复
+![我使用的消息链路，覆盖飞书、Gateway、模型和工具](/blogs/openclaw-feishu-quickstart/source-images/message-flow.svg)
 
-下面以 Linux 上的官方 CLI 为例。准备一个普通系统账号和可用的模型凭据。已有 Node.js 时，可以先运行 `node --version`，再对照官方安装页确认兼容性。[OpenClaw 安装文档](https://docs.openclaw.ai/install)
+<details>
+<summary>开篇动图</summary>
+
+![两只小狗的动图](/blogs/openclaw-feishu-quickstart/source-images/road-map-openclaw-01.gif)
+
+</details>
+
+## 我先验收本地对话
+
+我这里选 Linux 上的 CLI。开始前准备一个普通系统账号和模型凭据，已有 Node.js 时先运行 `node --version` 确认环境。
 
 ```bash
 curl -fsSL https://openclaw.ai/install.sh -o openclaw-install.sh
 bash openclaw-install.sh
 ```
 
-安装脚本会启动初始化向导。先配置模型供应商，让 Gateway 在后台运行。飞书可以留到下一步再配置。向导结束后运行：
+安装向导里，我先选模型供应商，把 Gateway 设成后台运行，暂时跳过飞书。向导结束后，我用下面三条命令确认版本、检查服务和打开 Dashboard。
 
 ```bash
 openclaw --version
@@ -30,27 +39,77 @@ openclaw gateway status
 openclaw dashboard
 ```
 
-在 Dashboard 输入 `请只回复：本地对话已连通`。收到回复后，再接飞书。页面只要连得上 Gateway 就可能打开，因此还要实际发一条消息来确认模型可用。若日志出现模型鉴权、配额或网络错误，先处理对应的供应商配置。[OpenClaw 快速入门](https://docs.openclaw.ai/start/getting-started)
+我会发一条短消息，请模型只回复「本地对话已连通」。看到回复才继续接飞书。遇到模型鉴权、配额或网络错误，我先看对应的供应商配置。
 
-## 第二步：让飞书私聊也能收到回复
+<details>
+<summary>部署流程和向导界面</summary>
 
-这里走企业自建应用的手动配置流程。先准备应用凭据，让 Gateway 建立长连接，再在飞书后台保存事件订阅。[OpenClaw 飞书配置向导](https://docs.openclaw.ai/channels/feishu/setup)
+向导的菜单和排列会随版本变化。我主要确认模型已配置、Gateway 能启动，并且对话有回复。
 
-1. 在[飞书开放平台](https://open.feishu.cn/app)创建企业自建应用，启用机器人能力。在「凭证与基础信息」里找到 App ID 和 App Secret。测试期把应用可用范围限定为自己的账号或测试成员。
-2. 运行 `openclaw channels login --channel feishu`，选手动配置，填入凭据并选择飞书域名。向导会按需安装官方 `@openclaw/feishu` 插件。只验收私聊时，可以把群聊策略设为 `disabled`。App Secret 留在受保护的配置里，别放进博客、截图或 Git 仓库。
-3. 保持 Gateway 运行，回到飞书后台的「事件与回调」，选择「使用长连接接收事件」，订阅「接收消息」`im.message.receive_v1`。按平台提示开通接收机器人私聊和以应用身份回复所需的权限，保存后发布应用版本。若租户要求审批，需等该版本生效。首次测试只需要消息收发相关权限。[飞书接收消息事件](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/im-v1) · [飞书长连接配置](https://open.feishu.cn/document/ukTMukTMukTM/uYDNxYjL2QTM24iN0EjN/event-subscription-configure-)
-4. 用 `openclaw channels status --probe` 检查通道，再到飞书客户端私聊机器人。如果使用默认的私聊配对策略，首次发消息会收到配对码。核对请求确实来自自己的测试账号，再在 Gateway 所在机器上批准。[飞书私聊访问控制](https://docs.openclaw.ai/channels/feishu/access-control)
+![我的 OpenClaw 部署和验收顺序](/blogs/openclaw-feishu-quickstart/source-images/setup-checkpoints.svg)
+
+![向导的安全提示](/blogs/openclaw-feishu-quickstart/source-images/road-map-openclaw-09.png)
+
+![向导选择快速开始或手动配置](/blogs/openclaw-feishu-quickstart/source-images/road-map-openclaw-10.png)
+
+![向导的模型供应商列表](/blogs/openclaw-feishu-quickstart/source-images/road-map-openclaw-11.png)
+
+![模型凭据设置示意](/blogs/openclaw-feishu-quickstart/source-images/model-credentials.svg)
+
+![向导的技能配置与服务检查](/blogs/openclaw-feishu-quickstart/source-images/road-map-openclaw-16.png)
+
+![向导提示安装完成](/blogs/openclaw-feishu-quickstart/source-images/road-map-openclaw-17.png)
+
+![Gateway 启动日志](/blogs/openclaw-feishu-quickstart/source-images/road-map-openclaw-18.png)
+
+</details>
+
+## 我再接飞书私聊
+
+这部分的飞书接入向导要求 OpenClaw 2026.5.29 或更高版本。我先用 `openclaw --version` 确认版本，再配置通道。
+
+1. 我先在飞书开放平台建一个企业自建应用，启用机器人，把应用可见范围限定在测试账号。App ID 与 App Secret 在「凭证与基础信息」里取。
+2. 我运行 `openclaw channels login --channel feishu`，选择手动配置，录入凭据并选择飞书域名。向导会按需安装飞书插件。我先验收私聊，把群聊策略设成 `disabled`。
+3. Gateway 保持运行。我回到飞书后台，在「事件与回调」里选长连接，添加接收消息事件 `im.message.receive_v1`，开通私聊收发所需权限并发布。租户要求审批时，我等版本生效后再发消息。
+4. 我用 `openclaw channels status --probe` 检查通道，然后在飞书客户端给机器人发一条消息。使用默认私聊策略时，如果收到配对码，我先核对请求来自自己的测试账号，再在 Gateway 所在机器上批准。
 
 ```bash
 openclaw pairing list feishu
 openclaw pairing approve feishu YOUR_PAIRING_CODE
 ```
 
-将 `YOUR_PAIRING_CODE` 换成刚收到的配对码。批准后重新发一条消息，等机器人回复。若手动设置了私聊白名单，则用白名单里的飞书账号直接测试。
+我用刚收到的配对码替换 `YOUR_PAIRING_CODE`，批准后重新发一条消息。已经设置私聊白名单时，我直接用名单里的账号测试。
 
-## 用一条巡检摘要验收
+![飞书客户端首次私聊与配对提示](/blogs/openclaw-feishu-quickstart/source-images/feishu-first-chat-pairing-example.png)
 
-在 Dashboard 和飞书私聊里各发一次下面的输入。任务只需要整理随消息发出的数据，可以在开通监控系统权限之前完成验收。
+<details>
+<summary>飞书后台、通道配置与配对步骤</summary>
+
+![我创建飞书企业自建应用的步骤](/blogs/openclaw-feishu-quickstart/source-images/feishu-app-creation.svg)
+
+![我配置飞书机器人收发权限的步骤](/blogs/openclaw-feishu-quickstart/source-images/feishu-app-permissions.svg)
+
+![飞书应用的创建版本和发布页面](/blogs/openclaw-feishu-quickstart/source-images/road-map-openclaw-06.png)
+
+![飞书后台的事件与回调页面和长连接选项](/blogs/openclaw-feishu-quickstart/source-images/road-map-openclaw-07.png)
+
+![向导选择飞书消息通道](/blogs/openclaw-feishu-quickstart/source-images/road-map-openclaw-13.png)
+
+![向导安装飞书插件的界面](/blogs/openclaw-feishu-quickstart/source-images/road-map-openclaw-14.png)
+
+![飞书通道凭据设置示意](/blogs/openclaw-feishu-quickstart/source-images/feishu-credentials.svg)
+
+![飞书后台开通权限并添加接收消息事件](/blogs/openclaw-feishu-quickstart/source-images/road-map-openclaw-19.png)
+
+![飞书应用修改事件订阅后创建新版本](/blogs/openclaw-feishu-quickstart/source-images/road-map-openclaw-20.png)
+
+![我核对配对请求并验证飞书回复的步骤](/blogs/openclaw-feishu-quickstart/source-images/pairing-checkpoints.svg)
+
+</details>
+
+## 我用三行巡检数据验收
+
+我在 Dashboard 和飞书私聊里各发一次下面的模拟输入。第一轮只整理消息自带的数据，暂时不用接监控系统。
 
 ```text
 以下是 09:00 的模拟巡检结果。请只列出状态为 WARN 或 FAIL 的服务，
@@ -61,20 +120,18 @@ queue     WARN  待处理 480 条
 backup    FAIL  最后成功于昨天 02:00
 ```
 
-两边的回复都应包含 `queue` 和 `backup`，异常总数应为 `2`。`api` 不应出现在异常列表里。通过这三个检查，可以同时确认消息往返和任务结果。接真实巡检数据时，我会先给 Agent 一个只读查询入口，保留查询时间和原始观测值。重启服务、修改配置等动作再单独设置权限和审批。[OpenClaw 安全指南](https://docs.openclaw.ai/gateway/security)
+我会核对三件事：回复里有 `queue` 和 `backup`，异常总数是 `2`，`api` 没进入异常列表。接真实巡检数据时，我会先加只读查询，保留观测值和时间。重启服务和修改配置再单独设置执行权限和审批。
 
-## 机器人没有回复，先查哪里
+![飞书机器人回复系统概况和 Redis 状态的对话示意](/blogs/openclaw-feishu-quickstart/source-images/feishu-ops-bot-example.png)
 
-| 看到的现象 | 先查什么 |
+## 机器人没回时我先查哪里
+
+| 我看到的现象 | 我先做什么 |
 | --- | --- |
-| Dashboard 打不开 | 在运行 Gateway 的机器上执行 `openclaw gateway status`，确认服务正在运行。 |
-| Dashboard 能打开，发消息时报错 | 看 `openclaw logs --follow` 里的模型请求错误，核对凭据、额度和网络。 |
-| Dashboard 能回复，飞书无反应 | 先运行 `openclaw channels status --probe`，再核对飞书应用版本、可用范围、长连接及事件订阅。 |
-| 飞书返回配对码 | 在 Gateway 上核对并批准自己的请求，再发一次消息。 |
-| 日志收到消息，飞书仍没有回复 | 看日志区分模型处理失败与飞书发送失败。若发送返回权限错误，核对应用发送权限和生效版本。 |
+| Dashboard 打不开 | 在 Gateway 所在机器上运行 `openclaw gateway status`，确认进程正在运行。 |
+| Dashboard 打得开，发消息时报错 | 用 `openclaw logs --follow` 看模型请求错误，核对凭据、额度和网络。 |
+| Dashboard 能回复，飞书没反应 | 运行 `openclaw channels status --probe`，核对飞书应用版本、可用范围、长连接和事件订阅。 |
+| 飞书返回配对码 | 核对并批准自己的请求，然后重新发一条消息。 |
+| 日志收到消息，飞书仍没有回复 | 从日志区分模型处理失败和飞书发送失败。发送若被拒绝，我会核对应用权限和生效版本。 |
 
-如果同时排查多个环节，可以开着 `openclaw logs --follow`，再从飞书发一条带当前时间的测试消息，便于定位对应的日志。[OpenClaw 飞书排障文档](https://docs.openclaw.ai/channels/feishu/troubleshooting)
-
-## 参考来源
-
-- 本文的选题来自小傅哥的 OpenClaw 安装与飞书接入文章，流程按现行官方文档重新整理。[小傅哥《OpenClaw》](https://bugstack.cn/md/ai/openclaw.html)
+排查时，我会开着 `openclaw logs --follow`，再从飞书发一条带当前时间的测试消息。这样能在日志里找到这一次请求，看到它停在哪一步。
