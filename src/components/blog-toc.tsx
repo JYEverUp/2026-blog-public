@@ -17,6 +17,7 @@ type BlogTocProps = {
 
 export function BlogToc({ toc, delay = 0 }: BlogTocProps) {
 	const [activeIds, setActiveIds] = useState<Set<string>>(new Set())
+	const baseLevel = toc.reduce((level, item) => Math.min(level, item.level), 6)
 	const minActiveId = useMemo(() => {
 		return Array.from(activeIds).sort((a, b) => toc.findIndex(item => item.id === a) - toc.findIndex(item => item.id === b))[0]
 	}, [activeIds, toc])
@@ -70,9 +71,9 @@ export function BlogToc({ toc, delay = 0 }: BlogTocProps) {
 				{toc.map(item => (
 					<a
 						key={item.id + item.level}
-						href={`#${item.id}`}
-						className={clsx('hover:text-brand relative block pl-3 transition-colors', item.id === minActiveId && 'text-brand')}
-						style={{ paddingLeft: (item.level - 1) * 8 }}>
+						href={`#${encodeURIComponent(item.id)}`}
+						className={clsx('hover:text-brand relative block [overflow-wrap:anywhere] transition-colors', item.id === minActiveId && 'text-brand')}
+						style={{ paddingInlineStart: (item.level - baseLevel) * 8 }}>
 						{item.text}
 					</a>
 				))}

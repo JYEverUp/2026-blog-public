@@ -1,5 +1,6 @@
 import { Marked, Renderer } from 'marked'
 import type { Tokens } from 'marked'
+import { htmlToDOM, type DOMNode } from 'html-react-parser'
 
 export type TocItem = { id: string; text: string; level: number }
 
@@ -14,6 +15,16 @@ export function slugify(text: string): string {
 		.replace(/[^a-z0-9\u4e00-\u9fa5\s-]/g, '')
 		.trim()
 		.replace(/\s+/g, '-')
+}
+
+function getHeadingText(nodes: DOMNode[]): string {
+	return nodes.map(node => {
+		if (node.type === 'text') return node.data
+		if (node.type !== 'tag') return ''
+		if (node.name === 'img') return node.attribs.alt || ''
+		if (node.name === 'br') return ' '
+		return getHeadingText(node.children as DOMNode[])
+	}).join('')
 }
 
 // Lazy load shiki to handle environments where it's not available (e.g., Cloudflare Workers)
@@ -61,14 +72,27 @@ export async function renderMarkdown(markdown: string): Promise<MarkdownRenderRe
 	// (If we lex before registering extensions, math tokens won't ever be produced on a cold refresh.)
 	const marked = new Marked()
 	const highlightedCode = new Map<Tokens.Code, string>()
+	const toc: TocItem[] = []
+	const usedIds = new Set<string>()
+	const reservedIds = new Set<string>()
 	const [shiki, katex] = await Promise.all([loadShiki(), loadKatex()])
 
 	// Render HTML with heading ids
 	const renderer = new Renderer()
 
-	renderer.heading = (token: Tokens.Heading) => {
-		const id = slugify(token.text || '')
-		return `<h${token.depth} id="${id}">${token.text}</h${token.depth}>`
+	renderer.heading = function (token: Tokens.Heading) {
+		const html = this.parser.parseInline(token.tokens)
+		const text = getHeadingText(htmlToDOM(html)).replace(/\s+/g, ' ').trim()
+		// Keep the original fragment for the first heading with each slug.
+		const baseId = slugify(token.text) || 'section'
+		let id = baseId
+		let suffix = 1
+		while (usedIds.has(id) || (id !== baseId && reservedIds.has(id))) {
+			id = `${baseId}-${++suffix}`
+		}
+		usedIds.add(id)
+		if (text) toc.push({ id, text, level: token.depth })
+		return `<h${token.depth} id="${id}">${html}</h${token.depth}>`
 	}
 
 	renderer.code = (token: Tokens.Code) => {
@@ -171,23 +195,9 @@ export async function renderMarkdown(markdown: string): Promise<MarkdownRenderRe
 	// Pre-process with marked lexer first (after extensions are registered)
 	const tokens = marked.lexer(markdown)
 
-	// Extract TOC from parsed tokens (this correctly skips code blocks)
-	const toc: TocItem[] = []
-	function extractHeadings(tokenList: typeof tokens) {
-		for (const token of tokenList) {
-			if (token.type === 'heading' && token.depth <= 3) {
-				// Use the parsed text (markdown syntax like links/code already stripped)
-				const text = token.text
-				const id = slugify(text)
-				toc.push({ id, text, level: token.depth })
-			}
-			// Recursively check nested tokens (e.g., in blockquotes, lists)
-			if ('tokens' in token && token.tokens) {
-				extractHeadings(token.tokens as typeof tokens)
-			}
-		}
-	}
-	extractHeadings(tokens)
+	marked.walkTokens(tokens, token => {
+		if (token.type === 'heading') reservedIds.add(slugify((token as Tokens.Heading).text) || 'section')
+	})
 
 	if (shiki) {
 		const codeBlocks: Tokens.Code[] = []

@@ -215,18 +215,6 @@
     "category": "可观测性"
   },
   {
-    "slug": "archive-java-java1-8xin-te-xing",
-    "title": "7、Java8新特性",
-    "tags": [
-      "Java",
-      "知识积累",
-      "勇往直前"
-    ],
-    "date": "2024-12-29",
-    "summary": "JDK - 新特性 - Java8 特性列表 Lambda表达式; 函数式接口; 方法引用和构造函数调用; Stream流; 在JDK7中的新特性 fork/join 框架和Stream流搭配使用; 接口中的默认方法和静态方法; Optional 容器; 新时间日期API; HashMap底层数据结构的…",
-    "category": "Java"
-  },
-  {
     "slug": "archive-engineering-concurrency-44-wei-fu-wu-lian-lu-ri-zhi-zhui-zong-shi-zhan",
     "title": "微服务链路日志追踪实战",
     "tags": [
@@ -494,18 +482,6 @@
     "category": "工程实践"
   },
   {
-    "slug": "archive-dev-log-day12",
-    "title": "项目开发日志 · Day012",
-    "tags": [
-      "开发日志",
-      "开发笔记",
-      "学习记录"
-    ],
-    "date": "2024-11-19",
-    "summary": "任务 [x] 规则引擎量化人群参与活动; 总结 首先先去了解了一下组合模式和决策树，然后看了看数据库，其实就是把一个类似于二叉树的结构存到了数据库里，分别对应了三个东西，一个表用来保存决策树的树根信息，然后一个表用来保存树上的所有节点的信息，然后一个表用来存决策树的连接信息，我们可以通过树根的 ID 拿…",
-    "category": "开发日志"
-  },
-  {
     "slug": "archive-engineering-concurrency-48-dian-shang-xi-tong-zi-jin-zhang-hu-biao-she-ji-yu-shi-zhan",
     "title": "电商系统-资金账户表设计 及 应用实战",
     "tags": [
@@ -548,18 +524,6 @@
     "date": "2024-11-10",
     "summary": "本文将介绍幂等问题的 4 种解决方案，理解后，可以应对工作中所有幂等性问题。 每种方案都会有代码落地，并对每种方案进行并发压测，验证其可靠性，可能有点长，大家耐心看完，吃透后，以后也不用在幂等性问题上耗费时间了。 什么是幂等 幂等指多次操作产生的影响只会跟一次执行的结果相同，通俗的说：某个行为重复的执行…",
     "category": "工程实践"
-  },
-  {
-    "slug": "archive-dev-log-day11",
-    "title": "项目开发日志 · Day011",
-    "tags": [
-      "开发日志",
-      "开发笔记",
-      "学习记录"
-    ],
-    "date": "2024-11-09",
-    "summary": "任务 [x] 在应用层编排抽奖过程; 总结 今天的内容比较简单，最主要的问题就是表改了，然后花了很多时间去改对应的 PO 以及 SQL，然后今天第一次开发 application 层，感觉就是把 domain 层各个领域进行组装，然后形成一个又一个的流程，在这里面会使用 MQ 把流程进行切片，之后写门面…",
-    "category": "开发日志"
   },
   {
     "slug": "archive-microservices-spring-cloud-3-shen-ru-li-jie-ribbonwen-dang",
@@ -605,18 +569,6 @@
     "date": "2024-11-05",
     "summary": "1、网关简介 网关作为流量的入口，常用的功能包括路由转发，权限校验，限流等。 2、Gateway简介 Spring Cloud Gateway 是Spring Cloud官方推出的第二代网关框架，定位于取代 Netflix Zuul。相比 Zuul 来说，Spring Cloud Gateway 提供更…",
     "category": "微服务"
-  },
-  {
-    "slug": "archive-dev-log-day09-day10",
-    "title": "项目开发日志 · Day09 ~ Day10",
-    "tags": [
-      "开发日志",
-      "开发笔记",
-      "学习记录"
-    ],
-    "date": "2024-11-04",
-    "summary": "任务 [x] 在应用层编排抽奖过程; 总结 有了前面的模板模式的基础，这一章节相对来说比较容易，自己实现的时候也没有什么大问题，大体流程就是写接口，编排流程，然后写实现类，然后写 Mapper，至于为什么花了两三天，这就不得不说上一章的分库分表了，没写过 SpringBoot Starter，没写过 M…",
-    "category": "开发日志"
   },
   {
     "slug": "archive-engineering-troubleshooting-cpubiao-sheng-shi-yong-arthas-3sding-wei-wen-ti",
@@ -672,18 +624,6 @@
     "date": "2024-10-27",
     "summary": "常见的对象存储方式对比 (https://note.moguit.cn/#/./Docker/对象存储MinIO入门简介/README?id=常见的对象存储方式对比) 直接将图片保存到服务的硬盘; 优点：开发便捷，成本低; 缺点：扩容困难; 使用分布式文件系统进行存储; 优点：容易实现扩容; 缺点：开发…",
     "category": "Docker"
-  },
-  {
-    "slug": "archive-java-fan-xing",
-    "title": "3、泛型",
-    "tags": [
-      "Java",
-      "知识积累",
-      "勇往直前"
-    ],
-    "date": "2024-10-26",
-    "summary": "泛型 泛型的理解 1. 泛型的概念：所谓泛型，就是允许在定义类、接口时通过一个标识表示类中某个属性的类型或者是某个方法的返 回值及参数类型。这个类型参数将在使用时（例如，继承或实现这个接口，用这个类型声明变量、 创建对象时确定（即传入实际的类型参数，也称为类型实参）。 2. 泛型的引入背景 集合容器类在…",
-    "category": "Java"
   },
   {
     "slug": "archive-deployment-06-nginxbu-shu",
@@ -807,18 +747,6 @@
     "date": "2024-10-13",
     "summary": "读写分离,简单地说是把对数据库的读和写操作分开,以对应不同的数据库服务器。 主数据库提供写操作，从数据库提供读操作，这样能有效地减轻单台数据库的压力。 通过MyCat即可轻易实现上述功能，不仅可以支持MySQL，也可以支持Oracle和SQL Server。 img 1. 原理 MySQL的主从复制，是…",
     "category": "存储中间件"
-  },
-  {
-    "slug": "archive-dev-log-day07-day08",
-    "title": "项目开发日志 · Day07 ~ Day08",
-    "tags": [
-      "开发日志",
-      "开发笔记",
-      "学习记录"
-    ],
-    "date": "2024-10-12",
-    "summary": "任务 [x] 分库分表组件; 遇到的问题 问题就不说了，这一章节全是问题 T.T，基础不牢，地动山摇啊！！！ 总结 首先建立一个大局观，要实现一个分库分表组件，那么先要学会如何编写 SpringBoot Starter，然后这个 Starter 需要实现的功能是分库分表，那么一定是有多个数据源，这个数据…",
-    "category": "开发日志"
   },
   {
     "slug": "archive-juc-xian-cheng-de-san-da-te-xing",
@@ -1012,18 +940,6 @@
     "category": "存储中间件"
   },
   {
-    "slug": "archive-java-duo-xian-cheng",
-    "title": "1、程序、进程、线程",
-    "tags": [
-      "Java",
-      "知识积累",
-      "勇往直前"
-    ],
-    "date": "2024-09-12",
-    "summary": "多线程 程序、进程、线程的理解 1. 程序(programm) 概念：是为完成特定任务、用某种语言编写的一组指令的集合。即指一段静态的代码。 2. 进程(process) 1. 概念：程序的一次执行过程，或是正在运行的一个程序。 2. 说明：进程作为资源分配的单位，系统在运行时会为每个进程分配不同的内存…",
-    "category": "Java"
-  },
-  {
     "slug": "archive-engineering-concurrency-62-fang-fa-zhi-xing-yi-chang-shi-yong-arthas-kuai-su-d8f0a69",
     "title": "方法执行异常，使用arthas，快速定位问题",
     "tags": [
@@ -1033,18 +949,6 @@
     "date": "2024-09-11",
     "summary": "当生产上某个方法的执行结果和我们期望的结果不一致时，咱们怎么办？ 修改代码，添加一些日志，在日志中输出方法的入参和返参; 然后发布上线，拿到入参、返参; 在本地进行重现，定位问题; 可以使用阿里的arthas工具，在不调整代码的情况下，拿到任意一个方法的入参、返参值，帮助我们更快的定位问题。 artha…",
     "category": "工程实践"
-  },
-  {
-    "slug": "archive-dev-log-day06",
-    "title": "项目开发日志 · Day06",
-    "tags": [
-      "开发日志",
-      "开发笔记",
-      "学习记录"
-    ],
-    "date": "2024-09-10",
-    "summary": "任务 [x] ID 生成策略开发; 学习过程 1. 先看视频了解用到了啥 2. 看小傅哥策略模式的文章 (https://mp.weixin.qq.com/s/zOFLtSFVrYEyTuihzwgKYw) 3. 看代码结构 1. 定义一个接口，用来生成 id 2. 实现接口，实现不同的 id 生成算法…",
-    "category": "开发日志"
   },
   {
     "slug": "archive-engineering-concurrency-82-springbootxia-zai-wen-jian-de-ji-chong-fang-shi-yi-952fad0",
@@ -1079,18 +983,6 @@
     "date": "2024-09-05",
     "summary": "1、问题代码 ``` public class CpuLoadTest { public static void main(String[] args) { System.out.println(\"程序已启动\"); while (true) { } } } ``` 执行上面这段代码，会导致cpu飙升 `…",
     "category": "工程实践"
-  },
-  {
-    "slug": "archive-java-javachang-yong-de-lei-ji-he",
-    "title": "2、Java常用类、集合",
-    "tags": [
-      "Java",
-      "知识积累",
-      "勇往直前"
-    ],
-    "date": "2024-09-04",
-    "summary": "一、Java常用类 String类 java.lang.String类的使用 1. 概述 String:字符串，使用一对\"\"引起来表示。 1. String声明为final的，不可被继承 2. String实现了Serializable接口：表示字符串是支持序列化的。 实现了Comparable接口：表…",
-    "category": "Java"
   },
   {
     "slug": "archive-microservices-spring-cloud-alibaba-sentinel-sentinelshi-yong-he-yuan-ma-fen-xi",
@@ -1169,18 +1061,6 @@
     "date": "2024-08-23",
     "summary": "看过本文并实施之后，解决问题的效率将大幅提升。 思考一个问题：当一个接口报错的时候，如何能够快速定位问题？ 如果能够满足下面这些条件，咱们就可以快速定位错误 1. 能够快速找到接口的详细调用日志 2. 日志中最好知道出错的是哪个接口的哪个方法，即哪个controller的哪个方法 3. 日志中最好有接口…",
     "category": "工程实践"
-  },
-  {
-    "slug": "archive-dev-log-day05",
-    "title": "项目开发日志 · Day05",
-    "tags": [
-      "开发日志",
-      "开发笔记",
-      "学习记录"
-    ],
-    "date": "2024-08-22",
-    "summary": "任务 [x] 活动领域的配置与状态; 学习过程 1. 包结构变化，调整对应的包 2. 了解活动创建的整个流程，然后将流程进行编排(其实就是落库的步骤呗)，写对应的 repository 层代码 1. 首先明确要做哪些操作 1. 添加活动 2. 添加奖品 3. 添加活动配置 4. 添加策略 5. 添加策略…",
-    "category": "开发日志"
   },
   {
     "slug": "archive-engineering-concurrency-89-mybatismo-hu-cha-xun-qian-mo-bu-yao-zai-yong-liao-56c4ca8",
@@ -1623,18 +1503,6 @@
     "category": "工程实践"
   },
   {
-    "slug": "archive-dev-log-day04",
-    "title": "项目开发日志 · Day04",
-    "tags": [
-      "开发日志",
-      "开发笔记",
-      "学习记录"
-    ],
-    "date": "2024-06-22",
-    "summary": "任务 [x] 简单工厂搭建发奖领域; 学习过程 1. 表结构变了，先导入 SQL，然后该对应的 PO 类，然后改一下 Mapper 文件 2. 先把包结构建好 1. 新建一个领域包，负责发奖 2. 领域包内建三个子包，model 实体封装包、repository 提供仓储服务、service 提供具体的…",
-    "category": "开发日志"
-  },
-  {
     "slug": "archive-storage-mysql-replication-ji-zhu-ji-mycat-2-ru-men",
     "title": "2、MyCat 入门",
     "tags": [
@@ -1737,18 +1605,6 @@
     "date": "2024-06-05",
     "summary": "Redis缓存使用问题 数据一致性 只要使用到缓存，无论是本地内存做缓存还是使用 redis 做缓存，那么就会存在数据同步的问题。 我以 Tomcat 向 MySQL 中写入和删改数据为例，来给你解释一下，数据的增删改操作具体是如何进行的。 image.png 我们分析一下几种解决方案， 1、先更新缓存…",
     "category": "存储中间件"
-  },
-  {
-    "slug": "archive-dev-log-day03",
-    "title": "项目开发日志 · Day03",
-    "tags": [
-      "开发日志",
-      "开发笔记",
-      "学习记录"
-    ],
-    "date": "2024-06-04",
-    "summary": "day03 任务 [x] 模板模式处理抽奖流程; 学习过程 1. 因为之前没学过设计模式，先学一学模板模式，用到一种学一种，哈哈哈 2. 先看一下整个抽奖流程 ![抽奖过程][step] 3. 了解了抽奖流程之后就开始写代码 1. 先写对应的 dao 层 1. 要查策略吧？写个策略的 Mapper 2.…",
-    "category": "开发日志"
   },
   {
     "slug": "archive-engineering-concurrency-52-springbootyou-ya-ting-ji",
@@ -2009,18 +1865,6 @@
     "category": "工程实践"
   },
   {
-    "slug": "archive-dev-log-day02",
-    "title": "项目开发日志 · Day02",
-    "tags": [
-      "开发日志",
-      "开发笔记",
-      "学习记录"
-    ],
-    "date": "2024-04-29",
-    "summary": "任务 [x] 表设计; [x] 抽奖领域模块开发; 学习过程 1. 查询分库分表相关知识点，了解到垂直和水平分库分表，主要是为了解决数据量过大导致 MySQL 查询慢、单体容量过大问题 2. 开始写代码 1. 编写基础的持久化对象 (PO) 2. 编写 Mapper 接口 3. 编写对应的 Mapper…",
-    "category": "开发日志"
-  },
-  {
     "slug": "archive-projects-spring-boot-starter-ratelimiter",
     "title": "1、限流开发组件",
     "tags": [
@@ -2042,18 +1886,6 @@
     "date": "2024-04-27",
     "summary": "```java com.itsoku.lesson061.Lesson061ApplicationTest ``` 基于数据库号段模式，可以理解为从数据库批量的获取自增id，每次从数据库取出一个号段范围，例如 [1,100] 代表100个Id，然后将这100个id加载到内存，以供调用方慢慢使用，等这批i…",
     "category": "工程实践"
-  },
-  {
-    "slug": "archive-java-ioliu",
-    "title": "4、Java IO流",
-    "tags": [
-      "Java",
-      "知识积累",
-      "勇往直前"
-    ],
-    "date": "2024-04-26",
-    "summary": "IO流 File类的使用 1. File类的理解 1. File类的一个对象，代表一个文件或一个文件目录(俗称：文件夹) 2. File类声明在java.io包下 3. File类中涉及到关于文件或文件目录的创建、删除、重命名、修改时间、文件大小等方法，并未涉及到写入或读取文件内容的操作。如果需要读取或…",
-    "category": "Java"
   },
   {
     "slug": "archive-engineering-docker-jenkinsbu-shu",
@@ -2527,18 +2359,6 @@
     "category": "工程实践"
   },
   {
-    "slug": "archive-dev-log-day01",
-    "title": "项目开发日志 · Day01",
-    "tags": [
-      "开发日志",
-      "开发笔记",
-      "学习记录"
-    ],
-    "date": "2024-02-17",
-    "summary": "任务 [x] 环境配置; [x] 搭建项目结构; [x] 跑通广播模式 RPC 过程调用; 学习过程 1. 项目整体了解 通过对第一节文档的阅读，了解整个项目的生命周期、所需要的技术以及代码提交规范 2. 搭建项目结构，理解每个模块应该干什么 模块 作用 | ----------------------…",
-    "category": "开发日志"
-  },
-  {
     "slug": "archive-messaging-rabbitmq-3-rabbitmqshi-ji-yong-fa",
     "title": "3、RabbitMQ实际用法",
     "tags": [
@@ -2751,18 +2571,6 @@
     "category": "工程实践"
   },
   {
-    "slug": "archive-java-wang-luo-bian-cheng",
-    "title": "5、网络编程",
-    "tags": [
-      "Java",
-      "知识积累",
-      "勇往直前"
-    ],
-    "date": "2024-01-18",
-    "summary": "网络编程 InetAddress类的使用 1. 实现网络通信需要解决的两个问题 1. 如何准确地定位网络上一台或多台主机；定位主机上的特定的应用 2. 找到主机后如何可靠高效地进行数据传输 2. 网络通信的两个要素： 1. 对应问题一：IP和端口号 2. 对应问题二：提供网络通信协议：TCP/IP参考模…",
-    "category": "Java"
-  },
-  {
     "slug": "archive-engineering-concurrency-45-jie-kou-ce-shi-li-qi-http-client",
     "title": "接口测试利器HTTP Client，不用Postman也可以",
     "tags": [
@@ -2871,17 +2679,5 @@
     "date": "2024-01-03",
     "summary": "常用的好用的压测工具 1. Apache服务器安装目录的 ab.exe 2. Jmeter 3. LoadRunner 为什么要自己实现一个压测工具？ 高并发有很多知识点，工具类（如：线程池、JUC四个常用工具类【CountDownLatch、CyclicBarrier、Semaphore、ExChan…",
     "category": "工程实践"
-  },
-  {
-    "slug": "archive-java-javafan-she-ji-zhi",
-    "title": "6、Java反射机制",
-    "tags": [
-      "Java",
-      "知识积累",
-      "勇往直前"
-    ],
-    "date": "2024-01-01",
-    "summary": "Java反射机制 反射的概述 1. 本章的主要内容 image-20211129123911661 2. 关于反射的理解:Reflection（反射)是被视为动态语言的关键，反射机制允许程序在执行期借助于Reflection API取得任何 类的内部信息，并能直接操作任意对象的内部属性及方法。 框架 =…",
-    "category": "Java"
   }
 ]

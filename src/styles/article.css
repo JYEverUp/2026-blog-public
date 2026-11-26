@@ -9,6 +9,14 @@
 }
 
 /* Headings */
+.prose :is(h1, h2, h3, h4, h5, h6)[id] {
+	scroll-margin-top: 6rem;
+}
+
+.prose :is(h1, h2, h3, h4, h5, h6) strong {
+	color: inherit;
+	font-weight: inherit;
+}
 .prose h1,
 .prose h2,
 .prose h3 {
@@ -199,6 +207,11 @@
 .prose img[src^='/blogs/power-agent-acp/'],
 .prose img[src^='/blogs/cua-driver-agent-integration/'],
 .prose img[src^='/blogs/websocket-reconnection/diagram-'] {
+	max-width: 100%;
+}
+
+/* Keep archived diagrams and screenshots readable. */
+.prose img[src^='/blogs/_archive-2024-assets/'] {
 	max-width: 100%;
 }
 

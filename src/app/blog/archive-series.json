@@ -1,23 +1,6 @@
 {
 	"topics": [
 		{
-			"title": "Java 基础",
-			"series": [
-				{
-					"title": "Java 基础",
-					"chapters": [
-						"archive-java-duo-xian-cheng",
-						"archive-java-javachang-yong-de-lei-ji-he",
-						"archive-java-fan-xing",
-						"archive-java-ioliu",
-						"archive-java-wang-luo-bian-cheng",
-						"archive-java-javafan-she-ji-zhi",
-						"archive-java-java1-8xin-te-xing"
-					]
-				}
-			]
-		},
-		{
 			"title": "Java 并发",
 			"series": [
 				{
@@ -461,26 +444,6 @@
 						"archive-projects-threadpool-threadpool",
 						"archive-projects-alipay-alipay",
 						"archive-projects-wxpay-wxpay"
-					]
-				}
-			]
-		},
-		{
-			"title": "开发日志",
-			"series": [
-				{
-					"title": "开发日志",
-					"chapters": [
-						"archive-dev-log-day01",
-						"archive-dev-log-day02",
-						"archive-dev-log-day03",
-						"archive-dev-log-day04",
-						"archive-dev-log-day05",
-						"archive-dev-log-day06",
-						"archive-dev-log-day07-day08",
-						"archive-dev-log-day09-day10",
-						"archive-dev-log-day11",
-						"archive-dev-log-day12"
 					]
 				}
 			]
