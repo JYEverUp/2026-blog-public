@@ -412,19 +412,6 @@
 			]
 		},
 		{
-			"title": "前端 · Vue 2",
-			"series": [
-				{
-					"title": "前端 · Vue 2",
-					"chapters": [
-						"archive-frontend-vue2-1-vueji-chu",
-						"archive-frontend-vue2-3-wang-luo-qing-qiu",
-						"archive-frontend-vue2-4-vuex"
-					]
-				}
-			]
-		},
-		{
 			"title": "项目实践",
 			"series": [
 				{

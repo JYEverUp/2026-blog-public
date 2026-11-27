@@ -504,17 +504,6 @@
     "category": "存储中间件"
   },
   {
-    "slug": "archive-frontend-vue2-1-vueji-chu",
-    "title": "1、vue基础",
-    "tags": [
-      "前端",
-      "Vue2"
-    ],
-    "date": "2024-11-11",
-    "summary": "一、 Vue基础 1. 上手vue简单示例 想让 Vue 工作，就必须创建一个 Vue 实例，且要传入一个配置对象; demo 容器里的代码依然符合 html 规范，只不过混入了一些特殊的 Vue 语法; demo 容器里的代码被称为【Vue模板】; Vue实例和容器是一一对应的，真实开发中只有一个Vu…",
-    "category": "前端"
-  },
-  {
     "slug": "archive-engineering-concurrency-12-mi-deng-tong-yong-shi-xian-tai-hao-yong-liao",
     "title": "幂等的4种解决方案",
     "tags": [
@@ -1942,17 +1931,6 @@
     "category": "工程实践"
   },
   {
-    "slug": "archive-frontend-vue2-3-wang-luo-qing-qiu",
-    "title": "3、网络请求",
-    "tags": [
-      "前端",
-      "Vue2"
-    ],
-    "date": "2024-04-17",
-    "summary": "一、网络请求 目前可以发送网络请求的方式： 1. xhr（基于XMLHttpRequest） 存在的问题：配置调用混乱；编码方式复杂；实际开发中经常被JQuery-Ajax代替 2. JQuery-Ajax 存在的问题：Vue开发中不需要调用jQuery这个重量级框架（1w＋行） 3. vue-reso…",
-    "category": "前端"
-  },
-  {
     "slug": "archive-microservices-spring-cloud-1-eurekafu-wu-zhu-ce-yu-fa-xian",
     "title": "1、Eureka服务注册与发现",
     "tags": [
@@ -2459,17 +2437,6 @@
     "date": "2024-02-06",
     "summary": "Zuul路由网关 什么是zuul Zuul包含了对请求的路由和过滤两个最主要的功能: 其中路由功能负责将外部请求转发到具体的微服务实例上，是==实现外部访问统一入口的基础==， 而过滤器功能则负责对请求的处理过程进行干预，是实现请求校验，服务聚合等功能的基础。ZuuI和Eureka进行整合, 将Zuul…",
     "category": "微服务"
-  },
-  {
-    "slug": "archive-frontend-vue2-4-vuex",
-    "title": "4、vuex",
-    "tags": [
-      "前端",
-      "Vue2"
-    ],
-    "date": "2024-02-05",
-    "summary": "一、VueX 1. 概念 ​ 在Vue中实现集中式状态（数据）管理的一个Vue插件，对vue应用中多个组件的共享状态进行集中式的管理（读/写），也是一种组件间通信的方式，且适用于任意组件间通信。 2. 何时使用？ ​ 多个组件需要共享数据时 3. 原理 Vuex原理图 1. 搭建vuex 环境 1. 创…",
-    "category": "前端"
   },
   {
     "slug": "archive-engineering-concurrency-11-springbootzhong-shi-xian-dong-tai-job",
