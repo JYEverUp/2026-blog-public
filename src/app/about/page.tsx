@@ -104,7 +104,8 @@ export default function Page() {
 
 					<div className='mt-8 flex items-center justify-center gap-6'>
 						<motion.a
-							href='https://github.com/YYsuni/2025-blog-public'
+							href='https://github.com/JYEverUp/2026-blog-public'
+							aria-label='在 GitHub 查看 JYEverUp/2026-blog-public'
 							target='_blank'
 							rel='noreferrer'
 							initial={{ opacity: 0, scale: 0.6 }}

@@ -1,7 +1,7 @@
 {
 	"meta": {
-		"title": "YYsuni",
-		"description": "YYsuni 的个人博客，记录 Java 后端开发与 AI Agent 实践。分享 Spring Boot 项目经验、Agent 源码拆解，以及 RAG、MCP 和工作流开发笔记。",
+		"title": "JYEverUp",
+		"description": "JYEverUp 的个人博客，记录 Java 后端开发与 AI Agent 实践。分享 Spring Boot 项目经验、Agent 源码拆解，以及 RAG、MCP 和工作流开发笔记。",
 		"username": "JYEverUp"
 	},
 	"theme": {
