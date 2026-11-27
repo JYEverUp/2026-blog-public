@@ -100,7 +100,7 @@ mv write2.datasource.json write2.datasource.json_bak
 /*+ mycat:showDataSources{} */;
 ```
 
-![image-20230202162445491](../../../../../congqing/Library/Application Support/typora-user-images/image-20230202162445491.png)
+*（原站配图缺失）*
 
 通过注释命名添加数据源后，在对应目录会生成相关配置文件，查看数据源配置文件：`mycat/conf/datasources`
 

@@ -303,11 +303,11 @@ show slave status\G;
 
 **slave1状态**
 
-![image-20221223180625839](../../../../../congqing/Library/Application Support/typora-user-images/image-20221223180625839.png)
+*（原站配图缺失）*
 
 **slave2状态**
 
-![image-20221223180659637](../../../../../congqing/Library/Application Support/typora-user-images/image-20221223180659637.png)
+*（原站配图缺失）*
 
 出现异常：
 
@@ -482,7 +482,7 @@ normalTables：普通表的配置
 
 连接Mycat，然后进行查询
 
-![image-20221223185303712](../../../../../congqing/Library/Application Support/typora-user-images/image-20221223185303712.png)
+*（原站配图缺失）*
 
 ### 5.4.2 注解方式-配置 master和slave 数据库的数据源信息
 
@@ -516,7 +516,7 @@ normalTables：普通表的配置
 /*+ mycat:showDataSources{} */;
 ```
 
-![image-20221223190547292](../../../../../congqing/Library/Application Support/typora-user-images/image-20221223190547292.png)
+*（原站配图缺失）*
 
 通过注释命名添加数据源后，在对应目录会生成相关配置文件，查看数据源配置文件：`mycat/conf/datasources`
 

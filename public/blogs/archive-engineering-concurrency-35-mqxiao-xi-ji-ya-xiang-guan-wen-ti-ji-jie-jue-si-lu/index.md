@@ -11,5 +11,4 @@
 **<font style="color:red">7. 顺序消息通用方案 & 源码</font>**
 **<font style="color:red">8. 消息积压问题及解决思路</font>**
 ## 消息积压问题及解决思路
-![](img/MQ消息堆积 .png)
-# 
+![MQ 消息积压问题及解决思路](/blogs/_archive-2024-assets/ecd28c92a4acc9d29e71.png)
