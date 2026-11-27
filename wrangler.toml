@@ -2,6 +2,14 @@ main = ".open-next/worker.js"
 name = "2025-blog-public"
 compatibility_date = "2025-03-25"
 compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+
+[[routes]]
+pattern = "blog.jinyuan.lol"
+custom_domain = true
+
+[vars]
+SITE_URL = "https://blog.jinyuan.lol"
 
 [assets]
 directory = ".open-next/assets"
