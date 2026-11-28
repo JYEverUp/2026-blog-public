@@ -1,0 +1,21 @@
+sequenceDiagram
+    autonumber
+    participant A as 平台
+    participant C as 渠道与公共媒体层
+    participant B as MediaBackend
+    participant P as 业务处理器
+    A->>C: 含附件的入站消息
+    C->>A: fetch_remote_media，按需鉴权
+    A-->>C: 附件字节
+    C->>B: 按策略 save(bytes, key)
+    C->>P: 媒体部分，携带存储键
+    P-->>C: 需要发送的媒体部分
+    C->>C: load_media_bytes 选择来源
+    opt 从后端读取
+        C->>B: read(key)
+        B-->>C: 字节
+    end
+    C->>A: 平台专属上传与发送
+    alt 上传失败或本类型不支持
+        C->>A: 发送可见的附件提示
+    end

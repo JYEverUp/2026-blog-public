@@ -1,0 +1,8 @@
+flowchart TB
+    P["业务处理器"] --> E["异步 MessageEvent 事件流"]
+    E --> B["默认 BaseChannel\n累积正文增量"]
+    E --> W["企微适配器\n累积当前完整文本"]
+    B --> F["FLUSH、MESSAGE 或结束节点"]
+    F --> T["发送完整文本"]
+    W --> R["reply_stream\n更新同一个 stream_id"]
+    R --> C["结束时 finish=true"]

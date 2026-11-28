@@ -1,0 +1,13 @@
+{
+  "title": "把 AI 助手接进工作群（三）：回答还没出来，先让用户知道系统在工作",
+  "tags": [
+    "AI",
+    "asyncio",
+    "流式回复"
+  ],
+  "date": "2026-10-31",
+  "summary": "从用户等待体验出发，结合事件缓冲、流式快照、首事件等待和任务清理代码，分析反馈时机、限流职责与交付失败。",
+  "cover": "/blogs/ai-gateway-03-streaming/delivery.svg",
+  "hidden": false,
+  "category": "AI 助手工程实践"
+}

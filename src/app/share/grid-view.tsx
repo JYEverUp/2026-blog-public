@@ -26,6 +26,11 @@ export default function GridView({ shares, isEditMode = false, onUpdate, onDelet
 
 	return (
 		<div className='mx-auto w-full max-w-7xl px-6 pt-24 pb-12'>
+			<header className='mb-8 text-center'>
+				<h1 className='text-3xl font-bold'>工程图谱</h1>
+				<p className='text-secondary mt-3'>收录值得精读的文档、值得拆解的源码，以及能用在真实项目里的工程实践。</p>
+			</header>
+
 			<div className='mb-8 space-y-4'>
 				<input
 					type='text'

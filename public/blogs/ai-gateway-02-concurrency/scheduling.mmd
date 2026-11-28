@@ -1,0 +1,9 @@
+flowchart TB
+    S["平台 SDK 回调线程"] --> T["call_soon_threadsafe\n回到 asyncio 事件循环"]
+    T --> Q["渠道实例的有界队列"]
+    Q --> W1["worker 1"]
+    Q --> W2["worker 2"]
+    W1 --> L1["会话 A 的锁\nchannel_id + subject_id"]
+    W2 --> L2["会话 B 的锁\nchannel_id + subject_id"]
+    L1 --> P1["处理 A\n同会话互斥"]
+    L2 --> P2["处理 B\n不同会话可并行"]

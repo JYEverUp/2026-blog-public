@@ -199,7 +199,8 @@
 	@apply max-sm:max-w-full;
 }
 
-/* Diagrams in the connector article */
+/* Diagrams in technical articles */
+.prose img[src^='/blogs/ai-gateway-'],
 .prose img[src^='/blogs/agent-connectors-from-api-to-runtime/'],
 .prose img[src^='/blogs/deepagents-model-integration/'],
 .prose img[src^='/blogs/agent-decision-model-integration/'],

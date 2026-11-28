@@ -1,0 +1,101 @@
+sequenceDiagram
+    autonumber
+    actor U as 用户
+    participant P as 飞书平台
+    participant C as FeishuChannel
+    participant M as ChannelManager
+    participant Q as 通道队列
+    participant W as worker
+    participant B as BaseChannel
+    participant S as MediaBackend
+    participant R as processor
+    participant A as Harness Agent
+    participant L as 模型 / 工具
+
+    Note over C,M: 启动阶段
+    M->>M: start()
+    M->>C: 注册通道，绑定入队回调和媒体后端
+    M->>Q: 创建通道队列
+    M->>C: start()
+    C->>P: 建立连接并订阅消息
+    M->>W: 启动 worker
+
+    Note over U,Q: 接收消息
+    U->>P: 发送“你好”
+    P-->>C: SDK 消息回调
+    C->>C: 过滤机器人消息、去重、提取平台字段
+    C->>M: enqueue(channel_id, raw_payload)
+    M->>Q: 安全入队
+
+    Note over W,B: 调度与消息准备
+    W->>Q: 等待并取出消息
+    Q-->>W: raw_payload
+    W->>C: parse_inbound(raw_payload)
+    C-->>W: InboundMessage
+    Note over W,C: text = 你好<br/>subject_id = ou_user_001
+    W->>W: 按对话 key 合并符合条件的消息
+    W->>W: 获取该通道、该对话的锁
+    W->>B: handle_inbound(message)
+    B->>B: 平台预处理、记录 subject 和回复路由
+
+    opt 包含需要持久化的媒体
+        B->>C: fetch_remote_media(url)
+        C->>P: 下载附件
+        P-->>C: 附件字节
+        C-->>B: bytes 和 MIME 类型
+        B->>S: save(bytes, key)
+        S-->>B: 保存完成
+        B->>B: 设置附件 local_path
+    end
+
+    B->>B: 应用群聊上下文和触发策略
+
+    alt 群消息未触发机器人
+        B->>B: 按配置暂存被动上下文
+        B-->>W: 本次不调用 processor
+    else 私聊或群消息已触发
+        Note over B,L: 生成回答
+        B->>R: processor(message)
+
+        opt 使用 Harness AI 后端
+            R->>R: 构建 messages、thread_id、user、source
+            R->>A: stream(request)
+            A->>L: 调用模型，按需执行工具
+            L-->>A: 文字片段、思考、工具结果
+            A-->>R: Agent 事件流
+        end
+
+        Note over B,R: 普通业务 processor 可以直接产生回复事件
+
+        R-->>B: DELTA：你好!
+        B->>B: 暂存文字，不立即发送
+        R-->>B: DELTA：有什么可以帮你?
+        B->>B: 继续积累文字
+        R-->>B: COMPLETED
+        B->>B: 合并剩余文字
+
+        Note over U,B: 发回原聊天
+        B->>B: reply_text(subject, text)
+        B->>B: 获取发送限流额度
+        B->>C: _send_text(subject, text)
+        C->>C: 根据 subject.metadata 确定回复目标
+        C->>P: 调用发送 API
+        P-->>C: 发送结果
+        P-->>U: 显示“你好! 有什么可以帮你?”
+
+        B->>B: 清理辅助任务、关闭事件流
+        B->>B: 成功时更新群聊上下文状态
+        B-->>W: 本次处理结束
+    end
+
+    W->>W: 释放对话锁
+    W->>Q: 等待下一条消息
+
+    Note over M,P: 主动推送走另一条入口，不经过 processor
+    opt 定时任务或业务主动推送
+        M->>C: push_text(subject, text)
+        C->>C: 获取发送限流额度
+        C->>C: _send_text(subject, text)
+        C->>P: 调用平台发送 API
+        P-->>U: 显示主动消息
+    end

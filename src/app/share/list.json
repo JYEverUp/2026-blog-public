@@ -1,285 +1,571 @@
 [
 	{
-		"name": "iLoveIMG",
-		"url": "https://www.iloveimg.com/zh-cn",
-		"logo": "/images/share/7e91e93e3cdd586b.svg",
-		"description": "免费图片处理网站，我经常用来压缩图片，压缩效果会比 Tinypng 更好。链式处理功能非常好用。",
+		"name": "Dev.java",
+		"url": "https://dev.java/learn/",
+		"logo": "/images/share/java-ai-java.webp",
+		"description": "学习 Java 语言、集合、Stream 和常用 JDK API。",
 		"tags": [
-			"图片"
-		],
-		"stars": 4
-	},
-	{
-		"name": "TinyPNG",
-		"url": "https://tinypng.com/",
-		"logo": "/images/share/e3ebf06fc5dd46e3.webp",
-		"description": "国际上比较出名的压缩图片工具，过去的书本中知晓的这个网站，但是有图片大小限制，也有数量限制。挺好的压缩图片替代品。",
-		"tags": [
-			"图片"
-		],
-		"stars": 3
-	},
-	{
-		"name": "removebg",
-		"url": "https://www.remove.bg/zh",
-		"logo": "/images/share/859bfb2ef1c6a503.svg",
-		"description": "AI 抠图工具，特点是界面简洁，效果比 windows 自带的去除背景会更好一些，缺点是有免费有导出大小限制",
-		"tags": [
-			"图片",
-			"AI"
-		],
-		"stars": 3
-	},
-	{
-		"name": "Neumorphism",
-		"url": "https://neumorphism.io/",
-		"logo": "https://neumorphism.io/apple-touch-icon.png",
-		"description": "Neumorphism 是一种极具鲜明特色的设计风格，总能给新人一种惊叹感。但是应用并不广泛，实际开发也会有很多不好的点。更多是做一个留念。",
-		"tags": [
-			"CSS",
-			"Github"
-		],
-		"stars": 2
-	},
-	{
-		"name": "Nucleo",
-		"url": "https://nucleoapp.com/app/?library=core",
-		"logo": "/images/share/7e720f35557fa9de.svg",
-		"description": "图标库，网站整体很干净。独特的是，它有一类像素风格的图标，很有意思。它的 icon 也很多，还有 grass 风格的。",
-		"tags": [
-			"Icons"
-		],
-		"stars": 3
-	},
-	{
-		"name": "Loadership",
-		"url": "https://www.loadership.com/",
-		"logo": "https://www.loadership.com/loadership_logo_round.svg",
-		"description": "13种 Loader 样式，在线调整使用。在 AI 时代可能意义小很多了。",
-		"tags": [
-			"CSS",
-			"Github"
-		],
-		"stars": 3
-	},
-	{
-		"name": "CSS Buttons",
-		"url": "https://cssbuttons.io/",
-		"logo": "/images/share/2b8118a3645967ee.svg",
-		"description": "有不少按钮样式。跟 Neumorphism 有一些关系。",
-		"tags": [
-			"CSS"
-		],
-		"stars": 2
-	},
-	{
-		"name": "Uiverse",
-		"url": "https://uiverse.io/",
-		"logo": "/images/share/5e7b29cb1a84be80.png",
-		"description": "不可错过的参考库，有很多交互效果，包括热门的 Button、Loader 设计，内容丰富，还在不断更新。",
-		"tags": [
-			"CSS"
-		],
-		"stars": 4
-	},
-	{
-		"name": "Magic UI",
-		"url": "https://magicui.design/",
-		"logo": "https://magicui.design/favicon.ico",
-		"description": "shadcn/ui 伴生库，有很多实用设计。取用也很方便，可以自己复制独立的代码。",
-		"tags": [
-			"组件",
-			"Github"
-		],
-		"stars": 4
-	},
-	{
-		"name": "Ai lman",
-		"url": "https://aliimam.in/docs/backgrounds/shader-rgb",
-		"logo": "https://aliimam.in/_next/image?url=%2Fai-logo-black.png&w=128&q=75",
-		"description": "类 Magic UI，但是感觉差点意思。可作为看完 Magic 意犹未尽时闲看。",
-		"tags": [
-			"组件"
-		],
-		"stars": 3
-	},
-	{
-		"name": "Awwwards",
-		"url": "https://www.awwwards.com/",
-		"logo": "https://assets.awwwards.com/assets/images/favicon.svg",
-		"description": "网站评选网站，你总能从这里发现惊艳的网站",
-		"tags": [
-			"网站集"
-		],
-		"stars": 3
-	},
-	{
-		"name": "CSS Design Awards",
-		"url": "https://www.cssdesignawards.com/",
-		"logo": "/images/share/aaae2bf4f74c8eb1.svg",
-		"description": "网站评选网站，跟 Awwwards 类似，可以看到每期的优秀网站。观感上会好些。",
-		"tags": [
-			"网站集"
-		],
-		"stars": 3
-	},
-	{
-		"name": "404s.design",
-		"logo": "/images/share/5c9a8b7deb717c5f.svg",
-		"url": "https://www.404s.design/",
-		"description": "收集 404 设计的网站，无聊的时候可以看下。",
-		"tags": [
-			"网站集"
-		],
-		"stars": 3
-	},
-	{
-		"name": "Igloo Inc.",
-		"logo": "/images/share/bfd0d5d3f6fd9811.webp",
-		"url": "https://www.igloo.inc/",
-		"description": "abeto 作品，非常酷炫",
-		"tags": [
-			"3D"
-		],
-		"stars": 4
-	},
-	{
-		"name": "abeto 官网",
-		"logo": "/images/share/36cd436103f87549.webp",
-		"url": "https://abeto.co/",
-		"description": "无限绽开的花，飘荡的树叶，复古风格化",
-		"tags": [
-			"3D"
-		],
-		"stars": 4
-	},
-	{
-		"name": "Messenger",
-		"logo": "/images/share/a325a2c41044854a.webp",
-		"url": "https://messenger.abeto.co/",
-		"description": "abeto 作品，卡通送信员在地球小镇上奔跑，联机在线，可换装",
-		"tags": [
-			"3D"
-		],
-		"stars": 4
-	},
-	{
-		"name": "Summer Afternoon",
-		"logo": "/images/share/3e14394c1063f979.webp",
-		"url": "https://summer-afternoon.vlucendo.com/",
-		"description": "夏日午后，小男孩在乡村公路上上游玩",
-		"tags": [
-			"3D"
-		],
-		"stars": 4
-	},
-	{
-		"name": "The Monolith Project",
-		"logo": "/images/share/12d8765705a21d67.webp",
-		"url": "https://themonolithproject.net/",
-		"description": "奇幻宇宙的动画演绎，像看电影一样。“跨越多星之际，一座沉默的巨石碑悄然苏醒。“巨石碑计划”：每一次触碰，皆可重写现实。”",
-		"tags": [
-			"3D"
+			"Java"
 		],
 		"stars": 5
 	},
 	{
-		"name": "Making Software",
-		"logo": "https://www.makingsoftware.com/favicon.ico",
-		"url": "https://www.makingsoftware.com/",
-		"description": "面向软件设计和开发人员的参考手册。样式很棒的学习网站。",
+		"name": "JVM 与诊断工具",
+		"url": "https://dev.java/learn/jvm/",
+		"logo": "/images/share/java-ai-jvm-diagnostics.webp",
+		"description": "查阅垃圾回收、JDK Flight Recorder 和 JVM 故障排查。",
 		"tags": [
-			"学习"
+			"Java"
 		],
 		"stars": 4
 	},
 	{
-		"name": "Ease 函数参考",
-		"logo": "https://easings.net/96.8aa68ac4.png",
-		"url": "https://easings.net/",
-		"description": "当你在调整动画节奏时，这个 ease 表能帮助直观感受 ease 表现出的效果",
+		"name": "Java 虚拟线程",
+		"url": "https://docs.oracle.com/en/java/javase/25/core/virtual-threads.html",
+		"logo": "/images/share/java-ai-virtual-threads.webp",
+		"description": "学习如何用虚拟线程处理高并发 I/O，以及如何观察运行状态。",
 		"tags": [
-			"Github"
+			"Java"
+		],
+		"stars": 4
+	},
+	{
+		"name": "Apache Maven",
+		"url": "https://maven.apache.org/guides/getting-started/",
+		"logo": "/images/share/java-ai-maven.webp",
+		"description": "查阅依赖管理、构建生命周期和多模块项目配置。",
+		"tags": [
+			"Java"
+		],
+		"stars": 4
+	},
+	{
+		"name": "JMH",
+		"url": "https://github.com/openjdk/jmh",
+		"logo": "/images/share/java-ai-jmh.webp",
+		"description": "编写 JVM 微基准测试，比较 Java 方法或数据结构的性能。",
+		"tags": [
+			"Java"
 		],
 		"stars": 3
 	},
 	{
-		"name": "Isocons",
-		"logo": "/images/share/97859f1c57799dd2.png",
-		"url": "https://www.isocons.app/",
-		"description": "3D icons 网站，酷酷的，免费。",
+		"name": "Spring Boot",
+		"url": "https://docs.spring.io/spring-boot/index.html",
+		"logo": "/images/share/java-ai-spring-boot.webp",
+		"description": "搭建 Java 服务，查阅应用配置、测试和健康检查。",
 		"tags": [
-			"Icons"
-		],
-		"stars": 3
-	},
-	{
-		"name": "Webp 转换压缩",
-		"logo": "https://www.yysuni.com/images/avatar.png",
-		"url": "https://www.yysuni.com/image-toolbox",
-		"description": "无限压缩，快且方便，可以直接对比效果",
-		"tags": [
-			"图片"
-		],
-		"stars": 3
-	},
-	{
-		"name": "WoraWork",
-		"logo": "/images/share/34ef22be0009fedc.webp",
-		"url": "https://worawork.vercel.app/",
-		"description": "方格世界的 Web3D，场景渲染非常棒，非常值得体验",
-		"tags": [
-			"3D"
-		],
-		"stars": 3
-	},
-	{
-		"name": "企鹅世界",
-		"logo": "/images/share/1f6902a80f07368a.webp",
-		"url": "https://play.pudgyworld.com/",
-		"description": "风格化的可爱 web 游戏",
-		"tags": [
-			"3D"
+			"后端"
 		],
 		"stars": 5
 	},
 	{
-		"name": "Susurrus",
-		"logo": "/images/share/b513e4aa35517dde.webp",
-		"url": "https://susurrus.vercel.app",
-		"description": "和煦日光下的春日田野，\n这些草儿刚刚长出，但还未完全长成。\n而当轻柔的微风拂过之处，\n它们微微荡漾，声音轻柔而低沉。",
+		"name": "Spring Data JPA",
+		"url": "https://docs.spring.io/spring-data/jpa/reference/",
+		"logo": "/images/share/java-ai-spring-data-jpa.webp",
+		"description": "用 Repository 管理数据访问、分页和事务。",
 		"tags": [
-			"3D"
+			"后端"
 		],
 		"stars": 4
 	},
 	{
-		"name": "Tearable UI",
-		"logo": "/images/share/5ec6be11bd351e3e.webp",
-		"url": "https://pushmatrix.github.io/tearable/",
-		"description": "将页面交互，变成一张张可以撕破的画布",
+		"name": "MyBatis",
+		"url": "https://mybatis.org/mybatis-3/zh_CN/index.html",
+		"logo": "/images/share/java-ai-mybatis.webp",
+		"description": "学习 SQL 映射、动态 SQL 和查询结果映射。",
 		"tags": [
-			"3D"
+			"后端"
+		],
+		"stars": 4
+	},
+	{
+		"name": "JUnit",
+		"url": "https://docs.junit.org/current/user-guide/",
+		"logo": "/images/share/java-ai-junit.webp",
+		"description": "为 Java 业务逻辑编写单元测试和参数化测试。",
+		"tags": [
+			"后端"
+		],
+		"stars": 5
+	},
+	{
+		"name": "Testcontainers for Java",
+		"url": "https://java.testcontainers.org/",
+		"logo": "/images/share/java-ai-testcontainers.webp",
+		"description": "在集成测试中启动 PostgreSQL、Redis 等真实依赖。",
+		"tags": [
+			"后端"
+		],
+		"stars": 4
+	},
+	{
+		"name": "Resilience4j",
+		"url": "https://resilience4j.readme.io/docs/getting-started",
+		"logo": "/images/share/java-ai-resilience4j.webp",
+		"description": "为外部 API 和模型调用配置超时、重试、限流和熔断。",
+		"tags": [
+			"后端"
+		],
+		"stars": 4
+	},
+	{
+		"name": "Temporal Java SDK",
+		"url": "https://docs.temporal.io/develop/java",
+		"logo": "/images/share/java-ai-temporal.webp",
+		"description": "用 Workflow 和 Activity 编排耗时任务，阅读事件历史回放、重试策略和外部信号。适合实践 Agent 任务中断续跑，并验证写库或发消息的 Activity 在重试时保持幂等。",
+		"tags": [
+			"后端"
+		],
+		"stars": 5
+	},
+	{
+		"name": "Apache ShardingSphere",
+		"url": "https://shardingsphere.apache.org/document/current/cn/overview/",
+		"logo": "/images/share/java-ai-shardingsphere.webp",
+		"description": "通过 JDBC 或 Proxy 接入分片和读写分离。适合用订单等真实查询验证路由命中、跨分片聚合、读写一致性和分布式事务的成本。",
+		"tags": [
+			"后端"
+		],
+		"stars": 4
+	},
+	{
+		"name": "Apache SeaTunnel",
+		"url": "https://seatunnel.apache.org/zh-CN/docs/connectors/source/Jdbc/",
+		"logo": "/images/share/java-ai-seatunnel.webp",
+		"description": "从 JDBC 数据源读取整表或自定义查询结果，搭建异构数据库批量迁移。适合验证分区并行读取、字段类型映射、失败后的重跑和源目标数据核对。",
+		"tags": [
+			"后端"
+		],
+		"stars": 4
+	},
+	{
+		"name": "Spring AI",
+		"url": "https://docs.spring.io/spring-ai/reference/",
+		"logo": "/images/share/java-ai-spring-ai.webp",
+		"description": "在 Spring Boot 中接入模型，处理结构化输出和对话记忆。",
+		"tags": [
+			"Agent"
+		],
+		"stars": 5
+	},
+	{
+		"name": "LangChain4j",
+		"url": "https://docs.langchain4j.dev/",
+		"logo": "/images/share/java-ai-langchain4j.webp",
+		"description": "在 Java 中整合模型、对话记忆和工具调用，构建助手或 Agent。",
+		"tags": [
+			"Agent"
+		],
+		"stars": 5
+	},
+	{
+		"name": "Google ADK for Java",
+		"url": "https://adk.dev/get-started/java/",
+		"logo": "/images/share/java-ai-google-adk.webp",
+		"description": "跑通第一个 Java Agent，再了解多工具和多 Agent 工作流。",
+		"tags": [
+			"Agent"
+		],
+		"stars": 4
+	},
+	{
+		"name": "Spring AI Alibaba",
+		"url": "https://github.com/alibaba/spring-ai-alibaba",
+		"logo": "/images/share/java-ai-spring-ai-alibaba.webp",
+		"description": "查看面向 Java 的 Agent 框架、图工作流和示例。",
+		"tags": [
+			"Agent"
+		],
+		"stars": 4
+	},
+	{
+		"name": "Embabel",
+		"url": "https://github.com/embabel/embabel-agent",
+		"logo": "/images/share/java-ai-embabel.webp",
+		"description": "参考 JVM Agent 如何根据目标和条件规划下一步操作。",
+		"tags": [
+			"Agent"
 		],
 		"stars": 3
 	},
 	{
-		"name": "Flux Pic Shader",
-		"logo": "/images/share/78a58c0955934e8d.webp",
-		"url": "https://shaders.fluxpic.com/",
-		"description": "流体动画工具，说不定以后可以参考",
+		"name": "Spring AI Agent 工作流模式",
+		"url": "https://spring.io/blog/2025/01/21/spring-ai-agentic-patterns/",
+		"logo": "/images/share/java-ai-agent-workflows.webp",
+		"description": "用 Java 示例了解顺序执行、路由、并行和循环评估。",
 		"tags": [
-			"动画"
+			"Agent"
+		],
+		"stars": 5
+	},
+	{
+		"name": "Octop",
+		"url": "https://github.com/TencentCloud/Octop",
+		"logo": "/images/share/java-ai-octop.webp",
+		"description": "腾讯云开源的自托管多用户 Agent 助手。可参考账号、Agent 和工作空间的组织方式，以及如何接入消息渠道和知识库，搭建面向团队的内部助手。",
+		"tags": [
+			"Agent"
+		],
+		"stars": 4
+	},
+	{
+		"name": "AgentScope Java",
+		"url": "https://github.com/agentscope-ai/agentscope-java",
+		"logo": "/images/share/java-ai-agentscope-java.webp",
+		"description": "面向长时运行任务的 Java Agent 框架。可从持久会话和工具执行入手，研究如何让不同请求创建的 Agent 实例接续同一会话，并把模型和工具接入现有服务。",
+		"tags": [
+			"Agent"
+		],
+		"stars": 5
+	},
+	{
+		"name": "JoyAgent-JDGenie",
+		"url": "https://github.com/jd-opensource/joyagent-jdgenie",
+		"logo": "/images/share/java-ai-jdgenie.webp",
+		"description": "京东开源的端到端多 Agent 项目。源码含 ReAct 和计划执行两种模式，可对比它们如何将任务交给搜索、报告等子 Agent，并把执行结果整理成可交付的报告。",
+		"tags": [
+			"Agent"
+		],
+		"stars": 4
+	},
+	{
+		"name": "Coze Studio",
+		"url": "https://github.com/coze-dev/coze-studio",
+		"logo": "/images/share/java-ai-coze-studio.webp",
+		"description": "开源的 Agent 搭建和发布平台。可自托管并查看工作流、插件和知识库的组织方式，适合拿同一个业务场景练习节点编排、参数传递与发布前调试。",
+		"tags": [
+			"Agent"
+		],
+		"stars": 4
+	},
+	{
+		"name": "OpenHands",
+		"url": "https://github.com/OpenHands/OpenHands",
+		"logo": "/images/share/java-ai-openhands.webp",
+		"description": "开源的编码 Agent 项目，可从 SDK 和运行时入手看代码修改、命令执行及测试反馈如何组成一轮任务。适合在示例仓库验证工作区隔离、任务回放和改动审查。",
+		"tags": [
+			"Agent"
+		],
+		"stars": 4
+	},
+	{
+		"name": "DeerFlow",
+		"url": "https://github.com/bytedance/deer-flow",
+		"logo": "/images/share/java-ai-deerflow.webp",
+		"description": "字节跳动开源的长任务 Agent 项目。重点看它如何用子 Agent、记忆和沙箱分解调研任务，适合拿多来源报告场景验证上下文传递、阶段产物和失败恢复。",
+		"tags": [
+			"Agent"
+		],
+		"stars": 4
+	},
+	{
+		"name": "LangGraph",
+		"url": "https://github.com/langchain-ai/langgraph",
+		"logo": "/images/share/java-ai-langgraph.webp",
+		"description": "以图和状态表达 Agent 工作流，支持检查点和人工介入。适合实现带审批的长流程，在高风险业务动作之前暂停，再从保存的状态恢复执行。",
+		"tags": [
+			"Agent"
+		],
+		"stars": 5
+	},
+	{
+		"name": "A2A Java SDK",
+		"url": "https://github.com/a2aproject/a2a-java",
+		"logo": "/images/share/java-ai-a2a-java.webp",
+		"description": "Agent2Agent 协议官方 Java SDK。通过 Agent Card 声明远程 Agent 的能力，通过消息、任务和产物跨服务协作，适合验证长任务状态的查询和输出接收。",
+		"tags": [
+			"Agent"
+		],
+		"stars": 4
+	},
+	{
+		"name": "DB-GPT",
+		"url": "https://github.com/eosphoros-ai/DB-GPT",
+		"logo": "/images/share/java-ai-db-gpt.webp",
+		"description": "开源的数据分析 Agent，可把自然语言查询交给 Text-to-SQL 和分析工作流。部署练习可用只读账号、查询超时和结果行数上限，验证它能回答哪些业务问题。",
+		"tags": [
+			"Agent"
+		],
+		"stars": 4
+	},
+	{
+		"name": "Spring AI RAG",
+		"url": "https://docs.spring.io/spring-ai/reference/api/retrieval-augmented-generation.html",
+		"logo": "/images/share/java-ai-spring-ai-rag.webp",
+		"description": "将检索到的文档加入模型上下文，搭建知识库问答。",
+		"tags": [
+			"RAG"
+		],
+		"stars": 5
+	},
+	{
+		"name": "LangChain4j RAG",
+		"url": "https://docs.langchain4j.dev/tutorials/rag/",
+		"logo": "/images/share/java-ai-langchain4j-rag.webp",
+		"description": "串起文档加载、切分、向量化和检索，跑通 Java RAG 示例。",
+		"tags": [
+			"RAG"
+		],
+		"stars": 4
+	},
+	{
+		"name": "pgvector",
+		"url": "https://github.com/pgvector/pgvector",
+		"logo": "/images/share/java-ai-pgvector.webp",
+		"description": "在 PostgreSQL 中存储和检索向量，了解 HNSW 和 IVFFlat 索引。",
+		"tags": [
+			"RAG"
+		],
+		"stars": 4
+	},
+	{
+		"name": "Qdrant Java Client",
+		"url": "https://github.com/qdrant/java-client",
+		"logo": "/images/share/java-ai-qdrant.webp",
+		"description": "用 Java 写入向量，执行相似度查询和元数据过滤。",
+		"tags": [
+			"RAG"
 		],
 		"stars": 3
 	},
 	{
-		"name": "Koi Pond",
-		"logo": "/images/share/a20a5149379578ee.webp",
-		"url": "https://www.bubbbly.com/app/koi-pond.html",
-		"description": "创意和美工都很棒",
+		"name": "Apache Tika",
+		"url": "https://tika.apache.org/",
+		"logo": "/images/share/java-ai-tika.webp",
+		"description": "从 PDF、Office 文档等文件中提取文本和元数据，用于知识库入库。",
 		"tags": [
-			"AI"
+			"RAG"
+		],
+		"stars": 4
+	},
+	{
+		"name": "RAGFlow",
+		"url": "https://github.com/infiniflow/ragflow",
+		"logo": "/images/share/java-ai-ragflow.webp",
+		"description": "可自托管的文档解析和检索项目。适合用含表格、扫描页、多栏排版的资料比较分块效果，再用固定问题集核对返回的证据片段和回答质量。",
+		"tags": [
+			"RAG"
+		],
+		"stars": 5
+	},
+	{
+		"name": "MCP 协议架构",
+		"url": "https://modelcontextprotocol.io/docs/learn/architecture",
+		"logo": "/images/share/java-ai-mcp.webp",
+		"description": "了解 Host、Client、Server 的职责，以及 Tools、Resources 和 Prompts 的用途。",
+		"tags": [
+			"MCP"
+		],
+		"stars": 4
+	},
+	{
+		"name": "MCP Java SDK",
+		"url": "https://github.com/modelcontextprotocol/java-sdk",
+		"logo": "/images/share/java-ai-mcp-java.webp",
+		"description": "用 Java 实现 MCP 客户端和服务端。",
+		"tags": [
+			"MCP"
+		],
+		"stars": 5
+	},
+	{
+		"name": "Spring AI MCP",
+		"url": "https://docs.spring.io/spring-ai/reference/api/mcp/mcp-overview.html",
+		"logo": "/images/share/java-ai-spring-ai-mcp.webp",
+		"description": "用 Spring Boot Starter 接入 MCP 服务，或将应用能力发布为 MCP 工具。",
+		"tags": [
+			"MCP"
+		],
+		"stars": 4
+	},
+	{
+		"name": "Spring AI Tool Calling",
+		"url": "https://docs.spring.io/spring-ai/reference/api/tools.html",
+		"logo": "/images/share/java-ai-tool-calling.webp",
+		"description": "将 Java 方法注册为模型可调用的工具，了解参数定义和执行流程。",
+		"tags": [
+			"MCP"
+		],
+		"stars": 4
+	},
+	{
+		"name": "MCP Inspector",
+		"url": "https://github.com/modelcontextprotocol/inspector",
+		"logo": "/images/share/java-ai-mcp-inspector.webp",
+		"description": "用协议测试工具检查自建 MCP 服务的工具清单、输入结构和返回结果。适合在客户端联调前核对工具契约、错误响应和连接配置。",
+		"tags": [
+			"MCP"
+		],
+		"stars": 4
+	},
+	{
+		"name": "Spring AI Evaluation",
+		"url": "https://docs.spring.io/spring-ai/reference/api/testing.html",
+		"logo": "/images/share/java-ai-evaluation.webp",
+		"description": "检查回答是否与检索上下文相关，以及是否有上下文依据。",
+		"tags": [
+			"评测运维"
+		],
+		"stars": 4
+	},
+	{
+		"name": "Promptfoo HTTP Provider",
+		"url": "https://www.promptfoo.dev/docs/providers/http/",
+		"logo": "/images/share/java-ai-promptfoo.webp",
+		"description": "对 Java Agent 的 HTTP 接口运行成组测试用例，比较改动前后的表现。",
+		"tags": [
+			"评测运维"
+		],
+		"stars": 4
+	},
+	{
+		"name": "Spring AI Observability",
+		"url": "https://docs.spring.io/spring-ai/reference/observability/index.html",
+		"logo": "/images/share/java-ai-spring-ai-observability.webp",
+		"description": "追踪模型调用和向量检索，查看耗时与模型用量。",
+		"tags": [
+			"评测运维"
+		],
+		"stars": 4
+	},
+	{
+		"name": "OpenTelemetry Java",
+		"url": "https://opentelemetry.io/docs/languages/java/",
+		"logo": "/images/share/java-ai-opentelemetry.webp",
+		"description": "为 Java 服务采集链路、指标和日志，将 Agent 请求与下游服务串起来排查。",
+		"tags": [
+			"评测运维"
+		],
+		"stars": 5
+	},
+	{
+		"name": "Apache SkyWalking",
+		"url": "https://skywalking.apache.org/docs/",
+		"logo": "/images/share/java-ai-skywalking.webp",
+		"description": "把 Java 服务的链路、指标和拓扑放在一起看。可为 Agent 请求建立追踪路径，定位耗时落在网关、模型调用、检索还是 JDBC，并结合错误率观察发布前后的变化。",
+		"tags": [
+			"评测运维"
+		],
+		"stars": 4
+	},
+	{
+		"name": "华为云 GaussDB",
+		"url": "https://support.huaweicloud.com/distributed-devg-v10-gaussdb/gaussdb-12-0075.html",
+		"logo": "/images/share/java-ai-gaussdb.webp",
+		"description": "华为云分布式 GaussDB 应用开发指南，覆盖 JDBC 等接入方式。做 Java 服务迁移时，可据此验证连接和事务，并重点比较业务 SQL 的兼容性、分布键选择和跨分片查询表现。",
+		"tags": [
+			"数据库"
+		],
+		"stars": 5
+	},
+	{
+		"name": "达梦 DM8",
+		"url": "https://eco.dameng.com/document/dm/zh-cn/app-dev/java-jdbc.html",
+		"logo": "/images/share/java-ai-dm8.webp",
+		"description": "达梦官方 Java JDBC 指南。适合把 Spring Boot 或 MyBatis 应用接入 DM8，再用迁移回归用例逐项核对标识符大小写、分页、主键生成、日期类型和事务边界。",
+		"tags": [
+			"数据库"
+		],
+		"stars": 5
+	},
+	{
+		"name": "人大金仓 KingbaseES",
+		"url": "https://bbs.kingbase.com.cn/kingbase-html/v8/index.html",
+		"logo": "/images/share/java-ai-kingbasees.webp",
+		"description": "金仓数据库产品手册。迁移项目可从驱动接入和兼容性测试入手，单独验证序列、存储过程和字段类型，再演练备份恢复和迁移切换。",
+		"tags": [
+			"数据库"
+		],
+		"stars": 4
+	},
+	{
+		"name": "openGauss",
+		"url": "https://docs.opengauss.org/zh/",
+		"logo": "/images/share/java-ai-opengauss.webp",
+		"description": "开源数据库社区文档，适合自建实验环境，查阅 JDBC、主备部署及 SQL 调优。可用慢查询与执行计划验证索引效果，并演练节点切换后的应用重连。",
+		"tags": [
+			"数据库"
+		],
+		"stars": 5
+	},
+	{
+		"name": "OceanBase",
+		"url": "https://www.oceanbase.com/docs",
+		"logo": "/images/share/java-ai-oceanbase.webp",
+		"description": "面向分布式数据库部署和租户管理的官方文档。可研究跨可用区部署、资源隔离及迁移路径。社区版使用 MySQL 模式，涉及 Oracle 模式的迁移需核对目标版本。",
+		"tags": [
+			"数据库"
+		],
+		"stars": 5
+	},
+	{
+		"name": "TiDB",
+		"url": "https://docs.pingcap.com/zh/tidb/stable/overview/",
+		"logo": "/images/share/java-ai-tidb.webp",
+		"description": "PingCAP 开源的分布式 SQL 数据库。可对比 TiKV 的行存和 TiFlash 的列存，用同一数据集验证事务写入、分析查询、热点以及扩容前后的表现。",
+		"tags": [
+			"数据库"
+		],
+		"stars": 5
+	},
+	{
+		"name": "PolarDB for PostgreSQL",
+		"url": "https://github.com/polardb/PolarDB-for-PostgreSQL",
+		"logo": "/images/share/java-ai-polardb.webp",
+		"description": "阿里云 PolarDB PostgreSQL 的开源项目。适合沿着共享存储、主节点和只读节点理解架构，再评估应用读写路由、只读查询和故障切换后的连接行为。",
+		"tags": [
+			"数据库"
+		],
+		"stars": 4
+	},
+	{
+		"name": "华为鲲鹏 · 应用移植",
+		"url": "https://support.huaweicloud.com/usermanual-mgc/mgc_03_31425.html",
+		"logo": "/images/share/java-ai-kunpeng.webp",
+		"description": "用华为云鲲鹏移植指南梳理 x86 服务迁往 ARM64 的步骤。Java 项目可盘点基础镜像、JDK、JNI 库和第三方组件，再用相同负载比较启动时间、吞吐和 P99。",
+		"tags": [
+			"服务器"
+		],
+		"stars": 5
+	},
+	{
+		"name": "飞腾腾云 S5000C",
+		"url": "https://www.phytium.com.cn/homepage/production/13/",
+		"logo": "/images/share/java-ai-phytium.webp",
+		"description": "面向服务器的 ARMv8 处理器。可结合整机、操作系统和软件的认证信息做部署评估，并用实际 Java 服务和数据库负载验证虚拟化、NUMA 与存储 I/O。",
+		"tags": [
+			"服务器"
+		],
+		"stars": 4
+	},
+	{
+		"name": "龙芯 3C6000",
+		"url": "https://www.loongson.cn/product/show?id=41",
+		"logo": "/images/share/java-ai-loongson.webp",
+		"description": "采用 LoongArch 的服务器处理器。把现有服务迁过去时，可按操作系统、LoongArch JDK、容器镜像、JNI 库和数据库驱动逐层核对，并在目标整机进行联调。",
+		"tags": [
+			"服务器"
+		],
+		"stars": 4
+	},
+	{
+		"name": "openEuler",
+		"url": "https://docs.openeuler.org/zh/",
+		"logo": "/images/share/java-ai-openeuler.webp",
+		"description": "服务器操作系统的社区文档，适合查部署、容器和系统管理。可用它搭建 Java 服务基线，验证 systemd 资源限制、日志采集、容器运行和故障重启。",
+		"tags": [
+			"服务器"
+		],
+		"stars": 5
+	},
+	{
+		"name": "毕昇 JDK",
+		"url": "https://www.openeuler.org/zh/other/projects/bishengjdk/",
+		"logo": "/images/share/java-ai-bisheng-jdk.webp",
+		"description": "openEuler 社区提供的 OpenJDK 发行版。选定目标架构和版本后，可与现用 JDK 在相同堆配置下比较 GC 停顿、CPU 使用率、吞吐和 P99 延迟。",
+		"tags": [
+			"服务器"
 		],
 		"stars": 4
 	}

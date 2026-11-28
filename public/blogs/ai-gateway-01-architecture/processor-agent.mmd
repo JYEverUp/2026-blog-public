@@ -1,0 +1,22 @@
+sequenceDiagram
+    autonumber
+    participant B as BaseChannel
+    participant R as processor
+    participant A as Harness Agent
+    participant L as 模型与工具
+    B->>R: processor(message)
+    alt 使用 AI 后端
+        R->>R: 构建业务请求与 thread_id
+        R->>A: stream(request)
+        A->>L: 调用模型，按需执行工具
+        L-->>A: 正文、思考或工具结果
+        A-->>R: Agent 事件流
+        R->>R: 转换为统一 MessageEvent
+    else 普通业务处理器
+        R->>R: 查询规则或固定业务逻辑
+    end
+    R-->>B: DELTA：你好!
+    B->>B: 积累正文
+    R-->>B: DELTA：有什么可以帮你?
+    R-->>B: COMPLETED
+    B->>B: 合并剩余正文，准备交付

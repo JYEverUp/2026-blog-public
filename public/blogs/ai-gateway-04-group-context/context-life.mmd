@@ -1,0 +1,17 @@
+sequenceDiagram
+    participant A as 群成员
+    participant G as GroupContextManager
+    participant P as 公共入站流程与处理器
+    A->>G: 未触发的讨论或附件
+    G->>G: 写入内存缓冲
+    Note over G: TTL、条数限制<br/>过期检查由后续消息触发
+    A->>G: 被 @ 的问题
+    G->>G: 清理过期项，附带近期讨论
+    G->>P: 本轮消息与 GroupContext
+    alt 处理成功且配置清理
+        P->>G: mark_replied
+        G->>G: 清理本群一次性缓冲
+    else 处理未成功
+        Note over G: 不按成功回复清理
+    end
+    Note over G,P: 长期记忆与附件文件清理由外层另行设计

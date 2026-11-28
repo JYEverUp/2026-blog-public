@@ -1,0 +1,13 @@
+{
+  "title": "把 AI 助手接进工作群（一）：先想清楚，网关到底负责什么",
+  "tags": [
+    "AI",
+    "Python",
+    "架构设计"
+  ],
+  "date": "2026-10-31",
+  "summary": "从企业知识助手的真实使用问题出发，结合消息模型、公共入站骨架和处理器注入代码，讲清职责边界、替换成本与架构取舍。",
+  "cover": "/blogs/ai-gateway-01-architecture/architecture.svg",
+  "hidden": false,
+  "category": "AI 助手工程实践"
+}

@@ -1,0 +1,19 @@
+sequenceDiagram
+    autonumber
+    participant P as 飞书平台
+    participant C as FeishuChannel
+    participant M as ChannelManager
+    participant Q as 通道队列
+    participant W as worker
+    Note over C,W: 启动：先准备入口，再运行消费者
+    M->>C: 绑定媒体后端与入队回调
+    M->>Q: 创建有界队列
+    M->>C: start()
+    C->>P: 建立 SDK 长连接
+    M->>W: 启动 worker
+    Note over P,Q: 接收：回调只做平台侧整理
+    P-->>C: 用户消息回调
+    C->>C: 过滤、去重、提取字段
+    C->>M: enqueue(channel_id, raw_payload)
+    M->>M: call_soon_threadsafe
+    M->>Q: 在事件循环线程入队

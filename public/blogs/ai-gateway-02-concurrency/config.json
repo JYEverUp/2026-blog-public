@@ -1,0 +1,13 @@
+{
+  "title": "把 AI 助手接进工作群（二）：同一个人别抢跑，不同的人别排长队",
+  "tags": [
+    "Python",
+    "asyncio",
+    "并发"
+  ],
+  "date": "2026-10-31",
+  "summary": "结合 worker、会话锁、消息合并、紧急旁路和取消代码，解释并发如何保持会话一致，为什么会拥堵，以及如何验证停止链路。",
+  "cover": "/blogs/ai-gateway-02-concurrency/scheduling.svg",
+  "hidden": false,
+  "category": "AI 助手工程实践"
+}

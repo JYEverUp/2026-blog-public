@@ -1,0 +1,20 @@
+sequenceDiagram
+    autonumber
+    actor U as 用户
+    participant P as 飞书平台
+    participant C as FeishuChannel
+    participant B as BaseChannel
+    participant M as ChannelManager
+    Note over C,B: 回复：来自本轮处理结果
+    B->>B: reply_text，获取一次限流额度
+    B->>C: _send_text(subject, text)
+    C->>C: 按 subject.metadata 选择路由
+    C->>P: 调用发送 API
+    P-->>U: 显示回答
+    B->>B: 清理辅助任务，成功后更新上下文
+    Note over P,M: 推送：使用调用方已有内容
+    M->>C: push_text(subject, text)
+    C->>C: 解析主动路由，获取额度
+    C->>C: _send_text(subject, text)
+    C->>P: 调用发送 API
+    P-->>U: 显示主动消息

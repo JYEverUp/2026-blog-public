@@ -5,6 +5,8 @@ import { motion } from 'motion/react'
 import { toast } from 'sonner'
 import { DialogModal } from '@/components/dialog-modal'
 import { useAuthStore } from '@/hooks/use-auth'
+import localSiteContent from '@/config/site-content.json'
+import localCardStyles from '@/config/card-styles.json'
 import { useConfigStore } from '../stores/config-store'
 import { pushSiteContent } from '../services/push-site-content'
 import type { SiteContent, CardStyles } from '../stores/config-store'
@@ -79,15 +81,32 @@ export default function ConfigDialog({ open, onClose }: ConfigDialogProps) {
 		}
 	}, [faviconItem, avatarItem, artImageUploads, backgroundImageUploads, socialButtonImageUploads])
 
+	const syncLocalCode = async (saved: boolean) => {
+		const id = toast.loading('正在从 GitHub 更新本地代码…')
+		try {
+			const response = await fetch('/api/local-git-sync', { method: 'POST' })
+			const result = await response.json().catch(() => null)
+			if (!response.ok) {
+				throw new Error(result?.message || '本地同步服务不可用。')
+			}
+			toast.success(result.updated ? '本地代码已同步' : '本地已包含 GitHub 最新提交', { id })
+			if (result.updated) window.location.reload()
+		} catch (error) {
+			const message = error instanceof Error ? error.message : '未知错误。'
+			toast.error((saved ? 'GitHub 已保存，本地同步失败。' : '本地同步失败。') + message, { id })
+		}
+	}
+
 	const handleChoosePrivateKey = async (file: File) => {
 		try {
 			const text = await file.text()
-			setPrivateKey(text)
-			await handleSave()
+			await setPrivateKey(text)
 		} catch (error) {
 			console.error('Failed to read private key:', error)
 			toast.error('读取密钥文件失败')
+			return
 		}
+		await handleSave()
 	}
 
 	const handleSaveClick = () => {
@@ -101,6 +120,22 @@ export default function ConfigDialog({ open, onClose }: ConfigDialogProps) {
 	const handleSave = async () => {
 		setIsSaving(true)
 		try {
+			const syncLocal =
+				process.env.NODE_ENV === 'development' &&
+				process.env.NEXT_PUBLIC_BLOG_LOCAL_GIT_SYNC === '1' &&
+				['localhost', '127.0.0.1'].includes(window.location.hostname)
+			const hasChanges =
+				JSON.stringify(formData) !== JSON.stringify(localSiteContent) ||
+				JSON.stringify(cardStylesData) !== JSON.stringify(localCardStyles) ||
+				Boolean(faviconItem || avatarItem) ||
+				[artImageUploads, backgroundImageUploads, socialButtonImageUploads].some(uploads => Object.keys(uploads).length > 0)
+
+			if (syncLocal && !hasChanges) {
+				await syncLocalCode(false)
+				onClose()
+				return
+			}
+
 			// Calculate removed art images so that we can delete files in repo
 			const originalArtImages = originalData.artImages ?? []
 			const currentArtImages = formData.artImages ?? []
@@ -130,6 +165,7 @@ export default function ConfigDialog({ open, onClose }: ConfigDialogProps) {
 			setArtImageUploads({})
 			setBackgroundImageUploads({})
 			setSocialButtonImageUploads({})
+			if (syncLocal) await syncLocalCode(true)
 			onClose()
 		} catch (error: any) {
 			console.error('Failed to save:', error)
@@ -235,9 +271,9 @@ export default function ConfigDialog({ open, onClose }: ConfigDialogProps) {
 				accept='.pem'
 				className='hidden'
 				onChange={async e => {
-					const f = e.target.files?.[0]
+					const f = e.currentTarget.files?.[0]
+					e.currentTarget.value = ''
 					if (f) await handleChoosePrivateKey(f)
-					if (e.currentTarget) e.currentTarget.value = ''
 				}}
 			/>
 

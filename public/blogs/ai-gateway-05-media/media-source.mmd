@@ -1,0 +1,9 @@
+flowchart TB
+    S["load_media_bytes"] --> D{"data 有值？"}
+    D -- "是" --> B["base64 解码\n返回字节与 MIME"]
+    D -- "否" --> L{"local_path 有值？"}
+    L -- "是" --> K{"已配置 MediaBackend？"}
+    K -- "是" --> R["按存储键读取字节"]
+    K -- "否" --> E["抛出 RuntimeError\n不静默退回 URL"]
+    L -- "否" --> U["检查 URL 并下载\n无来源则报错"]
+    U --> C["可选缓存到后端\n返回字节与 MIME"]

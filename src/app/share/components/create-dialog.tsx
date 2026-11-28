@@ -129,7 +129,7 @@ export default function CreateDialog({ share, onClose, onSave }: CreateDialogPro
 						type='text'
 						value={tagsInput}
 						onChange={e => handleTagsChange(e.target.value)}
-						placeholder='标签，用逗号分隔（如：图片, 工具）'
+						placeholder='标签，用逗号分隔（如：Java 基础, Agent 开发）'
 						className='w-full rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm focus:outline-none'
 					/>
 					<div className='mt-2 flex flex-wrap gap-1.5'>

@@ -1,0 +1,23 @@
+sequenceDiagram
+    autonumber
+    participant W as worker
+    participant C as FeishuChannel
+    participant B as BaseChannel
+    participant S as MediaBackend
+    W->>C: parse_inbound(raw_payload)
+    C-->>W: InboundMessage
+    W->>W: 按条件合并，获取会话锁
+    W->>B: handle_inbound(message)
+    B->>B: 平台预处理，跟踪回复目标
+    opt 需要持久化媒体
+        B->>C: fetch_remote_media(url)
+        C-->>B: 字节与 MIME 类型
+        B->>S: save(bytes, key)
+        B->>B: 设置 local_path
+    end
+    B->>B: 应用群聊上下文与触发策略
+    alt 未触发
+        B-->>W: 暂存被动讨论，结束本轮
+    else 已触发
+        B->>B: 进入处理器与交付流程
+    end

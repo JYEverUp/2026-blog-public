@@ -1,0 +1,13 @@
+{
+  "title": "把 AI 助手接进工作群（五）：图片和文件，不能在链路里悄悄消失",
+  "tags": [
+    "AI",
+    "Python",
+    "多模态"
+  ],
+  "date": "2026-10-31",
+  "summary": "沿附件字节的完整路径，结合来源选择、存储接口、鉴权下载与上传降级代码，分析一致性、内存成本、交付结果和清理责任。",
+  "cover": "/blogs/ai-gateway-05-media/media-source.svg",
+  "hidden": false,
+  "category": "AI 助手工程实践"
+}

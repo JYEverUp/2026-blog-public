@@ -1,0 +1,9 @@
+flowchart TB
+    U["员工：私聊或群聊提问"] --> A["平台适配器\n连接、鉴权、格式转换"]
+    A --> M["ChannelManager\n队列、worker、会话调度"]
+    M --> B["BaseChannel 公共主线\n媒体、群聊策略、交付约束"]
+    B --> P["MessageProcessor\n调用方提供的业务处理器"]
+    P -. "场景扩展：按权限检索" .-> K["企业知识服务\n不属于网关内置能力"]
+    P --> E["MessageEvent 事件流"]
+    E --> D["渠道自己的交付方式"]
+    D --> U

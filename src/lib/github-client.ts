@@ -170,7 +170,10 @@ export async function updateRef(token: string, owner: string, repo: string, ref:
 	})
 	if (res.status === 401) handle401Error()
 	if (res.status === 422) handle422Error()
-	if (!res.ok) throw new Error(`update ref failed: ${res.status}`)
+	if (!res.ok) {
+		const detail = await res.json().catch(() => null)
+		throw new Error(`update ref failed: ${res.status}${detail?.message ? ` - ${detail.message}` : ''}`)
+	}
 }
 
 export async function readTextFileFromRepo(token: string, owner: string, repo: string, path: string, ref: string): Promise<string | null> {

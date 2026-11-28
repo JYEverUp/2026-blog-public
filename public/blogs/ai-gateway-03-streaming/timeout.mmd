@@ -1,0 +1,18 @@
+sequenceDiagram
+    autonumber
+    participant C as 企微交付层
+    participant T as 首事件任务
+    participant P as 处理器
+    participant U as 聊天窗口
+    C->>T: create_task 读取第一个事件
+    T->>P: __anext__()
+    C->>C: asyncio.wait 有界等待
+    alt 等待期限内未就绪
+        C->>U: 尝试占位回复，finish=false
+        Note over T,P: 等待超时，原任务继续
+    end
+    P-->>T: 第一个事件
+    T-->>C: 返回事件
+    C->>P: 继续消费后续事件
+    C->>U: 正文增量与结束更新
+    Note over C,P: 首个事件不一定是首个正文 token

@@ -1,0 +1,13 @@
+{
+  "title": "把 AI 助手接进工作群（四）：听得到群聊，不等于每句话都要回答",
+  "tags": [
+    "AI",
+    "群聊",
+    "上下文设计"
+  ],
+  "date": "2026-10-31",
+  "summary": "结合触发判断、配置覆盖、上下文快照和过期清理代码，解释群聊助手什么时候回答、保留什么、如何控制成本与状态。",
+  "cover": "/blogs/ai-gateway-04-group-context/group-flow.svg",
+  "hidden": false,
+  "category": "AI 助手工程实践"
+}
