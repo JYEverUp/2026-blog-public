@@ -206,6 +206,7 @@
 .prose img[src^='/blogs/power-agent-storage-backend/'],
 .prose img[src^='/blogs/power-agent-acp/'],
 .prose img[src^='/blogs/cua-driver-agent-integration/'],
+.prose img[src^='/blogs/orca-parallel-agents-worktree/'],
 .prose img[src^='/blogs/websocket-reconnection/diagram-'] {
 	max-width: 100%;
 }

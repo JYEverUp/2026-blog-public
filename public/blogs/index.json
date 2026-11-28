@@ -1,5 +1,20 @@
 [
   {
+    "slug": "orca-parallel-agents-worktree",
+    "title": "Orca：用 Git Worktree 并行跑多个 AI 编程 Agent",
+    "tags": [
+      "Orca",
+      "Git Worktree",
+      "AI Agent",
+      "并行开发",
+      "代码审查"
+    ],
+    "date": "2026-11-29",
+    "summary": "从两种前端修复方案的对照出发，讲清 Orca 的安装、独立 worktree、并行执行、差异审查和会话交接。",
+    "hidden": false,
+    "category": "代码实现"
+  },
+  {
     "slug": "rea-mcp-software-analysis",
     "title": "REA 入门：用 MCP 看懂一个软件功能是怎么实现的",
     "tags": [

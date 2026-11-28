@@ -1,0 +1,25 @@
+---
+config:
+  theme: base
+  htmlLabels: false
+  flowchart:
+    htmlLabels: false
+    padding: 12
+    nodeSpacing: 26
+    rankSpacing: 30
+  themeVariables:
+    fontFamily: Microsoft YaHei, Noto Sans CJK SC, sans-serif
+    fontSize: 18px
+    primaryColor: "#e7f0ff"
+    primaryTextColor: "#132849"
+    primaryBorderColor: "#648cc4"
+    lineColor: "#45648c"
+---
+flowchart TD
+    Base["同一 Git 起始提交"]
+    Base --> A["Worktree A<br/>Agent 尝试折叠筛选"]
+    Base --> B["Worktree B<br/>Agent 尝试横向滚动"]
+    A --> Review["逐份审查 diff<br/>按同一条件跑验证"]
+    B --> Review
+    Review --> Merge["合并选定方案"]
+    Review --> Cleanup["清理其余工作区"]
