@@ -15,21 +15,6 @@
     "category": "代码实现"
   },
   {
-    "slug": "rea-mcp-software-analysis",
-    "title": "REA：用 MCP 看懂一个软件功能是怎么实现的",
-    "tags": [
-      "REA",
-      "MCP",
-      "逆向工程",
-      "Electron",
-      "Android"
-    ],
-    "date": "2026-11-28",
-    "summary": "从计算器的百分号入手，介绍 REA 的 MCP 接入、静态分析和证据核验，并配合原文的八张截图与一张 Mermaid 流程图。",
-    "hidden": false,
-    "category": "代码实现"
-  },
-  {
     "slug": "cua-driver-agent-integration",
     "title": "为什么要给现有 Agent 接入 Cua Driver",
     "tags": [
@@ -145,6 +130,36 @@
     "date": "2026-11-14",
     "summary": "从一个售后助手的接入需求出发，讲清直接写工具函数的适用范围、连接器的职责、账号与权限边界，以及本地工具和 MCP 两条接入路径；附 Mermaid 图和可离线运行的 Python 示例。",
     "cover": "/blogs/agent-connectors-from-api-to-runtime/architecture.svg",
+    "hidden": false,
+    "category": "代码实现"
+  },
+  {
+    "slug": "craft-anything-prototyping",
+    "title": "Craft Anything：从界面观察到可运行的原型",
+    "tags": [
+      "Craft Anything",
+      "AI Agent",
+      "原型开发",
+      "Clean Room",
+      "CLI"
+    ],
+    "date": "2026-11-08",
+    "summary": "以自有网站原型为例，拆解 Craft Anything 的观察、构建、比对和验收流程，附 Windows 配置及运行截图。",
+    "hidden": false,
+    "category": "代码实现"
+  },
+  {
+    "slug": "rea-mcp-software-analysis",
+    "title": "REA：用 MCP 看懂一个软件功能是怎么实现的",
+    "tags": [
+      "REA",
+      "MCP",
+      "逆向工程",
+      "Electron",
+      "Android"
+    ],
+    "date": "2026-11-07",
+    "summary": "从计算器的百分号入手，介绍 REA 的 MCP 接入、静态分析和证据核验，并配合原文的八张截图与一张 Mermaid 流程图。",
     "hidden": false,
     "category": "代码实现"
   },
@@ -278,6 +293,21 @@
     "cover": "/blogs/ai-gateway-05-media/media-source.svg",
     "hidden": false,
     "category": "AI 助手工程实践"
+  },
+  {
+    "slug": "archify-repository-architecture-map",
+    "title": "Archify：把代码仓库变成可交互的架构图",
+    "tags": [
+      "Archify",
+      "架构图",
+      "Agent Skill",
+      "代码阅读",
+      "JSON"
+    ],
+    "date": "2026-09-20",
+    "summary": "用 Archify 把仓库证据整理成结构化 JSON，再校验并生成可交互 HTML。覆盖安装、示例运行、选图和结果核验。",
+    "hidden": false,
+    "category": "代码实现"
   },
   {
     "slug": "openclaw-feishu-quickstart",

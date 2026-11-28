@@ -1,0 +1,22 @@
+---
+config:
+  theme: base
+  htmlLabels: false
+  flowchart:
+    htmlLabels: false
+    padding: 12
+    rankSpacing: 30
+  themeVariables:
+    fontFamily: Microsoft YaHei, Noto Sans CJK SC, sans-serif
+    fontSize: 18px
+    primaryColor: "#e7f0ff"
+    primaryTextColor: "#132849"
+    primaryBorderColor: "#648cc4"
+    lineColor: "#45648c"
+---
+flowchart TD
+    Source["阅读系统描述或仓库"] --> Agent["归纳组件和调用关系"]
+    Agent --> Data["写入结构化 JSON 与证据"]
+    Data --> Validate{"规则校验通过？"}
+    Validate -->|通过| HTML["交付可交互 HTML"]
+    Validate -->|修正相关字段| Data

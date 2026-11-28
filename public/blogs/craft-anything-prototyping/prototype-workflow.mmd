@@ -1,0 +1,21 @@
+---
+config:
+  theme: base
+  htmlLabels: false
+  flowchart:
+    htmlLabels: false
+    padding: 12
+    rankSpacing: 30
+  themeVariables:
+    fontFamily: Microsoft YaHei, Noto Sans CJK SC, sans-serif
+    fontSize: 18px
+    primaryColor: "#e7f0ff"
+    primaryTextColor: "#132849"
+    primaryBorderColor: "#648cc4"
+    lineColor: "#45648c"
+---
+flowchart TD
+    Study["观察有权使用的目标<br/>记录布局和操作"] --> Build["由编程 Agent 生成独立原型"]
+    Build --> Check["按屏幕宽度对照表现"]
+    Check --> Ready["验收生成结果"]
+    Check -->|记录差异| Build

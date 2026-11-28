@@ -1,0 +1,14 @@
+{
+  "title": "Archify：把代码仓库变成可交互的架构图",
+  "tags": [
+    "Archify",
+    "架构图",
+    "Agent Skill",
+    "代码阅读",
+    "JSON"
+  ],
+  "date": "2026-09-20",
+  "summary": "用 Archify 把仓库证据整理成结构化 JSON，再校验并生成可交互 HTML。覆盖安装、示例运行、选图和结果核验。",
+  "hidden": false,
+  "category": "代码实现"
+}

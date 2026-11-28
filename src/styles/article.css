@@ -209,6 +209,8 @@
 .prose img[src^='/blogs/cua-driver-agent-integration/'],
 .prose img[src^='/blogs/orca-parallel-agents-worktree/'],
 .prose img[src^='/blogs/rea-mcp-software-analysis/']:not([src$='/analysis-flow.svg']),
+.prose img[src^='/blogs/craft-anything-prototyping/']:not([src$='/prototype-workflow.svg']),
+.prose img[src^='/blogs/archify-repository-architecture-map/']:not([src$='/diagram-workflow.svg']),
 .prose img[src^='/blogs/websocket-reconnection/diagram-'] {
 	max-width: 100%;
 }

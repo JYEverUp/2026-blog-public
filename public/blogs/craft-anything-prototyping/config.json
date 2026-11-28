@@ -1,0 +1,14 @@
+{
+  "title": "Craft Anything：从界面观察到可运行的原型",
+  "tags": [
+    "Craft Anything",
+    "AI Agent",
+    "原型开发",
+    "Clean Room",
+    "CLI"
+  ],
+  "date": "2026-11-08",
+  "summary": "以自有网站原型为例，拆解 Craft Anything 的观察、构建、比对和验收流程，附 Windows 配置及运行截图。",
+  "hidden": false,
+  "category": "代码实现"
+}
