@@ -1,0 +1,23 @@
+---
+config:
+  theme: base
+  htmlLabels: false
+  flowchart:
+    htmlLabels: false
+    padding: 12
+    rankSpacing: 26
+  themeVariables:
+    fontFamily: Microsoft YaHei, Noto Sans CJK SC, sans-serif
+    fontSize: 19px
+    primaryColor: "#e7f0ff"
+    primaryTextColor: "#132849"
+    primaryBorderColor: "#648cc4"
+    lineColor: "#45648c"
+---
+flowchart TD
+    Question["用户：提出一个可复现的功能问题"]
+    Agent["编码 Agent：通过 MCP 发起检查"]
+    REA["REA：在本机检查应用样本"]
+    Evidence["返回文件位置、调用关系和未验证项"]
+    Check["用样本行为和测试用例核对结论"]
+    Question --> Agent --> REA --> Evidence --> Check

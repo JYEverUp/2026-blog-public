@@ -1,0 +1,14 @@
+{
+  "title": "REA 入门：用 MCP 看懂一个软件功能是怎么实现的",
+  "tags": [
+    "REA",
+    "MCP",
+    "逆向工程",
+    "Electron",
+    "Android"
+  ],
+  "date": "2026-11-28",
+  "summary": "从计算器的百分号入手，介绍 REA 的 MCP 接入、静态分析和证据核验，并配合原文的八张截图与一张 Mermaid 流程图。",
+  "hidden": false,
+  "category": "代码实现"
+}
